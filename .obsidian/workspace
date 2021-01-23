@@ -1,0 +1,122 @@
+{
+  "main": {
+    "id": "9ee669ce21c0a700",
+    "type": "split",
+    "children": [
+      {
+        "id": "f2bd305eb49df82e",
+        "type": "leaf",
+        "active": true,
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Deep Learning & Data Mining/Neural Network.md",
+            "mode": "source"
+          }
+        }
+      },
+      {
+        "id": "6361bcb3bd7fea9a",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Deep Learning & Data Mining/Neural Network.md",
+            "mode": "preview"
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "b36cd7ae22d5410e",
+    "type": "split",
+    "children": [
+      {
+        "id": "fc244993e88d1fa2",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "62a1506f9aea1867",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "06b9a1ef1c2b9834",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "Pasted",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "cdb884c5d6204ac5",
+    "type": "split",
+    "children": [
+      {
+        "id": "e5d0e609d981cca8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b5a7fbebea6fbbb2",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Deep Learning & Data Mining/Neural Network.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "246929e9dd668410",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "lastOpenFiles": [
+    "Deep Learning & Data Mining/Neural Network.md",
+    "Deep Learning & Data Mining/Perceptron algorithm.md",
+    "Deep Learning & Data Mining/Regression.md",
+    "Deep Learning & Data Mining/Preprocessing.md",
+    "Deep Learning & Data Mining/Machine Learning.md",
+    "Untitled.md",
+    "Deep Learning & Data Mining/What is deep learning.md",
+    "Deep Learning & Data Mining/Machine Learning 1.md",
+    "Stock/認識金融市場.md",
+    "Programming Lang/爬蟲.md"
+  ]
+}
