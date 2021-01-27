@@ -33,3 +33,17 @@ How it works?
 
 *Loss function* can measure how far this output from our expected.
 And we can use the loss score to optimize the weights
+
+### Brief Histroy
+* 1958 : Perceptron
+* 1969 : Perceptron has limitation
+* 1980 : Multi-layer Perceptron
+* 1986 : Backpropagation
+* 1989 : 1 hidden layer is "good enough", why deep?
+* 2006 : RBM Initialization
+* 2009 : GPU
+* 2011 : popular in speech recognition
+* 2012 : win ILSVRC image competition
+
+### Fully Connected Feedforward
+![[Pasted image 20210126032146.png]]
