@@ -42,7 +42,38 @@ Test data：耐酸性=3，強度=7
 ![](https://i.imgur.com/IhXnMXI.png)
 3.在這些最近距離的資料中，哪個類別最多，Test data就屬於這個類別
 
+### 在Scikit-learn中使用KNN
+```python
+knn = neighbors.KneighborsClassifier(n_neighbors=k)
+knn.fit(data, label)
+knn.predict(test_data)
+```
 
+使用範例：
+```python
+import pandas as pd
+import numpy as np
+from sklearn import neighbors
+
+# durability 代表面紙耐酸性
+# strength 代表面紙的強度
+data = pd.DataFrame({
+	"durability" : 	[7,7,3,1],
+	"strength":		[7,4,4,4],
+})
+
+# 1代表好面紙 0代表壞面紙
+label = np.array([0,0,1,1])
+k = 3
+
+knn = neighbors.KNeighborsClassifier(n_neighbors=k)
+knn.fit(data, label)
+
+# 預測新產品
+new_product = pd.DataFrame(np.array[])
+
+
+```
 
 ---
 

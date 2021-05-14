@@ -10,7 +10,7 @@
           "type": "markdown",
           "state": {
             "file": "Deep Learning & Data Mining/Lazy learning.md",
-            "mode": "preview"
+            "mode": "source"
           }
         }
       }
@@ -53,7 +53,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 205
+    "width": 205,
+    "collapsed": true
   },
   "right": {
     "id": "77bd3edf5e2bda58",
