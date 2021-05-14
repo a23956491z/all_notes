@@ -43,11 +43,28 @@ Test data：耐酸性=3，強度=7
 3.在這些最近距離的資料中，哪個類別最多，Test data就屬於這個類別
 
 ### 在Scikit-learn中使用KNN
+#### 基本用法
 ```python
 knn = neighbors.KneighborsClassifier(n_neighbors=k)
 knn.fit(data, label)
 knn.predict(test_data)
 ```
+
+#### 參數
+```python
+class sklearn.neighbors.KNeighborsClassifier(
+	n_neighbors=5,
+	weights='uniform', 
+	algorithm='auto', 
+	leaf_size=30, 
+	p=2, 
+	metric='minkowski', 
+	metric_params=None, 
+	n_jobs=None, 
+	**kwargs)
+```
+1. algorthm 有auto，ball_tree，kd_tree，brute等等可以選
+2. p-value是用哪種距離，p=1用曼哈頓距離，p=2用歐式距離
 
 使用範例：
 ```python
@@ -69,10 +86,22 @@ k = 3
 knn = neighbors.KNeighborsClassifier(n_neighbors=k)
 knn.fit(data, label)
 
-# 預測新產品
-new_product = pd.DataFrame(np.array[])
+# 預測新產品（一定要二維陣列，即使只有一筆資料）
+new_product = pd.DataFrame({
+	"durability" : 	[3],
+	"strength":		[7],
+})
 
+# 用np.array也可以
+# new_product = np.array([[3,7]])
+ 
+# 用DataFrame的2-array也可以
+# new_product = pd.DataFrame(np.array([[3,7]]))
 
+# 用list也可以
+# new_product = [[3,7]]
+
+print(knn.predict(new_product))
 ```
 
 ---
