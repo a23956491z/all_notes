@@ -1,3 +1,20 @@
+# 資料科學
+
+### 機器學習的種類
+1. 監督式學習
+2. 非監督式學習
+3. 半監督式學習
+4. 增強學習
+
+### KNN(K臨近演算法)
+常見的機器學習分類預測做法：
+1. Logistic回歸
+2. 決策樹
+3. K臨近演算法
+
+[[Lazy learning#k-Nearest Neighbor alg]]
+
+# 機器學習(李宏毅)
 Framework
 
 首先有一堆funtions（function set）

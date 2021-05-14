@@ -16,7 +16,7 @@ Methods:
 * case-based reasoning
 
 ---
-## k-Nearest Neighbor alg.
+## KNN(K-Nearest Neighbor alg.)
 * put instance in n-D space
 * nearest neighbor defined by Euclidean distance
 
