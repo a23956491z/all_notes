@@ -11,7 +11,6 @@
 1. Logistic回歸
 2. 決策樹
 3. K臨近演算法
-
 [[Lazy learning#k-Nearest Neighbor alg]]
 
 # 機器學習(李宏毅)
