@@ -13,8 +13,9 @@ OpenFlow controller：控制中心
 switch-to-controller message
 * 
 
+###  ICMP: internet control message protocol
 
-
-ICMP: internet control message protocol
-
+### SNMP protocol
+* InformRequest：Manager對Manager
+	例如區域
 
