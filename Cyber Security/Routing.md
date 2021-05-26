@@ -8,7 +8,12 @@ Traditional Routing：
 Software Designed Network：
 解決Traditional Routing
 
+OpenFlow：
+OpenFlow controller：控制中心
+switch-to-controller message
+* 
 
 
 
 Control Agent
+
