@@ -4,13 +4,13 @@
     "type": "split",
     "children": [
       {
-        "id": "6d72f6fdbb56c707",
+        "id": "663cfa1ff3a7c292",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Deep Learning & Data Mining/Lazy learning.md",
-            "mode": "source"
+            "file": "Deep Learning & Data Mining/Backpropagation.md",
+            "mode": "preview"
           }
         }
       }
@@ -39,7 +39,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "distance",
+                "query": "20210119163818",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -48,13 +48,11 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 205,
-    "collapsed": true
+    "width": 331
   },
   "right": {
     "id": "77bd3edf5e2bda58",
@@ -70,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Deep Learning & Data Mining/Lazy learning.md",
+                "file": "Deep Learning & Data Mining/Backpropagation.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,17 +97,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "6d72f6fdbb56c707",
+  "active": "663cfa1ff3a7c292",
   "lastOpenFiles": [
-    "Deep Learning & Data Mining/Lazy learning.md",
-    "Deep Learning & Data Mining/Cluster Analysis.md",
     "Deep Learning & Data Mining/Backpropagation.md",
-    "王陽明/筆記.md",
+    "Deep Learning & Data Mining/Closer look to Data Mining.md",
+    "Deep Learning & Data Mining/Neural Network.md",
     "Deep Learning & Data Mining/Machine Learning.md",
-    "Programming Tool/Perforce.md",
-    "Programming Tool/Untitled.md",
-    "Programming Lang/爬蟲.md",
-    "Pasted image 20210127115006.png",
-    "Pasted image 20210127143213.png"
+    "Deep Learning & Data Mining/Lazy learning.md",
+    "Pasted image 20210119163927.png",
+    "Pasted image 20210119164834.png",
+    "Deep Learning & Data Mining/Regression.md",
+    "Pasted image 20210119163818.png",
+    "Pasted image 20210126021110.png"
   ]
 }
