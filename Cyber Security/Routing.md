@@ -7,6 +7,8 @@ Traditional Routing：
 	
 Software Designed Network：
 解決Traditional Routing
+Control plane
+Data plane
 
 OpenFlow：
 OpenFlow controller：控制中心
@@ -16,6 +18,11 @@ switch-to-controller message
 ###  ICMP: internet control message protocol
 
 ### SNMP protocol
+Simple Network Management Protocol
+* SetRequest：
+* GetRequest：
 * InformRequest：Manager對Manager
-	例如區域
+	例如區網中心對區網中心
+* Trap：設備對管理員，定期回報維護用訊息(例如LOG)
 
+Management information base
