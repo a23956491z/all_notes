@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Deep Learning & Data Mining/Backpropagation.md",
-            "mode": "preview"
+            "file": "Cyber Security/Routing.md",
+            "mode": "source"
           }
         }
       }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Deep Learning & Data Mining/Backpropagation.md",
+                "file": "Cyber Security/Routing.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,6 +99,7 @@
   },
   "active": "663cfa1ff3a7c292",
   "lastOpenFiles": [
+    "Cyber Security/Untitled.md",
     "Deep Learning & Data Mining/Backpropagation.md",
     "Deep Learning & Data Mining/Closer look to Data Mining.md",
     "Deep Learning & Data Mining/Neural Network.md",
@@ -107,7 +108,6 @@
     "Pasted image 20210119163927.png",
     "Pasted image 20210119164834.png",
     "Deep Learning & Data Mining/Regression.md",
-    "Pasted image 20210119163818.png",
-    "Pasted image 20210126021110.png"
+    "Pasted image 20210119163818.png"
   ]
 }
