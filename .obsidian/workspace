@@ -6,19 +6,6 @@
       {
         "id": "663cfa1ff3a7c292",
         "type": "leaf",
-        "dimension": 68.65591397849462,
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Cyber Security/Routing.md",
-            "mode": "source"
-          }
-        }
-      },
-      {
-        "id": "e8468e34568f0276",
-        "type": "leaf",
-        "dimension": 31.344086021505372,
         "state": {
           "type": "markdown",
           "state": {
@@ -65,7 +52,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 331
+    "width": 259
   },
   "right": {
     "id": "77bd3edf5e2bda58",
