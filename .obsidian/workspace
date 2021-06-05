@@ -6,23 +6,10 @@
       {
         "id": "663cfa1ff3a7c292",
         "type": "leaf",
-        "dimension": 68.65591397849462,
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Cyber Security/Routing.md",
-            "mode": "source"
-          }
-        }
-      },
-      {
-        "id": "e8468e34568f0276",
-        "type": "leaf",
-        "dimension": 31.344086021505372,
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Cyber Security/Routing.md",
+            "file": "Programming Lang/Python.md",
             "mode": "source"
           }
         }
@@ -52,7 +39,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "20210119163818",
+                "query": "tag:#logic_circuit",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -65,8 +52,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 331,
-    "collapsed": true
+    "width": 331
   },
   "right": {
     "id": "77bd3edf5e2bda58",
@@ -82,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Cyber Security/Routing.md",
+                "file": "Programming Lang/Python.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,24 +90,24 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "active": "663cfa1ff3a7c292",
   "lastOpenFiles": [
+    "Programming Lang/Python.md",
+    "ADS & Algorithm/Shortest Path.md",
+    "ADS & Algorithm/Threaded binary tree.md",
+    "ADS & Algorithm/Binary Tree.md",
     "Cyber Security/Routing.md",
     "Cyber Security/Untitled.md",
     "Deep Learning & Data Mining/Backpropagation.md",
     "Deep Learning & Data Mining/Closer look to Data Mining.md",
     "Deep Learning & Data Mining/Neural Network.md",
-    "Deep Learning & Data Mining/Machine Learning.md",
-    "Deep Learning & Data Mining/Lazy learning.md",
-    "Pasted image 20210119163927.png",
-    "Pasted image 20210119164834.png",
-    "Deep Learning & Data Mining/Regression.md"
+    "Deep Learning & Data Mining/Machine Learning.md"
   ]
 }
