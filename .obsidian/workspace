@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Programming Lang/Python.md",
+            "file": "Cyber Security/Routing.md",
             "mode": "source"
           }
         }
@@ -52,7 +52,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 331
+    "width": 259
   },
   "right": {
     "id": "77bd3edf5e2bda58",
