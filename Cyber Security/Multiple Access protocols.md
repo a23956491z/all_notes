@@ -34,4 +34,16 @@ Collision : node retransmits frame in each subsequent slot
 Carrier Sense Multiple Access
 
 * Listen before transmit
-* Collision on 2 or more
+* Collision ： 兩個node同時判斷網路可用(idle)
+
+
+* CSMA/CD (with collision detection)
+**Stop sending** after detect collision
+
+
+* CSMA/CD (with collision avoiding)
+
+### Taking turns MAC protocol
+2 classes:
+* polling : 每一個node都問，需要排隊
+* token passing：有token的人可以傳資料，並把token傳下去
