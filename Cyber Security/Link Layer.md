@@ -19,3 +19,20 @@ D : Data
 ### Parity checking
 1. single bit parity
 2. ![](https://i.imgur.com/mTA5aJ9.png)
+
+### CRC
+
+r的數字可以自己訂，這裏 r=3
+
+![](https://i.imgur.com/chBjCzl.png)
+
+$D*2^r \oplus R$：
+就是把R串在D後面而已
+
+![](https://i.imgur.com/vH5Fduo.png)
+
+做除法運算時
+相減的部份，不需要借位和進位，只需要做XOR即可
+
+⚠️Imgur upload failed, check dev console
+⚠️Imgur upload failed, check dev console
