@@ -7,7 +7,7 @@ XLEN <- register bits wide
 RV32 : registers are 32bits wide
 RV64: 64bits wide
 
-### Base Instruction Formats
+## Base Instruction Formats
 4 base foramts with **32 bits** (aligned on four-byte)
 
 ![](https://i.imgur.com/N0yZdNU.png)
@@ -18,7 +18,7 @@ RV64: 64bits wide
 
 The **Sign bit** is alyways in *bit 31*
 
-### Immediate Formats Variant
+## Immediate Formats Variant
 Which is the Foramt B-tpye and J-type
 
 Diffierence between S/B type:
@@ -29,7 +29,7 @@ These are both 12-bit immediate field and B-type with one-bit left shift of imme
 
 ![](https://i.imgur.com/M37pNaH.png)
 
-### Integer Computation
+## Integer Computation
 1. I-type as register-immediate operation
 2. R-type as rigster-register operation
 
@@ -42,7 +42,7 @@ add 	t0, t1, t2;
 bltu 	t0, t1, overflow; # branch less than unsigned
 ```
 
-#### I-type instructions
+### I-type instructions
 ![](https://i.imgur.com/TLRJBhu.png)
 
 Arthmetic:
@@ -61,10 +61,14 @@ Shifts:
 ![](https://i.imgur.com/1KhqhSf.png)
 
 Jump:
-* `JALR` is 
+* `JALR` is jump and link register.
+* Offset is 12 bits signed I-immediate value
+* Target addrs is obtained by add offset to *sr1*
+* The addr of instruction following the jump store to register *rd*
+* *x0* also can be used in *rd* here if no other usage.
 
 See [[RISC-V#J-type instrcutions]] for `JAL` information.
-#### U-type instructions
+### U-type instructions
 
 ![](https://i.imgur.com/5ZqpAc6.png)
 
@@ -77,7 +81,7 @@ See [[RISC-V#J-type instrcutions]] for `JAL` information.
 	* adds offset to *pc* and place result to destination *rd*
 	* offset is U-immediate value (load top 20 bits, fill leaving with zero)
 
-#### R-type instructions
+### R-type instructions
 ![](https://i.imgur.com/kYSDMyg.png)
 
 *rs1* & *rs2* registers as source operands
@@ -105,7 +109,7 @@ Shift:
 Equal to `ADDI x0, x0, 0`.
 By the way, *x0* is write-only.
 
-#### J-type instrcutions
+### J-type instrcutions
 ![](https://i.imgur.com/Xb5Uz7n.png)
 
 `JAL` is jump and link
@@ -118,4 +122,7 @@ Standard software calling convention:
 * *x1* as return addr register.
 * *x5* as an alternate link register.
 * Alternate link register is used to perform calling milicode routine like epilogue and prologue
+
+
+**Misaligned instruction fetch exception** would be generate if addr is not aligned to a four-byte boundary.
 
