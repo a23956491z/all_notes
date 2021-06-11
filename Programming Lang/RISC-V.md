@@ -62,10 +62,14 @@ Shifts:
 
 Jump:
 * `JALR` is jump and link register.
-* Offset is 12 bits signed I-immediate value
+* Offset is 12 bits signed I-immediate value, not encoded in multiple of 2 bites like `JAL`.
 * Target addrs is obtained by add offset to *sr1*
 * The addr of instruction following the jump store to register *rd*
 * *x0* also can be used in *rd* here if no other usage.
+
+Combine `JALR` and `LUI` can jump anywhere in 32-bit absolute addr range.
+`LUI` load top 20 bits to register.
+`JARL` add in lower bits
 
 See [[RISC-V#J-type instrcutions]] for `JAL` information.
 ### U-type instructions
@@ -113,8 +117,7 @@ By the way, *x0* is write-only.
 ![](https://i.imgur.com/Xb5Uz7n.png)
 
 `JAL` is jump and link
-* J-immediate encode a **signed** offset.
-* Offset should be multiple of 2.(二的倍數)
+* J-immediate are a **signed** offset encoded in multiple of 2.(J-Imme乘二之後才是正確的相對位址)
 * Jumps can target a $\pm1$ MiB range.
 * Store the addr of the instruction follwing `JAL` into register *rd*
 
