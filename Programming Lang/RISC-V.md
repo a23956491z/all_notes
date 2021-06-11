@@ -21,4 +21,9 @@ The **Sign bit** is alyways in *bit 31*
 Which is the Foramt B-tpye and J-type
 
 Diffierence between S/B type:
-12-bit immediate field 
+These are both 12-bit immediate field and B-type with one-bit left shift of immediate value.
+
+* Every formats can present different bits and type immediate value.
+* This figure shows how we put the bits of immediate value to instruction format (Label with instruction bit *inst[y]*)
+
+![](https://i.imgur.com/M37pNaH.png)
