@@ -41,6 +41,17 @@ add 	t0, t1, t2;
 bltu 	t0, t1, overflow; # branch less than unsigned
 ```
 
+#### I-type instructions
+![](https://i.imgur.com/TLRJBhu.png)
 
+Arthmetic:
 * Use `ADDI rd, rs1, 0` to implement `MV rd, rs1` 
-* `SLTI` (set less than immediate )put 1 in register *rd* if *rs1* less than immeidate.
+* `SLTI` (set less than immediate )put 1 in register *rd* if *rs1* less than immeidate. And `SLITU` is for unsigned.
+
+Logic operation:
+* `ANDI` `ORI` `XORI` are logical operations
+* Using `XORI rd, rs1, -1` to performs bitwise inversion instead of `NOT`
+
+Shifts:
+* `SLLI` and `SRLI` is both logical shift.
+* `SRAI` is an arithmetic shift.
