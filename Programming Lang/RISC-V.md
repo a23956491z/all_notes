@@ -62,5 +62,20 @@ Shifts:
 ![](https://i.imgur.com/5ZqpAc6.png)
 
 * `LUI` , Load upper immediate:
-	 * load top 20 bits of 32-bit to destination
+	 * load top 20 bits of 32-bit to destination (U-immediate value)  *rd*
 	 * fill leaving 12 bits with zeros
+	* Combine with `ADDI` can compose a 32bit immediate value.
+
+* `AUIPC` , add upper immediate to *pc* :
+	* adds offset to *pc* and place result to destination *rd*
+	* offset is U-immediate value (load top 20 bits, fill leaving with zero)
+
+#### R-tyope instructions
+![](https://i.imgur.com/kYSDMyg.png)
+
+*rs1* & *rs2* registers as source operands
+write result in to register *rd*
+*funct7* & *funct3* select the type of operation
+
+Arthmetic:
+* Add 
