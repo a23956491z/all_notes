@@ -1,7 +1,8 @@
+## Preview
 Have 31 registers (x1-x31)
 * x0: constant 0
 * x1: return addr(standard software calling convention)
-* additional user-visible register: *pc* : addr of current instruction
+* additional user-visible register *pc*  addr of current instruction
 
 XLEN <- register bits wide
 RV32 : registers are 32bits wide
@@ -118,7 +119,8 @@ By the way, *x0* is write-only.
 ![](https://i.imgur.com/Xb5Uz7n.png)
 
 `JAL` is jump and link
-* J-immediate are a **signed** offset encoded in multiple of 2.(J-Imme乘二之後才是正確的相對位址)
+* J-immediate are a **signed** offset encoded in multiple of 2.
+	(J-Imme乘二之後才是正確的相對位址)
 * Jumps can target a $\pm1$ MiB range.
 * Store the addr of the instruction follwing `JAL` into register *rd*
 
@@ -130,12 +132,22 @@ Standard software calling convention:
 
 **Misaligned instruction fetch exception** would be generate if addr is not aligned to a four-byte boundary.
 
-### B-type instrucitons
+### B-type instructions
 ![](https://i.imgur.com/2Oba8QS.png)
 
-For all branch instructions.
-
+For all branch instructions:
 * 12-bit B-immediate encodes signed offset in multiples of 2.
 * Target addrs is offset add to current *pc*.
 * Branch can target a $\pm4$ KiB range.
-* 
+
+Equal & Negative:
+* `BEQ` `BNE` take the branch if register *rs1* *rs2* are equal or unequal respectively.
+
+Great & Less:
+* `BLT` `BLTU` take the branch if register *rs1* < *rs2*
+* `BGE` `BGEU` take the branch if register *rs1* < *rs2*
+* "U" is for unsigned comparison
+
+Greater/Less and Equal : 
+* **Not support** `BLE` & `BLEU`
+* Both can be synthesized by instructions above
