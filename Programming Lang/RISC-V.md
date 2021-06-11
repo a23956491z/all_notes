@@ -43,8 +43,8 @@ add 	t0, t1, t2;
 bltu 	t0, t1, overflow; # branch less than unsigned
 ```
 
-## Instructions
-### I-type instructions
+## Register Instructions
+### I-type
 ![](https://i.imgur.com/TLRJBhu.png)
 
 Arthmetic:
@@ -74,7 +74,7 @@ Combine `JALR` and `LUI` can jump anywhere in 32-bit absolute addr range.
 `JARL` add in lower bits
 
 See [[RISC-V#J-type instrcutions]] for `JAL` information.
-### U-type instructions
+### U-type 
 
 ![](https://i.imgur.com/5ZqpAc6.png)
 
@@ -151,3 +151,5 @@ Great & Less:
 Greater/Less and Equal : 
 * **Not support** `BLE` & `BLEU`
 * Both can be synthesized by instructions above
+
+## Memory Instructions
