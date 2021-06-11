@@ -56,6 +56,7 @@ Logic operation:
 Shifts:
 * `SLLI` and `SRLI` is both logical shift.
 * `SRAI` is an arithmetic shift. The sign bit wouldn't be shifted.
+* *We dont have `SLAR` because the maximum bits we can shfift is 31 bits. And Even if we shift 31 bits, still won't shift the sign bit. That's why we do't need `SLAR` to preserve the sign bit*
 
 #### U-type instructions
 
@@ -78,4 +79,22 @@ write result in to register *rd*
 *funct7* & *funct3* select the type of operation
 
 Arthmetic:
-* Add 
+* `ADD` & `SUB` perform addition and substraction
+* Overflow are ignored.
+
+Logic:
+* `AND` `OR` `XOR` perform bitwise logical operations
+
+Compares:
+* `SLT` & `SLTU` is signed and unsigned compares
+* Set *rd* to 1 if *rs1* < *rs2*
+* Set 0 otherwise
+
+Shift:
+* `SLL` `SRL` is logical left and right shift
+* `SRA` is arithmetic right shift.
+* Shift value in *rs1* by the **lower 5** bits of register *rs2*.
+
+`NOP`: basically does nothing. Only increase the pc (line of code).
+Equal to `ADDI x0, x0, 0`.
+
