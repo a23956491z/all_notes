@@ -58,8 +58,10 @@ Shifts:
 * `SRAI` is an arithmetic shift. The sign bit wouldn't be shifted.
 * *We dont have `SLAR` because the maximum bits we can shfift is 31 bits. And Even if we shift 31 bits, still won't shift the sign bit. That's why we do't need `SLAR` to preserve the sign bit*
 
+![](https://i.imgur.com/1KhqhSf.png)
+
 Jump:
-* ``
+* `JALR` is 
 
 See [[RISC-V#J-type instrcutions]] for `JAL` information.
 #### U-type instructions
