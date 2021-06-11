@@ -58,6 +58,10 @@ Shifts:
 * `SRAI` is an arithmetic shift. The sign bit wouldn't be shifted.
 * *We dont have `SLAR` because the maximum bits we can shfift is 31 bits. And Even if we shift 31 bits, still won't shift the sign bit. That's why we do't need `SLAR` to preserve the sign bit*
 
+Jump:
+* ``
+
+See [[RISC-V#J-type instrcutions]] for `JAL` information.
 #### U-type instructions
 
 ![](https://i.imgur.com/5ZqpAc6.png)
@@ -104,9 +108,12 @@ By the way, *x0* is write-only.
 
 `JAL` is jump and link
 * J-immediate encode a **signed** offset.
+* Offset should be multiple of 2.(二的倍數)
 * Jumps can target a $\pm1$ MiB range.
 * Store the addr of the instruction follwing `JAL` into register *rd*
 
 Standard software calling convention:
 * *x1* as return addr register.
 * *x5* as an alternate link register.
+* Alternate link register is used to perform calling milicode routine like epilogue and prologue
+
