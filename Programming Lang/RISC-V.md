@@ -102,3 +102,11 @@ By the way, *x0* is write-only.
 #### J-type instrcutions
 ![](https://i.imgur.com/Xb5Uz7n.png)
 
+`JAL` is jump and link
+* J-immediate encode a **signed** offset.
+* Jumps can target a $\pm1$ MiB range.
+* Store the addr of the instruction follwing `JAL` into register *rd*
+
+Standard software calling convention:
+* *x1* as return addr register.
+* *x5* as an alternate link register.
