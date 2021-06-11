@@ -54,4 +54,4 @@ Logic operation:
 
 Shifts:
 * `SLLI` and `SRLI` is both logical shift.
-* `SRAI` is an arithmetic shift.
+* `SRAI` is an arithmetic shift. The sign bit wouldn't be shifted.
