@@ -42,6 +42,7 @@ add 	t0, t1, t2;
 bltu 	t0, t1, overflow; # branch less than unsigned
 ```
 
+## Instructions
 ### I-type instructions
 ![](https://i.imgur.com/TLRJBhu.png)
 
@@ -129,3 +130,12 @@ Standard software calling convention:
 
 **Misaligned instruction fetch exception** would be generate if addr is not aligned to a four-byte boundary.
 
+### B-type instrucitons
+![](https://i.imgur.com/2Oba8QS.png)
+
+For all branch instructions.
+
+* 12-bit B-immediate encodes signed offset in multiples of 2.
+* Target addrs is offset add to current *pc*.
+* Branch can target a $\pm4$ KiB range.
+* 
