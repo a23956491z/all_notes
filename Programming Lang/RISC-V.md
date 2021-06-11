@@ -71,7 +71,7 @@ Shifts:
 	* adds offset to *pc* and place result to destination *rd*
 	* offset is U-immediate value (load top 20 bits, fill leaving with zero)
 
-#### R-tyope instructions
+#### R-type instructions
 ![](https://i.imgur.com/kYSDMyg.png)
 
 *rs1* & *rs2* registers as source operands
@@ -95,6 +95,10 @@ Shift:
 * `SRA` is arithmetic right shift.
 * Shift value in *rs1* by the **lower 5** bits of register *rs2*.
 
-`NOP`: basically does nothing. Only increase the pc (line of code).
+`NOP`: basically does nothing. Only increase the *pc*
 Equal to `ADDI x0, x0, 0`.
+By the way, *x0* is write-only.
+
+#### J-type instrcutions
+![](https://i.imgur.com/Xb5Uz7n.png)
 
