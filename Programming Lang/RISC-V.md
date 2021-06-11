@@ -87,7 +87,7 @@ See [[RISC-V#J-type instrcutions]] for `JAL` information.
 	* adds offset to *pc* and place result to destination *rd*
 	* offset is U-immediate value (load top 20 bits, fill leaving with zero)
 
-### R-type instructions
+### R-type 
 ![](https://i.imgur.com/kYSDMyg.png)
 
 *rs1* & *rs2* registers as source operands
@@ -115,7 +115,7 @@ Shift:
 Equal to `ADDI x0, x0, 0`.
 By the way, *x0* is write-only.
 
-### J-type instrcutions
+### J-type 
 ![](https://i.imgur.com/Xb5Uz7n.png)
 
 `JAL` is jump and link
@@ -132,7 +132,7 @@ Standard software calling convention:
 
 **Misaligned instruction fetch exception** would be generate if addr is not aligned to a four-byte boundary.
 
-### B-type instructions
+### B-type
 ![](https://i.imgur.com/2Oba8QS.png)
 
 For all branch instructions:
