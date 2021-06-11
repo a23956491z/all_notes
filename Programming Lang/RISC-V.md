@@ -19,3 +19,6 @@ The **Sign bit** is alyways in *bit 31*
 
 ### Immediate Formats Variant
 Which is the Foramt B-tpye and J-type
+
+Diffierence between S/B type:
+12-bit immediate field 
