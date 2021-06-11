@@ -34,5 +34,4 @@ $D*2^r \oplus R$：
 做除法運算時
 相減的部份，不需要借位和進位，只需要做XOR即可
 
-⚠️Imgur upload failed, check dev console
-⚠️Imgur upload failed, check dev console
+
