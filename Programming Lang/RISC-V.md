@@ -1,6 +1,7 @@
 Have 31 registers (x1-x31)
 * x0: constant 0
 * x1: return addr(standard software calling convention)
+* additional user-visible register: *pc* : addr of current instruction
 
 XLEN <- register bits wide
 RV32 : registers are 32bits wide
@@ -55,3 +56,11 @@ Logic operation:
 Shifts:
 * `SLLI` and `SRLI` is both logical shift.
 * `SRAI` is an arithmetic shift. The sign bit wouldn't be shifted.
+
+#### U-type instructions
+
+![](https://i.imgur.com/5ZqpAc6.png)
+
+* `LUI` , Load upper immediate:
+	 * load top 20 bits of 32-bit to destination
+	 * fill leaving 12 bits with zeros
