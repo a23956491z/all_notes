@@ -27,3 +27,20 @@ These are both 12-bit immediate field and B-type with one-bit left shift of imme
 * This figure shows how we put the bits of immediate value to instruction format (Label with instruction bit *inst[y]*)
 
 ![](https://i.imgur.com/M37pNaH.png)
+
+### Integer Computation
+1. I-type as register-immediate operation
+2. R-type as rigster-register operation
+
+
+* MIPS would throws overflow exception and RISC-V won't.
+To deal with overflow problem, implementing by ourself.
+e.g. We can check unsigned overflow like this
+```
+add 	t0, t1, t2;
+bltu 	t0, t1, overflow; # branch less than unsigned
+```
+
+
+* Use `ADDI rd, rs1, 0` to implement `MV rd, rs1` 
+* `SLTI` (set less than immediate )put 1 in register *rd* if *rs1* less than immeidate.
