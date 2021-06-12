@@ -260,6 +260,8 @@ SYSTEM instructions
 `EBREAK` is used by debuggers to create a break point.
 
 # Compare to MIPS
+Instruction Set Architecture of MIPS and RISC-V are both RISC, and x86 and ARM are CISC.
+
 
 ## Format
 ### Function code 
@@ -270,8 +272,13 @@ RISC-V has function code in most formats(except for U-type and J-type)
 MIPS only has immediate value in **I-format**
 RISC-V has immediate value in most formats (except for R-type)
 
+In MIPS J-format, we have 26 bit addr value
+
 ### Register to Register format
-MIPS has shift amount in R-format allow
+MIPS has shift amount in R-format
+RISC-V hasn't.
+
+
 
 ### Instruction
 1. Pseudo-instuctions
@@ -283,6 +290,10 @@ RISC-V is little-endian
 
 MIPS in early is big-endian
 Recent MIPS is bi-endianness.
+
+### Memory access
+MIPS only allow pc-relative access.
+RISC-V have both pc-relative access and adscan combine `LUI` and `JALR` to access any absolute 
 
 ### Pros & Cons
 MIPS
@@ -296,3 +307,7 @@ RISC-V
 
 
 
+### Reference
+https://www.csie.ntu.edu.tw/~cyy/courses/assembly/07fall/assignments/final/reports/arm_mips.pdf
+https://www.tutortecho.com/post/ic-design-%E4%BD%95%E8%AC%82control-status-register-csr
+https://max.cs.kzoo.edu/cs230/Resources/MIPS/MachineXL/InstructionFormats.html
