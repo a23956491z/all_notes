@@ -175,10 +175,20 @@ provide 32-bit user addr space and **byte-addressed **and **little-endian**
 Load:
 * **I-type**
 * Copy a value from memory to register *rd*
-* `LW` load a 32-bit value from memory into *rd*
-* `LH` load a 16-bit value from memor
+* `LW` load a 32-bit value.
+* `LH` load a 16-bit value and sign-extends to 32-bit.
+* `LHU` loads a 16-bit value but zero extends to 32-bit. 
+* `LB` & `LBU` loads a 8-bit value with sign-extends and zero extends respectively.
 
 Store:
 * **S-type**
 * Copy the value in register *rs2* to memory.
+* `SW` store 32-bit value
+* `SH` store 16-bit value from the low bits
+* `SB` store 8-bit value from the low bits
 
+Note:
+Misaligned accesses is supported in base ISA, but might run extremely slowly.
+
+
+### Memory Model
