@@ -210,16 +210,26 @@ SYSTEM instructions
 
 ![](https://i.imgur.com/TseXCWa.png)
 
-`CSRRW` 
-* Atomic read/write CSR
+`CSRRW` (Atomic read/write CSR)
 * atomically swaps values in CSRs and integer registers.
-* Reads the old value of CSR, zero-extends to XLEN bits, writing it to integer register *rd*.
+* Reads the value of CSR, zero-extends to XLEN bits, writing it to integer register *rd*.
+* Initial value in *rs1* is written to CSR.
 * if *rd*=*x0* instruction would not read CSR and stop.
 
-`CSRRS`
-* Atomic Read and Set Bits in CSR
-* reads the value of CSR, zero-extends to XLEN bits, writing it to integer register *rd*
+`CSRRS`(Atomic Read and Set Bits in CSR)
+* reads the value of CSR, zero-extends to XLEN bits, writing it to integer register *rd*.
+* Initial value in *rs1* is a bit mask specifies bit positions to be **set** in CSR.
+* Any bit that is High  in *rs1* would make corresponding bit to be set in CSR, other bits are unaffected.
 
+`CSRRC`(Atomic Read and Clear Bits in CSR)
+* reads the value of CSR, zero-extends to XLEN bits, writing it to integer register *rd*.
+* Initial value in *rs1* is a bit mask specifies bit positions to be **clear** in CSR.
+* Any bit that is High  in *rs1* would make corresponding bit to be clear in CSR, other bits are unaffected.
+
+> if *rs1=x0* would cause any side effect
+`CSRRWI` `CSRRSI` `CSRRCI` 
+* Immediate version to other CSR instructions.
+* 
 
 
 ### Environment call and break point
