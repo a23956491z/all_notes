@@ -192,7 +192,13 @@ Misaligned accesses is supported in base ISA, but might run extremely slowly.
 
 
 ### Memory Model
+![](https://i.imgur.com/N1YxHYT.png)
+
 RISC-V ISA supports multiple concurrent threads within single addr space.
 Each RISC-V hardware thread *hart*, has it's user register state .
 
 the `FENCE` instruction is used to order device I/O and memory accesses as viewed by other RISC-V harts and external devices or coprocessors.
+
+>Informally, no other RISC-V hart or external device can observe any operation
+in the successor set following a FENCE before any operation in the predecessor set preceding the
+FENCE
