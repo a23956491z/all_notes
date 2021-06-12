@@ -259,10 +259,30 @@ SYSTEM instructions
 `ECALL` is make a system call.
 `EBREAK` is used by debuggers to create a break point.
 
-## Compare to MIPS
+# Compare to MIPS
 
-### Instruction difference
+## Format
+### Function code 
+MIPS only has function code in **R-format**
+RISC-V has function code in most formats(except for U-type and J-type)
+
+### Immediate
+MIPS only has immediate value in **I-format**
+RISC-V has immediate value in most formats (except for R-type)
+
+### Register to Register format
+MIPS has shift amount in R-format allow
+
+### Instruction
 1. Pseudo-instuctions
+
+## Memory
+
+### Endian
+RISC-V is little-endian
+
+MIPS in early is big-endian
+Recent MIPS is bi-endianness.
 
 ### Pros & Cons
 MIPS
