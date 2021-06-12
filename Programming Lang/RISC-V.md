@@ -201,4 +201,13 @@ the `FENCE` instruction is used to order device I/O and memory accesses as viewe
 
 >Informally, no other RISC-V hart or external device can observe any operation
 in the successor set following a FENCE before any operation in the predecessor set preceding the
-FENCE
+
+## Others
+### Contorl and Status Register
+
+### Environment call and break point
+![](https://i.imgur.com/LxCGv9W.png)
+
+`ECALL` is make a system call.
+`EBREAK` is used by debuggers to create a break point.
+## Compare to MIPS
