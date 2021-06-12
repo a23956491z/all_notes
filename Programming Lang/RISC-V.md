@@ -279,7 +279,7 @@ MIPS is always 32 registers.
 ![](https://d3i71xaburhd42.cloudfront.net/097d9b196e215e2b65fabf8c94271d4075571c55/96-Table18.2-1.png)
 **Figure. RISC-V register convention**
 
-In user convention, RISC-V has more saved register & function arguments. And MIPS 
+In user convention, RISC-V has more saved register & function arguments. And MIPS has more temporaries.
 ---
 ## Format
 ### Function code 
