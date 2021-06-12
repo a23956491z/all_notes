@@ -281,6 +281,8 @@ For resource-constrained embedded applications, RICS-V have RV32E subset to RV32
 
 MIPS is always 32 registers.
 
+### Architecutre
+Length of Instruction for RISV-V 
 ### Register names
 ![](https://www.researchgate.net/profile/David-Fang-3/publication/34498148/figure/tbl7/AS:669422343684132@1536614132657/1-MIPS-register-conventions.png)
 **Figure. MIPS register convention**
@@ -336,18 +338,21 @@ Abosulut access can be achived by combining `LUI` and `JALR` to access any addre
 In `JAL`, MIPS always save return addr to *ra*.
 However, RISC-V allows user to assign register to store save return addr, which make calling milicode routine possible(like epilogue & prologue).
 
+### Alignment
+RISC-V allows unaligned memory access.
+Memory access in MIPS is always had to be aligned.
 
 ---
 ### Pros & Cons
 MIPS
 * Pros:
-	1. Convention
-	2. Newbie friendly : MIPS would check 
+	1. Convention : jump instructions wouldn't need to assign register to place return address.
+	2. Newbie friendly : MIPS would check overflow by itself and we don't need to check it by ourself.
 * Cons:
 
 RISC-V
 * Pros:
-	1. 
+	1. Flexibility : We can decide whether to use overflow check or not and have capibility to construct milicode routine.
 * Cons:
 
 
