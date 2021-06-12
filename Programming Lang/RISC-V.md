@@ -43,6 +43,7 @@ add 	t0, t1, t2;
 bltu 	t0, t1, overflow; # branch less than unsigned
 ```
 
+---
 ## Register Instructions
 ### I-type
 ![](https://i.imgur.com/TLRJBhu.png)
@@ -157,16 +158,27 @@ RISC-V : Include arithmetic comparison operations between two registers.
 x86, ARM : used condition codes
 MIPS : Compare one register against zero , compare two registers  inequality 
 
+---
 ## Memory Instructions
 ### Load and Store Instructions
 RV32I : load-store architecture
 provide 32-bit user addr space and **byte-addressed **and **little-endian**
 
-> Loads with a destination of x0 must still raise any exceptions and cause any other side effects even though the load value is discarded.
-
 > bi-endianness: MIPS
 > can switch to big-endian and little-endian
 
+![](https://i.imgur.com/VMLTOml.png)
 
+* load and store transfer a value between the registers and memory
+* 12-bit sign-extended offset is adding to register *rs1* 
 
+Load:
+* **I-type**
+* Copy a value from memory to register *rd*
+* `LW` load a 32-bit value from memory into *rd*
+* `LH` load a 16-bit value from memor
+
+Store:
+* **S-type**
+* Copy the value in register *rs2* to memory.
 
