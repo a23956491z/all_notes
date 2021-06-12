@@ -276,13 +276,18 @@ Instruction Set Architecture of MIPS and RISC-V are both RISC, and x86 and ARM a
 ### Open source
 RISC-V is open source and MIPS isn't.
 
-### Resource-Constrained
+
+
+### Architecutre
+Length of Instruction in RISV-V are variable and has multiple instruction length version to deal with instruction unaligned problem.
+
+Instruction length in MIPS is fixed.
+
+
 For resource-constrained embedded applications, RICS-V have RV32E subset to RV32, which only has 16 registers.
 
 MIPS is always 32 registers.
 
-### Architecutre
-Length of Instruction for RISV-V 
 ### Register names
 ![](https://www.researchgate.net/profile/David-Fang-3/publication/34498148/figure/tbl7/AS:669422343684132@1536614132657/1-MIPS-register-conventions.png)
 **Figure. MIPS register convention**
@@ -315,8 +320,6 @@ In MIPS J-format, we have 26 bit addr value
 ### Register to Register format
 MIPS has shift amount in R-format
 RISC-V hasn't.
-
-
 
 
 ---
@@ -362,3 +365,4 @@ https://riscv.org/wp-content/uploads/2017/05/riscv-spec-v2.2.pdf
 https://www.csie.ntu.edu.tw/~cyy/courses/assembly/07fall/assignments/final/reports/arm_mips.pdf
 https://www.tutortecho.com/post/ic-design-%E4%BD%95%E8%AC%82control-status-register-csr
 https://max.cs.kzoo.edu/cs230/Resources/MIPS/MachineXL/InstructionFormats.html
+https://www.zhihu.com/question/325968121
