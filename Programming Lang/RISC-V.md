@@ -202,8 +202,9 @@ the `FENCE` instruction is used to order device I/O and memory accesses as viewe
 >Informally, no other RISC-V hart or external device can observe any operation
 in the successor set following a FENCE before any operation in the predecessor set preceding the
 
-## Others
-### Contorl and Status Register
+
+## Contorl and Status Register
+### CSR instructions
 SYSTEM instructions
 * access system functionality that need privilege.
 * Using I-type format.
@@ -214,7 +215,7 @@ SYSTEM instructions
 * atomically swaps values in CSRs and integer registers.
 * Reads the value of CSR, zero-extends to XLEN bits, writing it to integer register *rd*.
 * Initial value in *rs1* is written to CSR.
-* if *rd*=*x0* instruction would not read CSR and stop.
+
 
 `CSRRS`(Atomic Read and Set Bits in CSR)
 * reads the value of CSR, zero-extends to XLEN bits, writing it to integer register *rd*.
@@ -226,10 +227,15 @@ SYSTEM instructions
 * Initial value in *rs1* is a bit mask specifies bit positions to be **clear** in CSR.
 * Any bit that is High  in *rs1* would make corresponding bit to be clear in CSR, other bits are unaffected.
 
-> if *rs1=x0* would cause any side effect
 `CSRRWI` `CSRRSI` `CSRRCI` 
 * Immediate version to other CSR instructions.
-* 
+* zero-extending 5-bit unsigned immediate 
+
+> if *rd*=*x0* instruction would not read CSR and stop.
+> if *rs1=x0*, would not cause any side effects even to read-only CSRs.
+> if immediate field in `CSRRSI` `CSRRCI` is zero, would not cause any side effects as *rs1=x0*
+
+### Timer and Counters
 
 
 ### Environment call and break point
