@@ -152,4 +152,13 @@ Greater/Less and Equal :
 * **Not support** `BLE` & `BLEU`
 * Both can be synthesized by instructions above
 
+Branch design:
+RISC-V : Include arithmetic comparison operations between two registers.
+x86, ARM : used condition codes
+MIPS : Compare one register against zero , compare two registers  inequality 
+
 ## Memory Instructions
+### Load and Store Instructions
+RV32I : load-store architecture
+provide 32-bit user addr space and **byte-addressed **and **little-endian**
+
