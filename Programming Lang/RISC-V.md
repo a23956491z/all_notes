@@ -258,4 +258,21 @@ SYSTEM instructions
 
 `ECALL` is make a system call.
 `EBREAK` is used by debuggers to create a break point.
+
 ## Compare to MIPS
+
+### Instruction difference
+1. Pseudo-instuctions
+
+### Pros & Cons
+MIPS
+* Pros:
+* Cons:
+
+RISC-V
+* Pros:
+* Cons:
+
+
+
+
