@@ -204,6 +204,23 @@ in the successor set following a FENCE before any operation in the predecessor s
 
 ## Others
 ### Contorl and Status Register
+SYSTEM instructions
+* access system functionality that need privilege.
+* Using I-type format.
+
+![](https://i.imgur.com/TseXCWa.png)
+
+`CSRRW` 
+* Atomic read/write CSR
+* atomically swaps values in CSRs and integer registers.
+* Reads the old value of CSR, zero-extends to XLEN bits, writing it to integer register *rd*.
+* if *rd*=*x0* instruction would not read CSR and stop.
+
+`CSRRS`
+* Atomic Read and Set Bits in CSR
+* reads the value of CSR, zero-extends to XLEN bits, writing it to integer register *rd*
+
+
 
 ### Environment call and break point
 ![](https://i.imgur.com/LxCGv9W.png)
