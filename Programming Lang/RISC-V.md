@@ -1,3 +1,12 @@
+# Computer Organization Final Term Report
+Author
+* Student id : 410821238
+* Name : 余慶龍
+* Grade : 資工二
+
+Last Modified Date: 2021/6/13
+
+# RISC-V Review
 ## Preview
 Have 31 registers (x1-x31)
 * x0: constant 0
@@ -280,11 +289,16 @@ MIPS is always 32 registers.
 **Figure. RISC-V register convention**
 
 In user convention, RISC-V has more saved register & function arguments. And MIPS has more temporaries.
+
 ---
 ## Format
 ### Function code 
 MIPS only has function code in **R-format**
 RISC-V has function code in most formats(except for U-type and J-type)
+
+In R-foramt:
+RISC-V has two stage of function code and provide 10 bits in total.
+MIPS has one function code.
 
 ### Immediate
 MIPS only has immediate value in **I-format**
@@ -327,6 +341,7 @@ RISC-V
 
 ---
 # Reference
+https://riscv.org/wp-content/uploads/2017/05/riscv-spec-v2.2.pdf
 https://www.csie.ntu.edu.tw/~cyy/courses/assembly/07fall/assignments/final/reports/arm_mips.pdf
 https://www.tutortecho.com/post/ic-design-%E4%BD%95%E8%AC%82control-status-register-csr
 https://max.cs.kzoo.edu/cs230/Resources/MIPS/MachineXL/InstructionFormats.html
