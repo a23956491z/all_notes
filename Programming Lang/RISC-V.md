@@ -263,6 +263,24 @@ SYSTEM instructions
 Instruction Set Architecture of MIPS and RISC-V are both RISC, and x86 and ARM are CISC.
 
 
+## General
+### Open source
+RISC-V is open source and MIPS isn't.
+
+### Resource-Constrained
+For resource-constrained embedded applications, RICS-V have RV32E subset to RV32, which only has 16 registers.
+
+MIPS is always 32 registers.
+
+### Register names
+![](https://www.researchgate.net/profile/David-Fang-3/publication/34498148/figure/tbl7/AS:669422343684132@1536614132657/1-MIPS-register-conventions.png)
+**Figure. MIPS register convention**
+
+![](https://d3i71xaburhd42.cloudfront.net/097d9b196e215e2b65fabf8c94271d4075571c55/96-Table18.2-1.png)
+**Figure. RISC-V register convention**
+
+In user convention, RISC-V has more saved register & function arguments. And MIPS 
+---
 ## Format
 ### Function code 
 MIPS only has function code in **R-format**
@@ -280,9 +298,8 @@ RISC-V hasn't.
 
 
 
-### Instruction
-1. Pseudo-instuctions
 
+---
 ## Memory
 
 ### Endian
@@ -293,8 +310,11 @@ Recent MIPS is bi-endianness.
 
 ### Memory access
 MIPS only allow pc-relative access.
-RISC-V have both pc-relative access and adscan combine `LUI` and `JALR` to access any absolute 
 
+RISC-V have both pc-relative access and absolute address access.
+Abosulut access can be achived by combining `LUI` and `JALR` to access any address in 32-bit range.
+
+---
 ### Pros & Cons
 MIPS
 * Pros:
@@ -305,9 +325,8 @@ RISC-V
 * Cons:
 
 
-
-
-### Reference
+---
+# Reference
 https://www.csie.ntu.edu.tw/~cyy/courses/assembly/07fall/assignments/final/reports/arm_mips.pdf
 https://www.tutortecho.com/post/ic-design-%E4%BD%95%E8%AC%82control-status-register-csr
 https://max.cs.kzoo.edu/cs230/Resources/MIPS/MachineXL/InstructionFormats.html
