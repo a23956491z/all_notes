@@ -162,3 +162,11 @@ MIPS : Compare one register against zero , compare two registers  inequality
 RV32I : load-store architecture
 provide 32-bit user addr space and **byte-addressed **and **little-endian**
 
+> Loads with a destination of x0 must still raise any exceptions and cause any other side effects even though the load value is discarded.
+
+> bi-endianness: MIPS
+> can switch to big-endian and little-endian
+
+
+
+
