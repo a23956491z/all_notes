@@ -236,7 +236,22 @@ SYSTEM instructions
 > if immediate field in `CSRRSI` `CSRRCI` is zero, would not cause any side effects as *rs1=x0*
 
 ### Timer and Counters
+![](https://i.ibb.co/sK71QZq/Screenshot-32.png)
 
+
+`RDCYCLE` pseudo-instruction:
+* reads the low XLEN bits of *cycle* CSR
+* *cycle* CSR : a count of the number of clock cycles executed by the processor core
+* `RDCYCLEH` reads bits 63-32 of same cycle counter.
+
+`RDTIME` pseudo-instruction:
+* reads the low XLEN bits of *time* CSR
+* *time* CSR : counts clock real time (from arbitrary start time)
+* `RDCYCLEH` reads bits 63-32 of same time counter.
+
+`RDINSTRET` pseudo-instruction:
+* reads the low XLEN bits of *instret* CSR
+* *instret* CSR : count the number of instructions retired by this hart(from arbitrary start time).
 
 ### Environment call and break point
 ![](https://i.imgur.com/LxCGv9W.png)
