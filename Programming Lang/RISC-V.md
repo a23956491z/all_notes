@@ -290,6 +290,10 @@ MIPS is always 32 registers.
 
 In user convention, RISC-V has more saved register & function arguments. And MIPS has more temporaries.
 
+### Arithmetic Overflow 
+MIPS produce overflow exception for signed addition instruciton.
+RISC-V would not check overflow and user should check it manually.
+
 ---
 ## Format
 ### Function code 
@@ -328,14 +332,22 @@ MIPS only allow pc-relative access.
 RISC-V have both pc-relative access and absolute address access.
 Abosulut access can be achived by combining `LUI` and `JALR` to access any address in 32-bit range.
 
+### Jump
+In `JAL`, MIPS always save return addr to *ra*.
+However, RISC-V allows user to assign register to store save return addr, which make calling milicode routine possible(like epilogue & prologue).
+
+
 ---
 ### Pros & Cons
 MIPS
 * Pros:
+	1. Convention
+	2. Newbie friendly : MIPS would check 
 * Cons:
 
 RISC-V
 * Pros:
+	1. 
 * Cons:
 
 
