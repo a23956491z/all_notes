@@ -395,7 +395,9 @@ RISC-V
 For instance, epilogue and prologue are necessary for procedure calling, using in almost every procedure is the best practice. If we can make it to milicode routine like subprocedure can reduce the lines of code and advance code reuse, which is make code more liable to  maintain in software engineering. In terms of MIPS, construct code this way is not viable due to we can't assign register to put procudure address.
 
 Regarding memory aspect, though the usage of combining `LUI` and `JALR` to jump make the regular jump process complex, by doing this, 
-we have the capability to 
+we have the capability of addressing to anywhere in memory. Maybe we are not always requiring this feature, but this advancement give us more powful memory access.
+
+From the previous discussion, I showd the interest in RISC-V and in the changeable feature the higher avaliability make more possibility in software. MIPS can preserve the convention and being newbie friendly as well. Because this two kind ISA are different in usage, RISC-V might better in structre engineering, on another hand, MIPS is a great introduction of ISA to student. In Shakespeare's play, Hamlet says "there is nothing eit"
 
 ---
 # Reference
