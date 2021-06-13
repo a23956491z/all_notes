@@ -270,6 +270,7 @@ SYSTEM instructions
 `ECALL` is make a system call.
 `EBREAK` is used by debuggers to create a break point.
 
+---
 # Compare to MIPS
 Instruction Set Architecture of MIPS and RISC-V are both RISC, and x86 and ARM are CISC.
 
@@ -302,6 +303,15 @@ In user register convention, RISC-V has more saved register & function arguments
 ### Arithmetic Overflow 
 MIPS produce overflow exception for signed addition instruciton.
 RISC-V would not check overflow and user should check it manually.
+
+---
+## Pipeline
+### Branch prediction
+
+### Branch delay slot
+
+### Conditional branch
+
 
 ---
 ## Format
@@ -362,26 +372,31 @@ RISC-V allows unaligned memory access.
 Memory access in MIPS is always had to be aligned.
 
 ---
-### Pros & Cons
+## Pros & Cons
 MIPS
 * Pros:
 	1. Convention : jump instructions wouldn't need to assign register to place return address.
 	2. Newbie friendly : MIPS would check overflow by itself and we don't need to check it by ourself.
 * Cons:
-	1. Jump limit : MIPS is limit
+	1. Jump limit : MIPS is limited in 16-bit offset jump and must with pc-relative address.
 
 RISC-V
 * Pros:
 	1. Flexibility : We can decide whether to use overflow check or not and have capibility to construct milicode routine.
-	2. Jump range : Jump and branch are possible to access any where in 32-bit range.
+	2. Jump  Advancement : Jump and branch are possible to access any where in 32-bit range. And can both jump with pc-relative and absolute address.
+	3. Performance : MIPS built with branch delay slot which make multisequential-system more complex and reduce the performance.
 * Cons:
 	1. Complexity : To increase the flexibility and performance, some instruction should use with combination.(e.g. `LUI` and `JALR`) 
 
 
 ---
 # Reference
-https://riscv.org/wp-content/uploads/2017/05/riscv-spec-v2.2.pdf
-https://www.csie.ntu.edu.tw/~cyy/courses/assembly/07fall/assignments/final/reports/arm_mips.pdf
+[The RISC-V Instruction Set Manual](https://riscv.org/wp-content/uploads/2017/05/riscv-spec-v2.2.pdf)
+[Computer Organization final report](https://www.csie.ntu.edu.tw/~cyy/courses/assembly/07fall/assignments/final/reports/arm_mips.pdf)
 https://www.tutortecho.com/post/ic-design-%E4%BD%95%E8%AC%82control-status-register-csr
 https://max.cs.kzoo.edu/cs230/Resources/MIPS/MachineXL/InstructionFormats.html
 https://www.zhihu.com/question/325968121
+https://courses.cs.washington.edu/courses/cse378/02au/Lectures/07controlI.pdf
+https://zh.wikipedia.org/wiki/MIPS%E6%9E%B6%E6%A7%8B
+https://zh.wikipedia.org/wiki/RISC-V
+https://chi_gitbook.gitbooks.io/personal-note/content/representing_instructions.html
