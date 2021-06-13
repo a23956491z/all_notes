@@ -315,7 +315,7 @@ RISC-V would not check overflow and user should check it manually.
 ### Branch delay slot
 MIPS has a delay slot after branch.
 
-RISC-V and other newer RISC design omit branch delay slot.
+RISC-V and other newer RISC design omit branch delay slot. By the mature of branch prediction, with branch predictors, misprediciton is by far lower than the number of branches with a nop delay slot and is accordingly more efficient.
 
 ### Conditional branch
 RISC-V directly compares two register to determine whether to branch.
@@ -426,7 +426,10 @@ From the previous discussion, I showd the interest in RISC-V and in the changeab
 [\[IC design\] 何謂control status register(csr)](https://www.tutortecho.com/post/ic-design-%E4%BD%95%E8%AC%82control-status-register-csr)
 [MIPS Instruction Formats](https://max.cs.kzoo.edu/cs230/Resources/MIPS/MachineXL/InstructionFormats.html)
 [知乎 : ARM、MIPS、RISC-V三种指令集本质上有何区别？](https://www.zhihu.com/question/325968121)
-[lecutre slides : MIPS controll](https://courses.cs.washington.edu/courses/cse378/02au/Lectures/07controlI.pdf)
+[lecutre slides : MIPS control](https://courses.cs.washington.edu/courses/cse378/02au/Lectures/07controlI.pdf)
+ [leture slides : MIPS control instructions](http://people.ee.duke.edu/~sorin/ece152/lectures/2.2-isa.pdf)
 [Wikipedia : MIPS](https://zh.wikipedia.org/wiki/MIPS%E6%9E%B6%E6%A7%8B)
 [Wikipedia : RISC-V](https://zh.wikipedia.org/wiki/RISC-V)
 [Chi_gitbook : Representing Instructions](https://chi_gitbook.gitbooks.io/personal-note/content/representing_instructions.html)
+ [Why is the branch delay slot deprecated or obsolete?](https://stackoverflow.com/questions/54724410/why-is-the-branch-delay-slot-deprecated-or-obsolete)
+ [leture slides : MIPS pipeline](https://eecs.oregonstate.edu/research/vlsi/teaching/ECE472_FA12/chapter4_pipelining_END_FA11.pdf)
