@@ -389,14 +389,19 @@ RISC-V
 	1. Complexity : To increase the flexibility and performance, some instruction should use with combination.(e.g. `LUI` and `JALR`) 
 
 
+## Personal Thought
+A rose has its thorns. MIPS jump instructions give us convention to use but sacrifice the jump range. Despite this, I  prefer powerfulness to  "easy to use". RISC-V has better performance and more functional possibility which allows me to do any thing I want and would not be limit by ISA.
+
+For instance, epilogue and prologue are necessary for procedure calling, using in almost every procedure is best practice.
+
 ---
 # Reference
 [The RISC-V Instruction Set Manual](https://riscv.org/wp-content/uploads/2017/05/riscv-spec-v2.2.pdf)
 [Computer Organization final report](https://www.csie.ntu.edu.tw/~cyy/courses/assembly/07fall/assignments/final/reports/arm_mips.pdf)
-https://www.tutortecho.com/post/ic-design-%E4%BD%95%E8%AC%82control-status-register-csr
-https://max.cs.kzoo.edu/cs230/Resources/MIPS/MachineXL/InstructionFormats.html
-https://www.zhihu.com/question/325968121
-https://courses.cs.washington.edu/courses/cse378/02au/Lectures/07controlI.pdf
-https://zh.wikipedia.org/wiki/MIPS%E6%9E%B6%E6%A7%8B
-https://zh.wikipedia.org/wiki/RISC-V
-https://chi_gitbook.gitbooks.io/personal-note/content/representing_instructions.html
+[\[IC design\] 何謂control status register(csr)](https://www.tutortecho.com/post/ic-design-%E4%BD%95%E8%AC%82control-status-register-csr)
+[MIPS Instruction Formats](https://max.cs.kzoo.edu/cs230/Resources/MIPS/MachineXL/InstructionFormats.html)
+[知乎 : ARM、MIPS、RISC-V三种指令集本质上有何区别？](https://www.zhihu.com/question/325968121)
+[lecutre slides : MIPS controll](https://courses.cs.washington.edu/courses/cse378/02au/Lectures/07controlI.pdf)
+[Wikipedia : MIPS](https://zh.wikipedia.org/wiki/MIPS%E6%9E%B6%E6%A7%8B)
+[Wikipedia : RISC-V](https://zh.wikipedia.org/wiki/RISC-V)
+[Chi_gitbook : Representing Instructions](https://chi_gitbook.gitbooks.io/personal-note/content/representing_instructions.html)
