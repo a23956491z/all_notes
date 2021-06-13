@@ -139,7 +139,7 @@ Standard software calling convention:
 * *x5* as an alternate link register.
 * Alternate link register is used to perform calling milicode routine like epilogue and prologue
 
-
+Because our offset encdoded in multiple of 2 rather than multiple of 4.
 **Misaligned instruction fetch exception** would be generate if addr is not aligned to a four-byte boundary.
 
 ### B-type
@@ -207,6 +207,8 @@ RISC-V ISA supports multiple concurrent threads within single addr space.
 Each RISC-V hardware thread *hart*, has it's user register state .
 
 the `FENCE` instruction is used to order device I/O and memory accesses as viewed by other RISC-V harts and external devices or coprocessors.
+
+Basically, RISC-V doesn't promise the order of accesses in multiple I/O devices and threads, and `FENCE` are invented to determine the order.
 
 >Informally, no other RISC-V hart or external device can observe any operation
 in the successor set following a FENCE before any operation in the predecessor set preceding the
@@ -288,14 +290,14 @@ For resource-constrained embedded applications, RICS-V have RV32E subset to RV32
 
 MIPS is always 32 registers.
 
-### Register names
+### Register convetion
 ![](https://www.researchgate.net/profile/David-Fang-3/publication/34498148/figure/tbl7/AS:669422343684132@1536614132657/1-MIPS-register-conventions.png)
 **Figure. MIPS register convention**
 
 ![](https://d3i71xaburhd42.cloudfront.net/097d9b196e215e2b65fabf8c94271d4075571c55/96-Table18.2-1.png)
 **Figure. RISC-V register convention**
 
-In user convention, RISC-V has more saved register & function arguments. And MIPS has more temporaries.
+In user register convention, RISC-V has more saved register & function arguments. On another hand, MIPS has more temporaries.
 
 ### Arithmetic Overflow 
 MIPS produce overflow exception for signed addition instruciton.
@@ -342,6 +344,7 @@ In `JAL`, MIPS always save return addr to *ra*.
 However, RISC-V allows user to assign register to store save return addr, which make calling milicode routine possible(like epilogue & prologue).
 
 ### Alignment
+Memory 
 RISC-V allows unaligned memory access.
 Memory access in MIPS is always had to be aligned.
 
@@ -352,6 +355,7 @@ MIPS
 	1. Convention : jump instructions wouldn't need to assign register to place return address.
 	2. Newbie friendly : MIPS would check overflow by itself and we don't need to check it by ourself.
 * Cons:
+* 
 
 RISC-V
 * Pros:
