@@ -6,6 +6,8 @@ Author
 
 Last Modified Date: 2021/6/13
 
+
+
 # RISC-V Review
 ## Preview
 Have 31 registers (x1-x31)
@@ -271,6 +273,10 @@ SYSTEM instructions
 `EBREAK` is used by debuggers to create a break point.
 
 ---
+<div style="page-break-after: always; visibility: hidden"> 
+\pagebreak 
+</div>
+
 # Compare to MIPS
 Instruction Set Architecture of MIPS and RISC-V are both RISC, and x86 and ARM are CISC.
 
@@ -397,9 +403,13 @@ For instance, epilogue and prologue are necessary for procedure calling, using i
 Regarding memory aspect, though the usage of combining `LUI` and `JALR` to jump make the regular jump process complex, by doing this, 
 we have the capability of addressing to anywhere in memory. Maybe we are not always requiring this feature, but this advancement give us more powful memory access.
 
-From the previous discussion, I showd the interest in RISC-V and in the changeable feature the higher avaliability make more possibility in software. MIPS can preserve the convention and being newbie friendly as well. Because this two kind ISA are different in usage, RISC-V might better in structre engineering, on another hand, MIPS is a great introduction of ISA to student. In Shakespeare's play, Hamlet says "there is nothing eit"
+From the previous discussion, I showd the interest in RISC-V and in the changeable feature the higher avaliability make more possibility in software. MIPS can preserve the convention and being newbie friendly as well. Because this two kind ISA are different in usage, RISC-V might better in structre engineering, on another hand, MIPS is a great introduction of ISA to student. In Shakespeare's play, Hamlet says "there is nothing either good or bad but thinking makes it so."(Weller, Hamlet, Act II, Scene II). As Hamlet's saying, they are both elaborate architecture, but no one is absolutely better. The dazzling point of itself depend where to shine.
 
 ---
+<div style="page-break-after: always; visibility: hidden"> 
+\pagebreak 
+</div>
+
 # Reference
 [The RISC-V Instruction Set Manual](https://riscv.org/wp-content/uploads/2017/05/riscv-spec-v2.2.pdf)
 [Computer Organization final report](https://www.csie.ntu.edu.tw/~cyy/courses/assembly/07fall/assignments/final/reports/arm_mips.pdf)
