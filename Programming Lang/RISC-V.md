@@ -305,6 +305,10 @@ RISC-V would not check overflow and user should check it manually.
 
 ---
 ## Format
+MIPS instruction format:
+![](https://i.imgur.com/5BCLs5E.png)
+
+
 ### Function code 
 MIPS only has function code in **R-format**
 RISC-V has function code in most formats(except for U-type and J-type)
@@ -323,6 +327,14 @@ In MIPS J-format, we have 26 bit addr value
 MIPS has shift amount in R-format
 RISC-V hasn't.
 
+### Instruction Combination by format
+Due to MIPS I-format has more immediate bits, it has no other space reserver to *function code* . If force to put *function code* in it, it would not have enough space to put 2 5-bit register address.
+
+Therefore, `SLLI Rd, Rs, immediate` is forced to split in two part :
+```Assembly
+LDR 	Ri, immediate;
+SLLI 	Rd, Rs, Ri;
+```
 
 ---
 ## Memory
@@ -344,7 +356,8 @@ In `JAL`, MIPS always save return addr to *ra*.
 However, RISC-V allows user to assign register to store save return addr, which make calling milicode routine possible(like epilogue & prologue).
 
 ### Alignment
-Memory 
+Memory  in RISC-V are byte-addressed rather than 4 byte-aligned in MIPS.
+
 RISC-V allows unaligned memory access.
 Memory access in MIPS is always had to be aligned.
 
