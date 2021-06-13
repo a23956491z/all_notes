@@ -426,6 +426,7 @@ we have the capability of addressing to anywhere in memory. Maybe we are not alw
 From the previous discussion, I showd the interest in RISC-V and in the changeable feature the higher avaliability make more possibility in software. MIPS can preserve the convention and being newbie friendly as well. Because this two kind ISA are different in usage, RISC-V might better in structre engineering, on another hand, MIPS is a great introduction of ISA to student. In Shakespeare's play, Hamlet says "there is nothing either good or bad but thinking makes it so."(Weller, Hamlet, Act II, Scene II). As Hamlet's saying, they are both elaborate architecture, but no one is absolutely better. The dazzling point of itself depend where to shine.
 
 ---
+
 <div style="page-break-after: always; visibility: hidden"> 
 \pagebreak 
 </div>
