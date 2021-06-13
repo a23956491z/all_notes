@@ -313,15 +313,20 @@ RISC-V would not check overflow and user should check it manually.
 ---
 ## Pipeline
 ### Branch delay slot
+MIPS has a delay slot after branch.
+
+RISC-V and other newer RISC design omit branch delay slot.
 
 ### Conditional branch
 RISC-V directly compares two register to determine whether to branch.
 
 MIPS separeate condition and branch.
-if we want to use `BLTI` we should implement like this:
+Branch depends on equality : `beq` `bne`
+Or compare register to zero and branch : `bgtz` `bgez` `bltz` `blez`
+and if we want to use `blt` we should implement like this in MIPS:
 ```
-slti $s2, $s1, 10
-bnez $s2, $
+slt		$t0, $s0, $s1
+bnez	$t0, $target
 ```
 
 ---
