@@ -330,7 +330,7 @@ RISC-V hasn't.
 ### Instruction Combination by format
 Due to MIPS I-format has more immediate bits, it has no other space reserver to *function code* . If force to put *function code* in it, it would not have enough space to put 2 5-bit register address.
 
-Therefore, `SLLI Rd, Rs, immediate` is forced to split in two part :
+Therefore, `SLLI Rd, Rs, immediate` is forced to split in two part by requirements of *function code* :
 ```Assembly
 LDR 	Ri, immediate;
 SLLI 	Rd, Rs, Ri;
@@ -368,12 +368,14 @@ MIPS
 	1. Convention : jump instructions wouldn't need to assign register to place return address.
 	2. Newbie friendly : MIPS would check overflow by itself and we don't need to check it by ourself.
 * Cons:
-* 
+	1. Jump limit : MIPS is limit
 
 RISC-V
 * Pros:
 	1. Flexibility : We can decide whether to use overflow check or not and have capibility to construct milicode routine.
+	2. Jump range : Jump and branch are possible to access any where in 32-bit range.
 * Cons:
+	1. Complexity : To increase the flexibility and performance, some instruction should use with combination.(e.g. `LUI` and `JALR`) 
 
 
 ---
