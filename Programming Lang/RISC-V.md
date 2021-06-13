@@ -313,26 +313,18 @@ RISC-V would not check overflow and user should check it manually.
 ---
 ## Pipeline
 ### Branch delay slot
-RISC-V and other newer RISC design omit branch delay slot. By the mature of branch prediction, with branch predictors, misprediciton is by far lower than the number of branches with a nop delay slot and is accordingly more efficient.
-
 To prevent **Control Harzard** in pipeline: e.g.
 ![](https://i.imgur.com/0Z1uwgQ.png)
 
-MIPS **Delayed** branches and has a delay slot after branch.
-With stall : 
-![](https://i.imgur.com/N4PddyV.png)
 
-### Conditional branch
-RISC-V directly compares two register to determine whether to branch.
 
-MIPS separeate condition and branch.
-Branch depends on equality : `beq` `bne`
-Or compare register to zero and branch : `bgtz` `bgez` `bltz` `blez`
-and if we want to use `blt` we should implement like this in MIPS:
-```
-slt		$t0, $s0, $s1
-bnez	$t0, $target
-```
+MIPS **Delayed** branches and has a delay slot after branch.(or we call it "Static prediection"):
+![](https://i.imgur.com/3Jc1qLk.png)
+
+
+RISC-V and other newer RISC design omit branch delay slot. By the mature of branch prediction(dynamic prediction), with branch predictors, misprediciton is by far lower than the number of branches with a nop delay slot and is accordingly more efficient.
+
+As we discussed above, RISC-V has better performance in many branches situation.
 
 ---
 ## Format
@@ -365,6 +357,19 @@ Therefore, `SLLI Rd, Rs, immediate` is forced to split in two part by requiremen
 ```Assembly
 LDR 	Ri, immediate;
 SLLI 	Rd, Rs, Ri;
+```
+
+
+### Conditional branch
+RISC-V directly compares two register to determine whether to branch.
+
+MIPS separeate condition and branch.
+Branch depends on equality : `beq` `bne`
+Or compare register to zero and branch : `bgtz` `bgez` `bltz` `blez`
+and if we want to use `blt` we should implement like this in MIPS:
+```
+slt		$t0, $s0, $s1
+bnez	$t0, $target
 ```
 
 ---
@@ -438,3 +443,4 @@ From the previous discussion, I showd the interest in RISC-V and in the changeab
 [Chi_gitbook : Representing Instructions](https://chi_gitbook.gitbooks.io/personal-note/content/representing_instructions.html)
  [Why is the branch delay slot deprecated or obsolete?](https://stackoverflow.com/questions/54724410/why-is-the-branch-delay-slot-deprecated-or-obsolete)
  [leture slides : MIPS pipeline](https://eecs.oregonstate.edu/research/vlsi/teaching/ECE472_FA12/chapter4_pipelining_END_FA11.pdf)
+[Introduction to MIPS processor](https://www.scss.tcd.ie/~jones/vivio/dlx/dlxtutorial.htm)
