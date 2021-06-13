@@ -390,9 +390,12 @@ RISC-V
 
 
 ## Personal Thought
-A rose has its thorns. MIPS jump instructions give us convention to use but sacrifice the jump range. Despite this, I  prefer powerfulness to  "easy to use". RISC-V has better performance and more functional possibility which allows me to do any thing I want and would not be limit by ISA.
+"A rose has its thorns". MIPS jump instructions give us convention to use but sacrifice the jump range. Despite this, I  prefer powerfulness to  "easy to use". RISC-V has better performance and more functional possibility which allows me to do any thing I want and would not be limit by ISA.
 
-For instance, epilogue and prologue are necessary for procedure calling, using in almost every procedure is best practice.
+For instance, epilogue and prologue are necessary for procedure calling, using in almost every procedure is the best practice. If we can make it to milicode routine like subprocedure can reduce the lines of code and advance code reuse, which is make code more liable to  maintain in software engineering. In terms of MIPS, construct code this way is not viable due to we can't assign register to put procudure address.
+
+Regarding memory aspect, though the usage of combining `LUI` and `JALR` to jump make the regular jump process complex, by doing this, 
+we have the capability to 
 
 ---
 # Reference
