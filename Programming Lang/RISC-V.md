@@ -85,7 +85,7 @@ Combine `JALR` and `LUI` can jump anywhere in 32-bit absolute addr range.
 `LUI` load top 20 bits to register.
 `JARL` add in lower bits
 
-See [[RISC-V#J-type instrcutions]] for `JAL` information.
+See [[RISC-V#J-type]] for `JAL` information.
 ### U-type 
 
 ![](https://i.imgur.com/5ZqpAc6.png)
@@ -312,12 +312,17 @@ RISC-V would not check overflow and user should check it manually.
 
 ---
 ## Pipeline
-### Branch prediction
-
 ### Branch delay slot
 
 ### Conditional branch
+RISC-V directly compares two register to determine whether to branch.
 
+MIPS separeate condition and branch.
+if we want to use `BLTI` we should implement like this:
+```
+slti $s2, $s1, 10
+bnez $s2, $
+```
 
 ---
 ## Format
@@ -362,9 +367,9 @@ MIPS in early is big-endian
 Recent MIPS is bi-endianness.
 
 ### Memory access
-MIPS only allow pc-relative access.
+MIPS only allow pc-relative access(in conditional jump : branch).
 
-RISC-V have both pc-relative access and absolute address access.
+RISC-V have both pc-relative access and absolute address access for all jumps and branches.
 Abosulut access can be achived by combining `LUI` and `JALR` to access any address in 32-bit range.
 
 ### Jump
