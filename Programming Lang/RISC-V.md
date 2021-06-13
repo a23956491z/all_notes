@@ -315,7 +315,13 @@ RISC-V would not check overflow and user should check it manually.
 ### Branch delay slot
 RISC-V and other newer RISC design omit branch delay slot. By the mature of branch prediction, with branch predictors, misprediciton is by far lower than the number of branches with a nop delay slot and is accordingly more efficient.
 
-MIPS has a delay slot after branch.
+To prevent **Control Harzard** in pipeline: e.g.
+![](https://i.imgur.com/0Z1uwgQ.png)
+
+MIPS **Delayed** branches and has a delay slot after branch.
+With stall : 
+![](https://i.imgur.com/N4PddyV.png)
+
 ### Conditional branch
 RISC-V directly compares two register to determine whether to branch.
 
