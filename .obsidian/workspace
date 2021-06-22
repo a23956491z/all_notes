@@ -9,19 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Programming Lang/RISC-V.md",
+            "file": "Cyber Security/Network Layer.md",
             "mode": "source"
-          }
-        }
-      },
-      {
-        "id": "06550e514c475029",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Programming Lang/RISC-V.md",
-            "mode": "preview"
           }
         }
       }
@@ -63,7 +52,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 259
+    "width": 259,
+    "collapsed": true
   },
   "right": {
     "id": "77bd3edf5e2bda58",
@@ -79,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Programming Lang/RISC-V.md",
+                "file": "Cyber Security/Network Layer.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,15 +101,15 @@
   },
   "active": "663cfa1ff3a7c292",
   "lastOpenFiles": [
+    "Cyber Security/Network Layer.md",
     "Programming Lang/RISC-V.md",
+    "Cyber Security/Untitled.md",
     "Programming Lang/Untitled.md",
     "Cyber Security/Link Layer.md",
     "Cyber Security/Multiple Access protocols.md",
     "Cyber Security/CTF.md",
     "Cyber Security/LANs.md",
-    "Cyber Security/Untitled.md",
     "Untitled.md",
-    "Cyber Security/Routing.md",
-    "Programming Lang/Python.md"
+    "Cyber Security/Routing.md"
   ]
 }
