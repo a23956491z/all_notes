@@ -129,6 +129,24 @@ build image with dockerfile
 push image to docker hub
 `docker push account_NAME/image_NAME`
 
+## CMD
+run a "full" command
+```dockerfile
+CMD bash
+CMD ["sleep","5"]
+```
+
+## ENTRYPOINT
+give a start of a command
+```dockerfile
+FROM Ubuntu
+
+ENTRYPOINT ["sleep"]
+```
+
+we can use like this:
+`docker run ubuntu-sleeper 10`
+which means
 
 ---
 
