@@ -123,7 +123,11 @@ COPY . /opt/source-code
 ENTRYPOINT FLASK_APP=/opt/source-code/app.py flask run
 ```
 
-build image with d
+build image with dockerfile
+`docker build Dockerfile -t acoount_NAME/image_NAME`
+
+push image to docker hub
+`docker push account_NAME/image_NAME`
 
 
 ---
