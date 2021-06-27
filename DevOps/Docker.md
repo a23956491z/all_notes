@@ -31,17 +31,21 @@ $ sudo docker run docker/whalesay cowsay hello-world!
 ```
 
 # basic 
-
-### RUN
+## RUN
 `docker run `runs a image, if not exist it would download it
 
 run with command
 `docker run ubuntu sleep 5`
 
-run c
+run container in background (detach):
+`docker run -d IMAGE`
+
+attach cotainer in background:
+`docker attach ID/NAME`
+
 execute command in container
 `docker exec ID/NAME COMMAND` 
-### PS
+## PS
 check running container:
 `docker ps`
 check exists container:
@@ -50,7 +54,7 @@ check exists container:
 check downloaded images:
 `docker images`
 
-### stop/remove
+## stop/remove
 stop running container:
 `docker stop ID\NAME`
 remove container:
@@ -61,17 +65,36 @@ remove container by image name:
 download image and not run:
 `docker pull IMAGE`
 
+# More Run
+## TAG
+tag(specific version)
+default tag is *latest*
+run with image and its tag
+`docker run IMAGE:TAG`
 
-docker run -w /home/enip/zawarudo/codebase/backtesting-project -it python:3.8.7
-1. start container:
+## STDIN
+provide input to container
+`docker run -i IMAGE`
+
+iterative container(with input and output)
+`docker run -it IMAGE`
+
 Assign name and allocate pseudo-TTY
 `docker run --name python_test -it python:3.8.7`
-Directly into bash with run
-(-rm automaically remove when exist)
-`docker run --name ubuntu_bash --rm -i -t ubuntu bash`
+## PORT
+
 Expose port
 `docker run -p 8001:80 python:3.8.7 bash`
 
 `docker run -p 81:8888 -w ~ -it with_jupyter python -m jupyterlab --allow-root --ip=0.0.0.0`
+
+
+docker run -w /home/enip/zawarudo/codebase/backtesting-project -it python:3.8.7
+1. start container:
+
+Directly into bash with run
+(-rm automaically remove when exist)
+`docker run --name ubuntu_bash --rm -i -t ubuntu bash`
+
 3. run bash:
 `docker exec -it ubuntu_bash bash`
