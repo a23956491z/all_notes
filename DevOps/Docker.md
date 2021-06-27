@@ -137,7 +137,8 @@ CMD ["sleep","5"]
 ```
 
 ## ENTRYPOINT
-give a start of a command
+only give a start of a command
+need fill argument by user
 ```dockerfile
 FROM Ubuntu
 
@@ -146,7 +147,39 @@ ENTRYPOINT ["sleep"]
 
 we can use like this:
 `docker run ubuntu-sleeper 10`
-which means
+which means `docker run ubuntu-sleeper sleep 10`
+
+provide a default argument
+```dockerfile
+FROM Ubuntu
+
+ENTRYPOINT ["sleep"]
+
+CMD ["5"]
+```
+
+we can even assign entrypoint at run
+`docker run --entrypoint sleep2.0 ubuntu-sleeper 10`
+
+# Network
+![](https://i.imgur.com/OrcoRul.png)
+
+default network use bridge(NAT)
+`docker run ubuntu --network=none;host`
+
+user-defined network
+```bash
+docker network create\
+	--driver bridge \
+	--subnet 182.18.0.0/16
+	custom-isolated-network
+```
+```bash
+docker network ls
+```
+```bash
+docker inspect ID/NAME 
+```
 
 ---
 
