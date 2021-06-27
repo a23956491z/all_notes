@@ -65,6 +65,10 @@ remove  image :
 download image and not run:
 `docker pull IMAGE`
 
+remove with image name:
+```bash
+docker rm $(docker ps -a -f ancestor=mikebirdgeneau/jupyterlab -q)
+```
 # More Run
 ## TAG
 tag(specific version)
@@ -104,6 +108,24 @@ mount host directory to container
 # ENV variable 
 ![](https://i.imgur.com/f4CUfFC.png)
 
+# IMAGE
+dockerfile: automatically make a image
+```dockerfile
+FROM Ubuntu
+RUN apt-get update
+RUN apt-get install python
+
+RUN pip install flask
+RUN pip install flask-mysql
+
+COPY . /opt/source-code
+
+ENTRYPOINT FLASK_APP=/opt/source-code/app.py flask run
+```
+
+build image with d
+
+
 ---
 
 1. start container:
@@ -120,5 +142,9 @@ Directly into bash with run
 run jupyterlab and assign port
 `docker run -p 8001:8888 mikebirdgeneau/jupyterlab`
 
-`docker run -v /opt/app/data:/home/enip/zawarudo/codebase -p 8001:8888 mikebirdgeneau/jupyterlab`
+with volume mapping
+`docker run -v /home/enip/zawarudo/codebase/deep-learning-research:/opt/app/data -p 8001:8888 mikebirdgeneau/jupyterlab`
+
+with automatically remove after exit
+`docker run --rm -v /home/enip/zawarudo/codebase/deep-learning-research:/opt/app/data -p 8001:8888 mikebirdgeneau/jupyterlab`
 
