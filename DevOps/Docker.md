@@ -82,13 +82,28 @@ iterative container(with input and output)
 Assign name and allocate pseudo-TTY
 `docker run --name python_test -it python:3.8.7`
 ## PORT
+![](https://i.imgur.com/AuAjo9b.png)
+every container has it's ip
+mapping container ip:port to host ip:port
 
 Expose port
 `docker run -p 8001:80 python:3.8.7 bash`
 
 `docker run -p 81:8888 -w ~ -it with_jupyter python -m jupyterlab --allow-root --ip=0.0.0.0`
 
+## VOLUME
+![](https://i.imgur.com/kfSmsqk.png)
 
+mount host directory to container
+`docker run -v /opt/datadir:/var/lib/mysql mysql`
+
+
+## LOG
+`docker logs ID/NAME`
+
+# ENV variable 
+
+---
 docker run -w /home/enip/zawarudo/codebase/backtesting-project -it python:3.8.7
 1. start container:
 
