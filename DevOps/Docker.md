@@ -59,7 +59,7 @@ stop running container:
 `docker stop ID\NAME`
 remove container:
 `docker rm ID\NAME`
-remove container by image name:
+remove  image :
 `docker rmi IMAGE`
 
 download image and not run:
@@ -102,9 +102,10 @@ mount host directory to container
 `docker logs ID/NAME`
 
 # ENV variable 
+![](https://i.imgur.com/f4CUfFC.png)
 
 ---
-docker run -w /home/enip/zawarudo/codebase/backtesting-project -it python:3.8.7
+
 1. start container:
 
 Directly into bash with run
@@ -113,3 +114,11 @@ Directly into bash with run
 
 3. run bash:
 `docker exec -it ubuntu_bash bash`
+
+
+# using
+run jupyterlab and assign port
+`docker run -p 8001:8888 mikebirdgeneau/jupyterlab`
+
+`docker run -v /opt/app/data:/home/enip/zawarudo/codebase -p 8001:8888 mikebirdgeneau/jupyterlab`
+
