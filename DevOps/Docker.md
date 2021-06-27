@@ -30,13 +30,37 @@ $ sudo docker run hello-world
 $ sudo docker run docker/whalesay cowsay hello-world!
 ```
 
+# basic 
 
+### RUN
+`docker run `runs a image, if not exist it would download it
+
+run with command
+`docker run ubuntu sleep 5`
+
+run c
+execute command in container
+`docker exec ID/NAME COMMAND` 
+### PS
 check running container:
 `docker ps`
 check exists container:
 `docker ps -a`
+
 check downloaded images:
 `docker images`
+
+### stop/remove
+stop running container:
+`docker stop ID\NAME`
+remove container:
+`docker rm ID\NAME`
+remove container by image name:
+`docker rmi IMAGE`
+
+download image and not run:
+`docker pull IMAGE`
+
 
 docker run -w /home/enip/zawarudo/codebase/backtesting-project -it python:3.8.7
 1. start container:
