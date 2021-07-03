@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "DevOps/Docker.md",
+            "file": "Cyber Security/Linux.md",
             "mode": "source"
           }
         }
@@ -52,7 +52,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 259
+    "width": 209
   },
   "right": {
     "id": "77bd3edf5e2bda58",
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DevOps/Docker.md",
+                "file": "Cyber Security/Linux.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,6 +100,7 @@
   },
   "active": "663cfa1ff3a7c292",
   "lastOpenFiles": [
+    "Cyber Security/Untitled.md",
     "DevOps/Docker.md",
     "conflict-files-obsidian-git.md",
     "DevOps/Git.md",
@@ -107,7 +108,6 @@
     "Programming Tool/Untitled.md",
     "Cyber Security/Network Layer.md",
     "Programming Lang/RISC-V.md",
-    "Cyber Security/Untitled.md",
     "Programming Lang/Untitled.md",
     "Cyber Security/Link Layer.md"
   ]
