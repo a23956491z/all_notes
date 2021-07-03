@@ -1,5 +1,18 @@
 ## Console
-Terminal使用 
+最初的Terminal 直接與System溝通(on console port)，使用所有資源
+
+Physical Console： Terminal 直接用cable直連Linux
+Virtual consle：模擬Physical Console
+
+Virtual console 通常僅用一個 terminal
+而這兩個詞之間也混用，但不完全相同
+
+
+TTY是teletypewriter的簡稱
+後來基本上都指terminal
+常用的TTY1~6是Virtual console的典型實例
+
+
 ### 切換X windows與文字模式
 TTY1 開機後的預設操作界面，通常是X window
 **Ctrl + Alt + F2～F6** 可以切換不同的 tty終端機
