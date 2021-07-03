@@ -108,4 +108,24 @@ yum-utils (1)        - tools for manipulating repositories and extended package 
 root執行才會寫入所有資料
 
 ### Shutdown
-以TTY登錄時，有些OS不
+以TTY登錄時，有些OS不需root權限也可關機
+否則只有root可以關機
+
+
+* `# shutdown -h now`
+立刻關機
+* `# shutdown -h 20:25`
+20:25 ，若在21:25才下達此指令，則隔天才關機
+* `# shutdown -h +10`
+十分鐘後關機
+* `# shutdown -r now`
+立刻重新開機
+* `# shutdown -r +30 'The system will reboot' `
+30分鐘後，重新開機，並警告
+* `# shutdown -k now 'This system will reboot' `
+僅發出警告，不真的關機
+
+其他相關指令：
+* reboot
+* halt ： 終止所有程式，並關閉CPU
+* poweroff：halt + 送出ACPI指令到PSU，關閉電源
