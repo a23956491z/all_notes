@@ -32,12 +32,45 @@ Ctrl + C 中斷程式
 Ctrl + D EOF 或 Exit
 Shift + PageUp/Down 翻頁
 
-### 求助
+## 求助
+
 `--help` 取得說明
 
+### Man
 `man COMMAND` 查詢使用手冊(man page)
 如：`man date`
 man page代號：
 * 1 ：shell中的指令
 * 5 ：設定檔或格式
 * 8 ：管理員可用的指令
+
+導覽：
+* 按`/` 向下搜尋
+* 按`?` 向上搜尋
+* 按`n` 搜尋下一個，`N`上一個
+
+參數：
+- `man -f [...]` 消歧義，查詢同名文件
+```bash
+[dmtsai@study ~]$ man -f man
+man (1)              - an interface to the on-line reference manuals
+man (1p)             - display system documentation
+man (7)              - macros to format man pages
+```
+- `man [number] [...]` 用代號查特定同名文件
+```bash
+[dmtsai@study ~]$ man 1 man  <==這裡是用 man(1) 的文件資料
+[dmtsai@study ~]$ man 7 man  <==這裡是用 man(7) 的文件資料
+```
+* `man -k [...]` 文件內有提到關鍵字就列出
+```bash
+[dmtsai@study ~]$ man -k man
+fallocate (2)        - manipulate file space
+zshall (1)           - the Z shell meta-man page
+....(中間省略)....
+yum-config-manager (1) - manage yum configuration options and yum repositories
+yum-groups-manager (1) - create and edit yum's group metadata
+yum-utils (1)        - tools for manipulating repositories and extended package management
+```
+
+### INFO
