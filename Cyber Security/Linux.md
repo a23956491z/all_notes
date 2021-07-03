@@ -1,3 +1,5 @@
+## Console
+Terminal使用 
 ### 切換X windows與文字模式
 TTY1 開機後的預設操作界面，通常是X window
 **Ctrl + Alt + F2～F6** 可以切換不同的 tty終端機
@@ -129,3 +131,6 @@ root執行才會寫入所有資料
 * reboot
 * halt ： 終止所有程式，並關閉CPU
 * poweroff：halt + 送出ACPI指令到PSU，關閉電源
+
+多層系統中，shutdown通常是讓guest os關機
+poweroff則是讓整個系統關機
