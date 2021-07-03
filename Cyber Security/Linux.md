@@ -73,4 +73,23 @@ yum-groups-manager (1) - create and edit yum's group metadata
 yum-utils (1)        - tools for manipulating repositories and extended package management
 ```
 
-### INFO
+### info page
+`info [...]` 一樣是查詢指令用法
+不過文件可讀性更高，也包含超鏈接和索引
+
+導覽：
+* node：子頁面
+* tab 移動游標到下一個node
+* `N` 到下一個node
+* `P` 到上一個node
+* `U` 到上一**層**node
+* `H` 簡介如何導覽
+* `B` 移動游標到第一個可用node
+* `E` 移動游標到最後一個node
+
+### Doc
+/usr/share/doc 會放軟體的Doc
+
+## 文字編輯器
+### Nano
+`nano [...]` 用nano開啟
