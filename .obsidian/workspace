@@ -7,8 +7,11 @@
         "id": "663cfa1ff3a7c292",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "DevOps/Docker.md",
+            "mode": "source"
+          }
         }
       }
     ],
@@ -65,6 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "DevOps/Docker.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -96,8 +100,8 @@
   },
   "active": "663cfa1ff3a7c292",
   "lastOpenFiles": [
-    "conflict-files-obsidian-git.md",
     "DevOps/Docker.md",
+    "conflict-files-obsidian-git.md",
     "DevOps/Git.md",
     "Programming Tool/Django.md",
     "Programming Tool/Untitled.md",
