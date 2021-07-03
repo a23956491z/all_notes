@@ -92,4 +92,20 @@ yum-utils (1)        - tools for manipulating repositories and extended package 
 
 ## 文字編輯器
 ### Nano
-`nano [...]` 用nano開啟
+`nano [...]` 用nano開啟`[...]`
+
+請愛用 Ctrl + G 求助
+
+## 關機
+由於多人多工，隨意關機會影響到其他人
+
+`who` 看誰在線上
+
+### sync：資料同步寫入
+`sync`可以把記憶體的資料立刻寫入硬碟。
+
+一般使用者執行`sync`，只會寫入其相關資料
+root執行才會寫入所有資料
+
+### Shutdown
+以TTY登錄時，有些OS不
