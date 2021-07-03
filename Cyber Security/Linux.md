@@ -147,3 +147,9 @@ root執行才會寫入所有資料
 
 多層系統中，shutdown通常是讓guest os關機
 poweroff則是讓整個系統關機
+
+## 檔案權限
+所有的使用者資訊都在 /etc/passwd 內
+密碼記錄在 /etc/shadow內
+
+使用`ls -al` 看目錄內，所有檔案的詳細全
