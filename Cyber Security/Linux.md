@@ -31,3 +31,13 @@ Tab 命令補全
 Ctrl + C 中斷程式
 Ctrl + D EOF 或 Exit
 Shift + PageUp/Down 翻頁
+
+### 求助
+`--help` 取得說明
+
+`man COMMAND` 查詢使用手冊(man page)
+如：`man date`
+man page代號：
+* 1 ：shell中的指令
+* 5 ：設定檔或格式
+* 8 ：管理員可用的指令
