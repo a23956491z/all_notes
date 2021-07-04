@@ -108,7 +108,7 @@ mount host directory to container
 # ENV variable 
 ![](https://i.imgur.com/f4CUfFC.png)
 
-# IMAGE
+# IMAGE / Dockerfile
 dockerfile: automatically make a image
 ```dockerfile
 FROM Ubuntu
