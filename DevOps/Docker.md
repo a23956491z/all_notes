@@ -183,6 +183,19 @@ docker inspect ID/NAME
 
 ---
 
+# Storage
+
+## layered architecture
+![](https://i.imgur.com/1eyyHbY.png)
+
+docker reuse the same layer
+![](https://i.imgur.com/l9FFse7.png)
+
+so if we updated our source code only, we can do fast deploy
+
+
+---
+
 1. start container:
 
 Directly into bash with run
