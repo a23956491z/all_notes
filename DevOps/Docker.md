@@ -235,6 +235,8 @@ different OS use differnt default storage drvier
 ---
 # Compose
 
+---
+# Registry
 
 ---
 
