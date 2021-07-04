@@ -208,7 +208,29 @@ docker make a copy to container layer
 this is COPY-ON_WRITE mechanism
 mechanism
 ## volumes : persistent storage
+### volume mount
 ![](https://i.imgur.com/LeHkyxJ.png)
+
+if we don't have such volume when running, docker create one
+
+### bind mount
+assign volume which is not from default folder:
+`docker run -v /data/mysql:/var/lib/mysql mysql`
+![](https://i.imgur.com/cMo2WuQ.png)
+
+same meaning, but better:
+```bash
+docker run\
+	--mount type=bind, source=/data/mysql, target=/var/lib/mysql\
+	mysql
+```
+
+## Storage driver
+different OS use differnt default storage drvier
+* AUFS : like Ubuntu
+* ZFS
+* BTRFS
+* Device Mapper
 
 ---
 
