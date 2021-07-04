@@ -129,6 +129,14 @@ build image with dockerfile
 push image to docker hub
 `docker push account_NAME/image_NAME`
 
+## Dockerfile command
+* FROM
+* RUN
+* COPY
+* ENTRYPOINT
+* CMD
+* ENV
+
 ## CMD
 run a "full" command
 ```dockerfile
