@@ -185,14 +185,30 @@ docker inspect ID/NAME
 
 # Storage
 
+## docker file architeture
+* `/var/lib/docker` docker directory
+	* volumes 
+
+
 ## layered architecture
+docker **reuse the same layer**
 ![](https://i.imgur.com/1eyyHbY.png)
 
-docker reuse the same layer
+so if we updated our source code only, we can do fast deploy
 ![](https://i.imgur.com/l9FFse7.png)
 
-so if we updated our source code only, we can do fast deploy
 
+the layers created in building are read only
+when we run a container we have a container layer
+all container build from same image, use the **same container layer**
+![](https://i.imgur.com/LIIZIAm.png)
+
+if we modify "read only" file,
+docker make a copy to container layer
+this is COPY-ON_WRITE mechanism
+mechanism
+## volumes : persistent storage
+![](https://i.imgur.com/LeHkyxJ.png)
 
 ---
 
