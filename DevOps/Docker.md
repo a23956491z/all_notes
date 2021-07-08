@@ -124,7 +124,7 @@ ENTRYPOINT FLASK_APP=/opt/source-code/app.py flask run
 ```
 
 build image with dockerfile
-`docker build Dockerfile -t acoount_NAME/image_NAME`
+`docker build Dockerfile -t acoount_NAME/image`
 
 push image to docker hub
 `docker push account_NAME/image_NAME`
