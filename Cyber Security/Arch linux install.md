@@ -41,3 +41,24 @@ init swap partition
 `# mkswap /dev/SWAP_PARTITION`
 enable swap
 `# swapon /dev/SWAP_PARTITION`
+
+### mount
+`mount /dev/ROOT_PARTITION /mnt`
+
+
+## install 
+install essential package
+`# pacstrap /mnt base linux linux-firmware`
+
+* subsitutre linux for other kernels
+* linux-firmware can be omit in virtual machine
+* container can omit both above
+
+`# genfstab -U /mnt /mnt/etc/fstab`
+
+change root
+`# arch-chroot /mnt`
+
+
+
+`# timedatectl set-ntp true`
