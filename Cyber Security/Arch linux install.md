@@ -32,33 +32,42 @@ label:
 `gpt` for disk larger than 2 TB
 `dos` otherwise
 
+`300 M` for boot
 
 ### formating
+format boot partition to fat
+`# mkfs.fat -F 32 /dev/BOOT_PARTITION`
+
 format partition to Ext4
 `# mkfs.ext4 /dev/ROOT_PARTITION`
 
 init swap partition
 `# mkswap /dev/SWAP_PARTITION`
-enable swap
-`# swapon /dev/SWAP_PARTITION`
 
 ### mount
 `mount /dev/ROOT_PARTITION /mnt`
 
+`mkdir -p /mnt/boot/efi`
+`mount /dev/sda1 /mnt/boot/efi/`
+
+enable swap
+`# swapon /dev/SWAP_PARTITION`
 
 ## install 
 install essential package
-`# pacstrap /mnt base linux linux-firmware vim networkmanager sudo`
+`# pacstrap /mnt base linux linux-firmware vim networkmanager sudo intel-ucode`
 
 sudo for sudo
 vim for text editing
 networkmanager for network manage
 
+
 * subsitutre linux for other kernels
-* linux-firmware can be omit in virtual machine
+* linux-firmware and intel-ucode can be omit in virtual machine
 * container can omit both above
 
 ### configure boot
+
 generate fstab file
 `# genfstab -U /mnt >> /mnt/etc/fstab`
 
