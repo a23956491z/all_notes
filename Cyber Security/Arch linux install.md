@@ -48,8 +48,9 @@ enable swap
 
 ## install 
 install essential package
-`# pacstrap /mnt base linux linux-firmware`
+`# pacstrap /mnt base linux linux-firmware vim`
 
+vim for text editing
 * subsitutre linux for other kernels
 * linux-firmware can be omit in virtual machine
 * container can omit both above
@@ -72,6 +73,32 @@ network synchronization
 ### Timezone
 list avaliable timezone
 `# timedatectl list-timezones`
+OR select timezone with UI 
+`tzselect`
 
-select timezone with UI
-`fzselect`
+set time zone
+`# ln -sf /usr/share/zoneinfo/_Region_/_City_ /etc/localtime`
+
+apply timezone(generate /etc/adjtime)
+`# hwclock --systohc`
+
+## localization
+edit `/etc/locale.gen`
+uncomment `en_US.UTF-8 UTF-8` and other locale
+
+generate locals
+`locale-gen`
+
+make local setting perminant:
+`# echo "LANG=en_US.UTF_8" >> /etc/locale.conf`
+
+* create `/etc/locale.conf`
+add `LANG=en_US.UTF_8`
+
+make keyboard layout setting perminant
+`# echo "KEYMAP=_layout_" >> /etc/vconle.conf`
+
+create `/etc/vconle.conf`:
+* add `KEYMAP=_layout_`
+	e.g. `KEYMAP=de-latin1`
+
