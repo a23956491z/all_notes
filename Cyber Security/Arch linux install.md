@@ -54,11 +54,24 @@ install essential package
 * linux-firmware can be omit in virtual machine
 * container can omit both above
 
-`# genfstab -U /mnt /mnt/etc/fstab`
+### configure boot
+generate fstab file
+`# genfstab -U /mnt >> /mnt/etc/fstab`
 
 change root
 `# arch-chroot /mnt`
 
 
+## Time
+check timedatectl 
+`timedatectl status`
 
+network synchronization
 `# timedatectl set-ntp true`
+
+### Timezone
+list avaliable timezone
+`# timedatectl list-timezones`
+
+select timezone with UI
+`fzselect`
