@@ -113,5 +113,20 @@ enable NetworkManager we installed:
 set root password:
 `# passwd`
 
+
+create user:
+`useradd -m -G wheel -s /bin/bash USERNAME`
 wheel is Administration group
-`useradd -m -G wheel -s /bin/bash enip`
+
+edit sudoer
+`visudo`
+uncomment `%wheel ALL=(ALL) ALL`
+allow wheel group be Administration
+
+set user password:
+`passwd USERNAME`
+
+## REBOOT
+`exit` or Ctrl+d
+
+`reboot`
