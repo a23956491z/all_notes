@@ -268,3 +268,6 @@ with volume mapping
 with automatically remove after exit
 `docker run --rm -v /home/enip/zawarudo/codebase/deep-learning-research:/opt/app/data -p 8001:8888 mikebirdgeneau/jupyterlab`
 
+
+
+# permission denied
