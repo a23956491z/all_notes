@@ -48,9 +48,12 @@ enable swap
 
 ## install 
 install essential package
-`# pacstrap /mnt base linux linux-firmware vim`
+`# pacstrap /mnt base linux linux-firmware vim networkmanager sudo`
 
+sudo for sudo
 vim for text editing
+networkmanager for network manage
+
 * subsitutre linux for other kernels
 * linux-firmware can be omit in virtual machine
 * container can omit both above
@@ -93,7 +96,7 @@ make local setting perminant:
 `# echo "LANG=en_US.UTF_8" >> /etc/locale.conf`
 
 * create `/etc/locale.conf`
-add `LANG=en_US.UTF_8`
+	add `LANG=en_US.UTF_8`
 
 make keyboard layout setting perminant
 `# echo "KEYMAP=_layout_" >> /etc/vconle.conf`
@@ -102,3 +105,13 @@ create `/etc/vconle.conf`:
 * add `KEYMAP=_layout_`
 	e.g. `KEYMAP=de-latin1`
 
+## Network
+enable NetworkManager we installed:
+`systemctl enable NetworkManager`
+
+## create user
+set root password:
+`# passwd`
+
+wheel is Administration group
+`useradd -m -G wheel -s /bin/bash enip`
