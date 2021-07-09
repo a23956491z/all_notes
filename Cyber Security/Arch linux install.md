@@ -55,8 +55,9 @@ enable swap
 
 ## install 
 install essential package
-`# pacstrap /mnt base linux linux-firmware vim networkmanager sudo intel-ucode`
+`# pacstrap /mnt base linux linux-firmware vim networkmanager sudo intel-ucode grub`
 
+grub for boot manager
 sudo for sudo
 vim for text editing
 networkmanager for network manage
@@ -102,7 +103,7 @@ generate locals
 `locale-gen`
 
 make local setting perminant:
-`# echo "LANG=en_US.UTF_8" >> /etc/locale.conf`
+`# echo "LANG=en_US.UTF-8" >> /etc/locale.conf`
 
 * create `/etc/locale.conf`
 	add `LANG=en_US.UTF_8`
@@ -136,6 +137,12 @@ set user password:
 `passwd USERNAME`
 
 ## REBOOT
+### boot manager
+install grub
+`grub-install /dev/sda`
+config grub
+`grub-mkconfig -o /boot/grub/grub.cfg`
+
 `exit` or Ctrl+d
 
 `reboot`
