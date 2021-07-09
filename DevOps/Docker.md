@@ -271,3 +271,18 @@ with automatically remove after exit
 
 
 # permission denied
+```bash
+sudo groupadd docker
+```
+
+```bash
+$ sudo usermod -aG docker $USER
+```
+
+```bash
+$ newgrp docker
+```
+
+```bash
+$ docker info
+```
