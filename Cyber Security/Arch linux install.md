@@ -35,4 +35,9 @@ label:
 
 ### formating
 format partition to Ext4
-`mkfs.ext4 /dev/ROOT_PARTION`
+`# mkfs.ext4 /dev/ROOT_PARTITION`
+
+init swap partition
+`# mkswap /dev/SWAP_PARTITION`
+enable swap
+`# swapon /dev/SWAP_PARTITION`
