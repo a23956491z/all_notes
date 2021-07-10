@@ -180,3 +180,7 @@ linux系統內，以`.`開頭檔案就是隱藏檔
 `ls -l --full-time` 可以顯示完整時間
 
 目錄的權限如果沒有 `x`可執行，則不可進入該目錄
+
+## Unzip
+tar.xz
+`tar Jxcf OOO`
