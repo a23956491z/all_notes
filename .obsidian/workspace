@@ -1,43 +1,29 @@
 {
   "main": {
-    "id": "770de0b4390d1c40",
+    "id": "347fada3e6e404bf",
     "type": "split",
     "children": [
       {
-        "id": "663cfa1ff3a7c292",
+        "id": "4c79fe31508f5965",
         "type": "leaf",
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Cyber Security/Linux.md",
-            "mode": "source"
-          }
-        }
-      },
-      {
-        "id": "cfe12bf412784791",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Cyber Security/Linux.md",
-            "mode": "preview"
-          }
+          "type": "empty",
+          "state": {}
         }
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "7f0c5b101b166aa8",
+    "id": "5670f3e1e83908ef",
     "type": "split",
     "children": [
       {
-        "id": "ad7f45153280aba3",
+        "id": "2bdc60bf68e60d54",
         "type": "tabs",
         "children": [
           {
-            "id": "85ea847527e42522",
+            "id": "5319ff182fb93ade",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -45,12 +31,12 @@
             }
           },
           {
-            "id": "6e2e5584a365e827",
+            "id": "1d953a00086a4042",
             "type": "leaf",
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#logic_circuit",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -63,24 +49,22 @@
       }
     ],
     "direction": "horizontal",
-    "width": 209,
-    "collapsed": true
+    "width": 300
   },
   "right": {
-    "id": "77bd3edf5e2bda58",
+    "id": "30405e540dfcd9b2",
     "type": "split",
     "children": [
       {
-        "id": "6a1e8d5b33eff1df",
+        "id": "83f44cf68d4554c5",
         "type": "tabs",
         "children": [
           {
-            "id": "f39d99c7ad60e88d",
+            "id": "79900eba379ab676",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Cyber Security/Linux.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -92,7 +76,7 @@
             }
           },
           {
-            "id": "2651c34c2597904a",
+            "id": "c2b09828da64943a",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -102,25 +86,13 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
     "width": 300,
     "collapsed": true
   },
-  "active": "663cfa1ff3a7c292",
-  "lastOpenFiles": [
-    "Cyber Security/Linux.md",
-    "DevOps/Docker.md",
-    "Cyber Security/Untitled.md",
-    "DevOps/Git.md",
-    "conflict-files-obsidian-git.md",
-    "Programming Tool/Django.md",
-    "Programming Tool/Untitled.md",
-    "Cyber Security/Network Layer.md",
-    "Programming Lang/RISC-V.md",
-    "Programming Lang/Untitled.md"
-  ]
+  "active": "4c79fe31508f5965",
+  "lastOpenFiles": []
 }
