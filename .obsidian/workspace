@@ -13,6 +13,17 @@
             "mode": "source"
           }
         }
+      },
+      {
+        "id": "cfe12bf412784791",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Cyber Security/Linux.md",
+            "mode": "preview"
+          }
+        }
       }
     ],
     "direction": "vertical"
@@ -52,7 +63,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 209
+    "width": 209,
+    "collapsed": true
   },
   "right": {
     "id": "77bd3edf5e2bda58",
