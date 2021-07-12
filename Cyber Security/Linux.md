@@ -188,7 +188,7 @@ linux系統內，以`.`開頭檔案就是隱藏檔
 2. 軟體開發：區分不同團隊
 
 ### 改變檔案權限
-1. 改變檔案所屬群組：`chgrp`
+**1. 改變檔案所屬群組：`chgrp`**
 ```bash
 chgrp [-R] GROUP DIR/FILE
 ```
@@ -199,7 +199,7 @@ chgrp [-R] GROUP DIR/FILE
 $ chgrp test_users init.cfg
 ```
 
-2. 改變檔案擁有者：`chown`
+**2. 改變檔案擁有者：`chown`**
 ```bash
 chown [-R] OWNER DIR/FILE
 chown [-R] OWNER:GROUP DIR/FILE
@@ -216,11 +216,33 @@ $ chown .sshd init.cfg
 
 常用的更改擁有者場景：複製檔案
 複製檔案給別人，檔案擁有者仍然是自己
-如果我們要把 `.bashrc` copy成 `.bashrc_copy`，並傳給`Josh`：
+如果我們要把 `.bashrc` copy成 `.bashrc_copy`，並轉給`josh`：
 ```bash
 $ cp .bashrc .bashrc_copy
-$ ls -al
+$ chown josh:josh .bashrc
 ```
+
+**3. 改變權限：`chmod`**
+```bash
+chmod [-R] xyz DIR/FILE
+```
+用數字改變權限：
+* `r`: 4
+* `w`: 2
+* `x`: 1
+* `-`: 0
+
+把權限累加即可得到一個數字
+例如：
+owner = rwx = 4+2+1 = 7
+group = r-x = 4+1 = 5
+others = --- = 0+0+0 = 0
+權限代碼就是775
+```bash
+$ chmod 750 .bashrc
+```
+
+利用vim新增
 
 ## Unzip
 tar.xz
