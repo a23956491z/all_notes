@@ -189,9 +189,24 @@ linux系統內，以`.`開頭檔案就是隱藏檔
 
 ### 改變檔案權限
 1. 改變檔案所屬群組：`chgrp`
-用法：`chgrp GROUP [-R] DIR/FILE`
--R：遞迴變更，把目錄下所有檔案都更改
+```bash
+chgrp [-R] GROUP DIR/FILE
+```
+* -R：遞迴變更，把目錄下所有檔案都更改
+* 群組需要存在於`/etc/group`內
+例如：
+```bash
+$ chgrp test_users init.cfg
+```
 
+2. 改變檔案擁有者：`chown`
+```bash
+chown GROUP [-R] OWNER DIR/FILE
+chown GROUP [-R] OWNER:GROUP DIR/FILE
+```
+* -R：遞迴變更，把目錄下所有檔案都更改
+* 使用者需要存在於`/etc/passwd`內
+* 
 
 ## Unzip
 tar.xz
