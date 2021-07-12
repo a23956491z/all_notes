@@ -201,12 +201,26 @@ $ chgrp test_users init.cfg
 
 2. 改變檔案擁有者：`chown`
 ```bash
-chown GROUP [-R] OWNER DIR/FILE
-chown GROUP [-R] OWNER:GROUP DIR/FILE
+chown [-R] OWNER DIR/FILE
+chown [-R] OWNER:GROUP DIR/FILE
 ```
 * -R：遞迴變更，把目錄下所有檔案都更改
 * 使用者需要存在於`/etc/passwd`內
-* 
+* 分隔owner和group可以用`.`跟`:`
+* `chown`也可以只改變群組
+例如：
+```bash
+# change group to ssh
+$ chown .sshd init.cfg
+```
+
+常用的更改擁有者場景：複製檔案
+複製檔案給別人，檔案擁有者仍然是自己
+如果我們要把 `.bashrc` copy成 `.bashrc_copy`，並傳給`Josh`：
+```bash
+$ cp .bashrc .bashrc_copy
+$ ls -al
+```
 
 ## Unzip
 tar.xz
