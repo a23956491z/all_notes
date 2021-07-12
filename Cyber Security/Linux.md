@@ -149,6 +149,8 @@ root執行才會寫入所有資料
 多層系統中，shutdown通常是讓guest os關機
 poweroff則是讓整個系統關機
 
+---
+
 ## 檔案權限
 所有的使用者資訊都在 /etc/passwd 內
 密碼記錄在 /etc/shadow內
@@ -242,7 +244,26 @@ others = --- = 0+0+0 = 0
 $ chmod 750 .bashrc
 ```
 
-利用vim新增
+利用vim新增 .sh的shell script後，權限常常是 -rw-rw-r--(664)
+如果我們要讓這個.sh可以執行，就需要更改權限成 -rwxrwxr-x(775 )
+```bash
+$ vim a.sh
+$ chmod 775 a.sh
+```
+
+
+用符號改變權限：
+```bash
+chmod [-R] {u/g/o/a}{+/-/=}{rwx} 
+```
+如果要設定成 -rwxr-xr-x
+owner：可讀 可寫 可執行
+group：可讀 可執行
+others：可讀 可執行
+```bash
+$ chmod u=rwx,go=rx .bashrc
+# 注意
+```
 
 ## Unzip
 tar.xz
