@@ -256,14 +256,31 @@ $ chmod 775 a.sh
 ```bash
 chmod [-R] {u/g/o/a}{+/-/=}{rwx} 
 ```
+* {u/g/o/a}
+	* `u` 代表owner
+	* `g` 代表group
+	* `o` 代表others
+	* `a` 代表all
+* {+/-/=}
+	* +代表新增
+	* -代表移除
+	* =代表設定
+
+
 如果要設定成 -rwxr-xr-x
 owner：可讀 可寫 可執行
 group：可讀 可執行
 others：可讀 可執行
 ```bash
 $ chmod u=rwx,go=rx .bashrc
-# 注意
 ```
+**注意，中間不能有空格**
+
+如果是讓所有人都**額外**有可執行權限：
+```bash
+$ chmod a+x .bashrc
+```
+在不知道原本權限的情境下特別好用
 
 ## Unzip
 tar.xz
