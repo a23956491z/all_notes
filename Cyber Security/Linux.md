@@ -282,6 +282,8 @@ $ chmod a+x .bashrc
 ```
 在不知道原本權限的情境下特別好用
 
+---
+
 ## Unzip
 tar.xz
 `tar Jxcf OOO`

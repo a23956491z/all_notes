@@ -7,8 +7,11 @@
         "id": "4c79fe31508f5965",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "Cyber Security/Linux.md",
+            "mode": "source"
+          }
         }
       }
     ],
@@ -65,6 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Cyber Security/Linux.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,5 +98,15 @@
     "collapsed": true
   },
   "active": "4c79fe31508f5965",
-  "lastOpenFiles": []
+  "lastOpenFiles": [
+    "Cyber Security/Linux.md",
+    "Cyber Security/Network Layer.md",
+    "DevOps/Perforce.md",
+    "DevOps/Git.md",
+    "DevOps/Docker.md",
+    "Cyber Security/Multiple Access protocols.md",
+    "Cyber Security/Arch linux install.md",
+    "Cyber Security/CTF.md",
+    "Cyber Security/Routing.md"
+  ]
 }
