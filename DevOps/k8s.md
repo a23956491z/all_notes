@@ -166,4 +166,7 @@ deployment label used for connect to service
 selector in service
 ![](https://i.imgur.com/Xu292nj.png)
 
-![Uploading file...ntis8]()
+ports in service
+![](https://i.imgur.com/tFK7ZRU.png)
+
+![](https://i.imgur.com/I4GpYBz.png)
