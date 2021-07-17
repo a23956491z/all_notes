@@ -7,5 +7,32 @@
       ],
       "key": "V"
     }
+  ],
+  "obsidian-git:push": [
+    {
+      "modifiers": [
+        "Meta",
+        "Shift"
+      ],
+      "key": "+"
+    }
+  ],
+  "obsidian-git:list-changed-files": [
+    {
+      "modifiers": [
+        "Meta",
+        "Shift"
+      ],
+      "key": "/"
+    }
+  ],
+  "obsidian-git:pull": [
+    {
+      "modifiers": [
+        "Meta",
+        "Shift"
+      ],
+      "key": "*"
+    }
   ]
 }
