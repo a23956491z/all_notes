@@ -99,6 +99,15 @@ kubectl describe pod mongo-depl-67f895857c-fkspm
 ```bash
 kubectl exec --it POD_NAME -- bin/bash
 ```
+
+```bash
+kubectl delete deployment DEPLOY
+```
+
+apply the configuration
+```bash
+kubectl apply -f FILE_NAME
+```
 ## Install on arch
 
 **注意： Virtualbox中沒辦法使用KVM(VT-X問題)，不過minikube可以使用docker**
@@ -140,3 +149,4 @@ Start minikube:
 minikube start --driver=docker
 ```
 
+## YAML Configuration file
