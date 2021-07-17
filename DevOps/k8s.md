@@ -26,5 +26,7 @@ Volumes:
 Depolyment:
 * blueprint for pods
 * determine how many replicate pod you want
+* **can't replicated database ** : statefulSet for stateFUL app or database
+* DB often hosted ouside k8s cluster by statefulSet is hard to configure
 
 ![](https://i.imgur.com/4bxAFcQ.png)
