@@ -73,9 +73,31 @@ kubectl get nodes
 
 確認pods
 ```bash
-
 kubectl get nodes
+```
 
+建立deployment
+```bash
+kubectl create deployment NAME --image=image 
+
+$ kubectl create deployment nginx-depl --image=nginx
+```
+
+編輯deployment
+```bash
+kubectl edit deployment NAME
+```
+
+```bash
+kubectl create deployment mongo-depl --image=mongo
+kubectl get pod
+kubectl logs mongo-depl-67f895857c-fkspm
+kubectl describe pod mongo-depl-67f895857c-fkspm
+```
+
+進入pod的terminal
+```bash
+kubectl exec --it POD_NAME -- bin/bash
 ```
 ## Install on arch
 
