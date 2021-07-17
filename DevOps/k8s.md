@@ -150,3 +150,20 @@ minikube start --driver=docker
 ```
 
 ## YAML Configuration file
+
+YAML:
+* strict to indentation
+* store config file with your code
+
+![](https://i.imgur.com/imXjBg4.png)
+
+label is matched by selector
+![](https://i.imgur.com/g4Rbwhd.png)
+
+deployment label used for connect to service
+![](https://i.imgur.com/J83PMyc.png)
+
+selector in service
+![](https://i.imgur.com/Xu292nj.png)
+
+![Uploading file...ntis8]()
