@@ -38,6 +38,15 @@ Depolyment:
  * each Node has multiple pods
  * worker nodes do actual work
 
+![](https://i.imgur.com/pRoSYui.png)
+
 Workder machine should have:
 * **Kubelet** interacts with both container and node
 * container runtime
+* Kube proxy
+
+interact with cluster: master node
+* Api server : cluster gateway
+* Scheduler :  
+* Contorller manager
+* etcd : cluster brain, store cluster changes in key value store 
