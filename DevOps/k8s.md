@@ -30,3 +30,14 @@ Depolyment:
 * DB often hosted ouside k8s cluster by statefulSet is hard to configure
 
 ![](https://i.imgur.com/4bxAFcQ.png)
+
+
+## k8s architecture
+ 
+ worker machine
+ * each Node has multiple pods
+ * worker nodes do actual work
+
+Workder machine should have:
+* **Kubelet** interacts with both container and node
+* container runtime
