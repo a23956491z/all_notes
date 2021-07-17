@@ -62,3 +62,36 @@ Test/Local cluster Setup
 interact with cluster (CLI)
 command line tool for k8s cluster
 
+
+## Install on arch
+
+```bash
+sudo pacman -Sy libvirt qemu ebtables dnsmasq
+```
+
+```bash
+sudo usermod -a -G libvirt $(whoami)  
+newgrp libvirt
+```
+```bash
+sudo systemctl start libvirtd.service  
+sudo systemctl enable libvirtd.service  
+   
+sudo systemctl start virtlogd.service  
+sudo systemctl enable virtlogd.service
+```
+
+docker:
+```bash
+sudo pacman -Sy docker-machine
+```
+```bash
+yaourt -Sy docker-machine-driver-kvm2
+```
+
+minikube:
+```bash
+pacman -S minikube kubectl
+```
+
+Start minikube:
