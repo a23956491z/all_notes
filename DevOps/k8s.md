@@ -65,7 +65,7 @@ command line tool for k8s cluster
 
 ## Install on arch
 
-**注意： Virtualbox中沒辦法使用KVM，只能在virtualbox中用virtualbox**
+**注意： Virtualbox中沒辦法使用KVM，不過minikube可以使用docker**
 
 ### KVM的安裝
 ```bash
@@ -84,7 +84,7 @@ sudo systemctl start virtlogd.service
 sudo systemctl enable virtlogd.service
 ```
 
-### Virtualbox內請安裝virtualbox
+
 
 docker:
 ```bash
@@ -101,5 +101,5 @@ pacman -S minikube kubectl
 
 Start minikube:
 ```bash
-minikube start --driver=virtualbox
+minikube start --driver=docker
 ```
