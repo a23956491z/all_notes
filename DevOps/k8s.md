@@ -50,3 +50,15 @@ interact with cluster: master node
 * Scheduler :  
 * Contorller manager
 * etcd : cluster brain, store cluster changes in key value store 
+
+## minikube
+
+Test/Local cluster Setup
+* create virtual box
+* Node runs in Virtual box
+* 1 node k8s cluster
+
+## kubectl
+interact with cluster (CLI)
+command line tool for k8s cluster
+
