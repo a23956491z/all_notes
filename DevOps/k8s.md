@@ -58,14 +58,28 @@ Test/Local cluster Setup
 * Node runs in Virtual box
 * 1 node k8s cluster
 
+確認狀態
+```bash
+minikube status
+```
 ## kubectl
 interact with cluster (CLI)
 command line tool for k8s cluster
 
+確認node
+```bash
+kubectl get nodes
+```
 
+確認pods
+```bash
+
+kubectl get nodes
+
+```
 ## Install on arch
 
-**注意： Virtualbox中沒辦法使用KVM，不過minikube可以使用docker**
+**注意： Virtualbox中沒辦法使用KVM(VT-X問題)，不過minikube可以使用docker**
 
 ### KVM的安裝
 ```bash
@@ -103,3 +117,4 @@ Start minikube:
 ```bash
 minikube start --driver=docker
 ```
+
