@@ -300,6 +300,257 @@ $ chmod a+x .bashrc
 
 ---
 
+
+## 目錄與檔案指令
+
+### PWD
+print working directory,列出目前工作目錄
+```bash
+pwd [-P]
+```
+* -P 列出真實路徑，而非連接路徑(連接檔)
+
+### MKDIR
+make directory
+```bash
+mkdir [-mp] DIR
+$ mkdir -m 771 test_dir
+```
+* -m 設定檔案權限
+* -p 遞迴建立目錄(自動建立不存在的父目錄)，同時也可以忽略已存在目錄
+
+### RMDIR
+remove directory, 只能移除空目錄
+```bash
+rmdir [-p] DIR
+```
+* -p 遞迴移除空目錄
+
+### PATH
+
+執行指令時，會到PATH的路徑中尋找有沒有可執行檔案
+（若有多個同名可執行檔，會使用先找到的）
+查看PATH：
+```bash
+[root@archlinux ~]echo $PATH
+/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/root/bin
+```
+
+新增PATH：
+```bash
+PATH="${PATH}=:/root"
+```
+
+目前的工作目錄不在$PATH內
+所以執行指令時需要加上目錄
+```bash=
+./test.sh
+# 而不是test.sh
+```
+
+### LS
+```bash
+ls [-aAdfFhilnrRSt] DIR/FILE
+ls [--color={never, auto, always}] DIR/FILE
+ls [--full-time] DIR/FILE
+```
+
+Options：
+* -a 包含隱藏檔
+* -A 包含隱藏檔，除了 `.` `..` 
+* -d 只列出`.`目錄
+* -f 印出的結果不排序
+* -F 附加檔案類型的資訊，如目錄會加上`/`
+* -h 容量用GB MB表示
+* -i incode號碼
+* -l 詳細資料
+* -n 列出UID GUD取代使用者與群組
+* -r 印出反向排序的結果
+* -R 遞迴印出
+* -S 照檔案容量排序
+* -t 照時間排序
+* --color
+    * never 取消顏色提示
+    * always 顯示顏色
+    * auto 自動判定
+* --full-time 顯示完整時間
+* -time
+    * atime 上次訪問時間
+    * ctime 修改時間
+    * birth 創造時間
+
+```bash=
+$ ls -l --time=ctime
+$ ls -l --color=always
+$ ls -l --full-time
+$ ls -al ~
+$ ls -alF 
+```
+
+### CP 複製
+```bash=
+cp [-adfilprsu] SOURCE DESTINATION
+cp [options] SOURCE1 SOURCE2... DIRECTORY
+```
+
+參數：
+* -a 即-dr --preserve=all
+* -d 若來源為連接檔則複製連接檔
+* -f 強制複製，例如Des已存在
+* -i 若目標存在，覆蓋時會先詢問
+* -l 建立hard link的連接檔
+* -p 連同權限與時間複製(常用於備份)
+* -r 遞迴持續複製
+* -s 複製成為 symbolic link，也就是捷徑
+* -u 目標比來源舊才會複製，類似更新複製
+* --preserve=all 複製檔案的所有屬性
+
+```bash=
+$ cp -i ~/.bashrc /tmp/bashrc
+# 已存在的話會詢問
+$ cp -a /var/log/wtmp wtmp_2
+# 完全複製，包含所有屬性
+$ cp -r /etc/ /tmp
+# 遞迴複製
+```
+
+### RM 刪除
+```bash=
+rm [-fir] DIR/FILE
+```
+參數：
+* -f 強制
+* -i 詢問
+* -r 遞迴
+
+```bash=
+$ rm -i bashrc
+# 刪除前會詢問
+$ rm -i bashrc*
+# 刪除bashrc開頭的，並詢問
+$ rm -r /tmp/etc
+# 刪除整個/tmp/etc 目錄
+```
+*root的rm 會alias成 rm -r
+可以用`\rm` 反斜線來忽略alias*
+
+### MV 更名或移動
+```bash=
+mv [-fiu] SOURCE DES
+mv [options] SRC1 SRC2 ... DIR
+```
+參數：
+* -f 強制
+* -i 詢問
+* -r 遞迴
+
+```bash=
+$ mv bashrc1 bashrc2 mvtest2
+# 把前兩個檔案移動到 mvtest2資料夾
+```
+
+### Basename / Dirname
+
+* basename 取得路徑中的檔案名
+* dirname 取得路徑中的目錄名
+
+### CAT 檢視檔案內容
+```bash=
+cat [-AbEnTv] FILE
+```
+參數：
+* -A 即-vET
+* -b 加上行號
+* -E 加上斷行字元
+* -n 加上行號(含空白行)
+* -T 顯示出tab
+* -v 顯示出特殊字元
+
+**`tac`** 是cat的reverse版本
+從尾巴印回來
+
+### NL 對行號優化的檢視
+```bash=
+nl [-bnw] FILE
+```
+參數：
+* -b
+    * a 空行也印出行號
+    * t 空行跳過
+* -n
+    * ln 行號在熒幕左方
+    * rn 行號在熒幕右方
+    * rz 行號在熒幕且補0
+* -w
+    * NUMBER 行號變幾位數
+
+```bash=
+$ nl -b a /etc/issue
+# 空白行加上行號
+$ nl -b a -n rz /etc/issue
+# 行號補零
+$ nl -b a -n rz -w 3 /etc/issue
+# 指定行號變3位數
+```
+
+### less/more 可翻頁檢視
+
+```bash=
+more FILE
+```
+操作：
+* 空白 向下翻一頁
+* Enter 向下翻一行
+* /STR 搜尋STR這個關鍵字
+* :f 顯示檔名與已顯示行數
+* q 離開
+
+
+```bash=
+less FILE
+```
+操作：
+* 空白|PGDN  向下翻一頁
+* PGUP 向上翻一頁
+* /STR 向下搜尋STR
+* ?STR 向上搜尋STR
+* n 再搜尋
+* N 反向的再搜尋
+* g 第一行
+* G 最後一行
+* q 離開
+
+### head/tail 部分檢視
+```bash=
+head [-n number] FILE
+tail [-nf number] FILE
+```
+
+參數：
+* -n 印出幾行，可以用負數表示除了那幾行外，都印
+* -f 持續更新
+
+```bash=
+$ head -n -10 /etc/man_df.conf
+# 印出 除了最後十行外的所有內容
+$ tail -f /var/log/messages
+# 如果有新的內容也會繼續印出
+$ tail -n 10 /var/log/messages
+# 最後10行
+$ tail -n +10 /var/log/messages
+# 10行之後的內容都印出來
+$ head -n 20 /var/log/messages | tail -n 10
+# 先用head抓前20行，再抓後10行，也就是(11~20行)
+$ cat -n /var/log/messages | head -n 20 | tail -n 10
+# 11~20行外，再加上行號
+```
+
+### od 檢視binary
+
+```bash=
+$ od -t xCc /etc/issue
+# 同時輸出：十六進制 + ASCII
+```
 ## Unzip
 tar.xz
 `tar Jxcf OOO`
