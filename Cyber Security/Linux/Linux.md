@@ -569,6 +569,8 @@ $ date; ls -l /etc/man_db.conf ; ls -l --time=atime /etc/man_db.conf ; \
 # 顯示三種不同的檔案更改時間
 ```
 
+可以使用touch來讓檔案的mtime變成「現在」
+
 ```bash
 touch [-acdmt] FILE
 ```
@@ -579,8 +581,17 @@ touch [-acdmt] FILE
 * -m 只修改mtime
 * -t 指定修改時間，格式 `[YYYYMMDDhhmm]`
 
+```bash
+$ touch -d "2 days ago" bashrc
+# 讓檔案mtime和atime變成兩天前
+$ touch -t 201406150202 bashrc
+# 指定檔案時間
+```
 
-可以使用touch來讓檔案的mtime變成「現在」
+## 預設/隱藏權限
+
+### umask 檢視檔案預設權限
+
 
 ## Unzip
 tar.xz
