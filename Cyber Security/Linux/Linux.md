@@ -588,7 +588,7 @@ $ touch -t 201406150202 bashrc
 # 指定檔案時間
 ```
 
-## 預設/隱藏權限
+## 預設/隱藏/特殊 權限
 
 ### umask 檢視檔案預設權限
 umask的分數是「需要拿掉的權限」
@@ -605,6 +605,32 @@ $ umask 002
 ### lsattr 檢視檔案隱藏屬性
 
 ### chattr 設定檔案隱藏屬性
+有些權限可以鎖死檔案，讓他不能被刪除或更動
+
+### SUID - Set UID
+s這個權限取代owner的x
+例如`-rwsr-xr-x`，就稱有Set UID的特殊權限
+
+功能：
+* 只對binary program有用
+* 執行者需要有 x權限
+* s權限只在執行時有用
+* 執行者會有 owner的權限
+
+也就是說，有SUID權限時，在執行階段，執行者會暫時被視為root
+例如：
+* 使用者對於/usr/bin/passwd ，有s權限
+* 但是passwd的擁有者是root
+* 而使用者在執行 /usr/bin/passwd時，會暫時獲得root權限
+* 所以能改動不可更改的/etc/shadow
+
+而SUID權限只能用在binary program，而不可用在shell script
+
+### GUID
+當s權限取代group的x
+
+除了binary program，GUID還可以用在目錄
+進入目錄後，該group會被視為目錄的owner
 
 ## Unzip
 tar.xz
