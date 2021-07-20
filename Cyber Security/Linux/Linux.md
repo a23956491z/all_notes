@@ -376,8 +376,9 @@ Options：
 * --full-time 顯示完整時間
 * -time
     * atime 上次訪問時間
-    * ctime 修改時間
+    * ctime 狀態更新時間
     * birth 創造時間
+    * mtime 內容變更時間
 
 ```bash=
 $ ls -l --time=ctime
@@ -551,6 +552,36 @@ $ cat -n /var/log/messages | head -n 20 | tail -n 10
 $ od -t xCc /etc/issue
 # 同時輸出：十六進制 + ASCII
 ```
+![](https://i.imgur.com/Rs6a35M.png)
+
+利用od的特性，輸出特定字串的ASCII
+```bash=
+$ echo "print my ASCII" | od -t oCc
+# 輸出ASCII，並附帶八進位碼
+```
+
+### touch 建立檔案
+[[Linux#LS]] 中有提到不同的檔案時間
+預設情況是顯示 mtime，也就是內容更動時間
+```bash
+$ date; ls -l /etc/man_db.conf ; ls -l --time=atime /etc/man_db.conf ; \
+> ls -l --time=ctime /etc/man_db.conf
+# 顯示三種不同的檔案更改時間
+```
+
+```bash
+touch [-acdmt] FILE
+```
+參數：
+* -a 只修改 access time
+* -c 只修改檔案時間，檔案不存在也不建立
+* -d, --date 指定修改日期
+* -m 只修改mtime
+* -t 指定修改時間，格式 `[YYYYMMDDhhmm]`
+
+
+可以使用touch來讓檔案的mtime變成「現在」
+
 ## Unzip
 tar.xz
 `tar Jxcf OOO`
