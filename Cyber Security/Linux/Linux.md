@@ -1,3 +1,4 @@
+# Console基本操作
 ## Console
 最初的Terminal 直接與System溝通(on console port)，使用所有資源
 
@@ -151,6 +152,7 @@ poweroff則是讓整個系統關機
 
 ---
 
+# 檔案與權限
 ## 檔案權限
 所有的使用者資訊都在 /etc/passwd 內
 密碼記錄在 /etc/shadow內
@@ -626,12 +628,43 @@ s這個權限取代owner的x
 
 而SUID權限只能用在binary program，而不可用在shell script
 
-### GUID
+### SGID
 當s權限取代group的x
 
 除了binary program，GUID還可以用在目錄
 進入目錄後，該group會被視為目錄的owner
 
+### SBIT
+t取代other的x
+SBIT只對目錄有用
+
+使用者在目錄內建立檔案
+只有owner和root可以刪除檔案
+
+### 設定 SUID/SGID/SBIT
+
+* 4為SUID
+* 2為SGID
+* 1為SBIT
+
+在原本的權限前面，加上特殊權限
+```bash
+$ chmod 4755 FILE
+# 把檔案加上 SUID的權限
+```
+
+`-rwSrwSrwT`出現大寫時，代表原本不具有x權限，特殊權限是假的
+
+### file 觀察檔案類型
+```bash
+file FILE
+```
+
+## 搜尋
+### which
+### whereis
+### locate / updatedb
+### find
 ## Unzip
 tar.xz
 `tar Jxcf OOO`
