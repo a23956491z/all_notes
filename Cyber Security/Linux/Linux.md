@@ -780,7 +780,12 @@ $ find /usr/bin /usr/sbin -perm /7000 -exec ls -l {} \;
 # -exec 的結尾用 \;
 $ find / -size +1M
 # 找檔案大於1MiB的
-$ find /etc +50k -a -size -60k -exec ls -l {} 
+$ find /etc -size +50k -a -size -60k -exec ls -l {} \;
+# 60K > 檔案 > 50K 並用 ls列出
+$ find /etc -size +50k -a ! -user -root exec ls -ld {} \;
+# 檔案>50K 且user不是root 並用ls列出
+$ find /etc -size +1500k -o size 0
+# 檔案>1500k 或 容量0
 ```
 
 ## Unzip
