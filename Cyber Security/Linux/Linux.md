@@ -300,6 +300,35 @@ $ chmod a+x .bashrc
 ![](https://i.imgur.com/hldJJGj.png)
 所以通常給`r`權限也會給`x`權限，不然就沒有意義了
 
+### 同群組內成員，共同擁有目錄開發權限
+建立群組與用戶 alex arod
+```bash
+$ groupadd project
+$ useradd -G project alex
+$ useradd -G project arod
+$ id alex arod
+```
+建立專案目錄
+```bash
+$ mkdir /src/ahome
+$ ls -l -d /src/ahome
+```
+
+修改權限
+```bash
+$ chgrp project /src/ahome
+$ chmod 770 /src/ahome
+$ ls -l -d /src/ahome
+```
+
+此時 alex在/src/ahome內新增的檔案
+arod沒辦法更改，因為alex新增的檔案，群組所屬是alex
+
+目錄應該要有 SGID的權限
+```bash
+$ chmod 2770 /src/ahome
+```
+
 ---
 
 
@@ -749,7 +778,10 @@ $ find / -perm 7000
 $ find /usr/bin /usr/sbin -perm /7000 -exec ls -l {} \;
 # find的結果會跑到{}內
 # -exec 的結尾用 \;
-$ find / -size +1
+$ find / -size +1M
+# 找檔案大於1MiB的
+
+
 ```
 
 ## Unzip
