@@ -771,7 +771,7 @@ $ find / -name "*passwd*"
 $ find /run -type s
 # 找type是socket的檔案
 $ find / -perm /7000
-# 尋找含有任意特殊權限的
+# 尋找含有任意特殊權的
 $ find / -perm 7000
 # 尋找同時含有三個特殊權限的
 
@@ -781,7 +781,7 @@ $ find /usr/bin /usr/sbin -perm /7000 -exec ls -l {} \;
 $ find / -size +1M
 # 找檔案大於1MiB的
 
-
+$$asdasda$$
 ```
 
 ## Unzip
