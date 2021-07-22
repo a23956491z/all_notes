@@ -719,12 +719,38 @@ find [PATH] [option] [action]
 	1. -name FILENAME：搜尋檔案名為 FILENAME的檔案
 	2. -size `[+-]`SIZE：搜尋比SIZE還要大或小的檔案
 	Byte用c，KiB用k，`-size +50k`代表大於50KB
-	3. -type TYPE：搜尋檔案類型時TYPE的
+	3. -type TYPE：搜尋檔案類型時TYPE的（正規檔案f，裝置檔案b c，目錄d，連接檔d，socket s）
 	4. -perm mode：搜尋權限剛好是mode的檔案(如4755)
-	5. -perm /mode：包含任一個mode權限(如搜尋755，700就會被抓出來)
+	5. -perm /mode：包含任一個mode權限(如搜尋755，100 400 700都會被抓出來)
 4. -exec command：command可以處理搜尋到的結果
 
+```bash
+$ find / -mtime 0
+# 在根目錄尋找，mtime在一天內的檔案
+$ find /etc -newer /etc/passwd
+# 在 /etc 尋找比 /etc/passwd更新的檔案
 
+$ find /home -user enip
+# 在 /home 尋找擁有者是 enip的檔案
+$ find / -nouser
+# 找 檔案擁有者 非本機user的檔案
+
+$ find / -name passwd
+# 找passwd這個檔案
+$ find / -name "*passwd*"
+# 找中間含有passwd的檔案
+$ find /run -type s
+# 找type是socket的檔案
+$ find / -perm /7000
+# 尋找含有任意特殊權限的
+$ find / -perm 7000
+# 尋找同時含有三個特殊權限的
+
+$ find /usr/bin /usr/sbin -perm /7000 -exec ls -l {} \;
+# find的結果會跑到{}內
+# -exec 的結尾用 \;
+$ find / -size +1
+```
 
 ## Unzip
 tar.xz
