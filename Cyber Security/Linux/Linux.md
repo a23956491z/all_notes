@@ -661,9 +661,40 @@ file FILE
 ```
 
 ## 搜尋
-### which
-### whereis
-### locate / updatedb
+### which 找指令的執行檔
+```bash
+which [-a] command
+```
+which 會去找 PATH內的有沒有那個執行檔
+但是像是`history` 這種bash內建指令則找不到(不在PATH內)
+參數：
+- -a 列出所有找到的結果
+
+
+```bash
+$ which bc
+```
+
+
+### whereis 從特定目錄找檔案
+```bash
+whereis [-bmsu] FILE/DIR
+```
+參數：
+- -l 列出whereis會去哪些目錄找
+- -b 只找binary檔案
+- -m 只找mamul目錄下的
+- -s 只找source來源檔案
+- -u 找上面三個以外的路徑
+### locate 從資料庫找檔案
+```bash
+locate [-ir] FILE
+```
+FILE只需要輸入檔案的**部分名稱**
+locate會從 /var/lib/mlocate 這個檔案資料庫去找
+
+每個distro更
+
 ### find
 ## Unzip
 tar.xz
