@@ -693,9 +693,39 @@ locate [-ir] FILE
 FILE只需要輸入檔案的**部分名稱**
 locate會從 /var/lib/mlocate 這個檔案資料庫去找
 
-每個distro更
+每個distro更新資料庫的頻率不同
+可以利用`updatedb`手動更新檔案資料庫
+(根據這個檔案來搜尋硬碟 /etc/updatedb.conf)
 
-### find
+
+### find 強大的檔案搜尋
+```bash
+find [PATH] [option] [action]
+```
+參數：
+1. 時間： -atime, -ctime, -mtime
+	1. -mtime n ： n天前的那天內更動的檔案
+	2. -mtime +n：n天前被更動的檔案
+	3. -mtime -n：n天內被更動的
+	4. -newer FILE：列出比FILE更新的檔案
+2. 使用者或群組：
+	1. -uid n ： 使用者賬號ID(UID)
+	2. -gid n： 群組ID(GID)
+	3. -user NAME：使用者名稱
+	4. -group NAME：群組名稱
+	5. -nouser：檔案擁有者不存在於 `/etc/passwd`內的檔案
+	6. -nogroup：檔案群組不存在於`/etc/group`內的檔案
+3. 權限有關：
+	1. -name FILENAME：搜尋檔案名為 FILENAME的檔案
+	2. -size `[+-]`SIZE：搜尋比SIZE還要大或小的檔案
+	Byte用c，KiB用k，`-size +50k`代表大於50KB
+	3. -type TYPE：搜尋檔案類型時TYPE的
+	4. -perm mode：搜尋權限剛好是mode的檔案(如4755)
+	5. -perm /mode：包含任一個mode權限(如搜尋755，700就會被抓出來)
+4. -exec command：command可以處理搜尋到的結果
+
+
+
 ## Unzip
 tar.xz
 `tar Jxcf OOO`
