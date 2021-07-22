@@ -780,8 +780,7 @@ $ find /usr/bin /usr/sbin -perm /7000 -exec ls -l {} \;
 # -exec 的結尾用 \;
 $ find / -size +1M
 # 找檔案大於1MiB的
-
-$$asdasda$$
+$ find /etc +50k -a -size -60k -exec ls -l {} 
 ```
 
 ## Unzip
