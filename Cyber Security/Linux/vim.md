@@ -19,6 +19,10 @@ set nu
 set ai
 set cursorline
 set bg=dark
+set hlsearch
+set incsearch
+set laststatus=2
+set showcmd
 color industry
 
 syntax on
@@ -26,6 +30,7 @@ syntax on
 hi LineNr cterm=bold ctermfg=DarkGrey ctermbg=None
 hi CursorLineNr cterm=bold ctermfg=Green ctermbg=None
 hi CursorLine ctermfg=None ctermbg=None cterm=bold
+hi Search cterm=reverse ctermbg=none ctermfg=none
 
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 let g:indentLine+char = '|'
