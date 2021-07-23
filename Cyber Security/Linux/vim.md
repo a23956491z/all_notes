@@ -13,3 +13,7 @@ vim >= 7.3.74
 
 Ctrl + n 自動補完
 
+```bash
+set clipboard=unnamedplus
+set nu
+```
