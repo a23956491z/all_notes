@@ -170,3 +170,21 @@ ports in service
 ![](https://i.imgur.com/tFK7ZRU.png)
 
 ![](https://i.imgur.com/I4GpYBz.png)
+
+### delete with configuration
+```
+$ kuberctl delete -f nginx-deployment.yaml
+$ kuberctl delete -f nginx-service.yaml
+```
+
+## MongoDB + MongoExpree project
+
+### overview
+- 2 deployment / pod
+- 2 service
+- 1 ConfigMap
+- 1 secret
+
+
+![](https://i.imgur.com/noX3G1G.png)
+
