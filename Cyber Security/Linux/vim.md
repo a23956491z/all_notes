@@ -28,5 +28,5 @@ hi CursorLineNr cterm=bold ctermfg=Green ctermbg=None
 hi CursorLine ctermfg=None ctermbg=None cterm=bold
 
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
-let g:indentLine+char = '⦙'
+let g:indentLine+char = '|'
 ```
