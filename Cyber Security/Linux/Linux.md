@@ -790,4 +790,4 @@ $ find /etc -size +1500k -o size 0
 
 ## Unzip
 tar.xz
-`tar Jxcf OOO`
+`tar Jxvf OOO`
