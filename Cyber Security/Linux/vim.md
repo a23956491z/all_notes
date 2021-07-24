@@ -35,3 +35,9 @@ hi Search cterm=reverse ctermbg=none ctermfg=none
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 let g:indentLine+char = '|'
 ```
+
+Indent
+1. VISUAL LINE: `Shift+v`
+2. select lines
+3. hit ">" (`shift+.`)
+
