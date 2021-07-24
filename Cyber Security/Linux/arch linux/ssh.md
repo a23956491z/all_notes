@@ -1,6 +1,7 @@
 Server:
 ```bash
 sudo pacman -S openssh
+sudo sshd -t
 ```
 ```
 PermitRootLogin no
@@ -8,6 +9,8 @@ Port 22
 PasswordAuthentication no
 HostKey /etc/ssh/ssh_host_rsa_key
 ```
+
+
 ```bash
 ssh-keygen -t dsa -f /etc/ssh/ssh_host_dsa_key
 ssh-keygen -t rsa -f /etc/ssh/ssh_host_rsa_key
