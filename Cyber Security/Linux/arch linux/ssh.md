@@ -31,6 +31,14 @@ Host arch
     Port     33874
 ```
 
+bad owner or permission
+```bash
+chmod 600 ~/.ssh/config
+# change from 644 to 600
+chown $USER ~/.ssh/config
+# change user
+```
+
 copy key to server
 ```bash
 $ ssh-copy-id -p 33874 enip@192.168.56.101
