@@ -31,13 +31,13 @@ tags : Programming
 > nothing to commit, working directory clean
 > **這個訊息代表你的資料庫是無更新狀態
 > （你沒變更檔案）**
-> ___
+> ...
 > On branch master
 > Untracked files:
->  (use "git add <file>..." to include in what will > be committed)
-> 
+>  (use `it add <file>...` to include in what will > be committed)  
+>  ...
 >    NYKD-54.avi
-> 
+>  ...
 > nothing added to commit but untracked files present (use "git add" to track)
 > **這個訊息代表NYKD-54.avi是新的或已更新的資料**
 
@@ -48,7 +48,7 @@ tags : Programming
 > *`git status`* 確認其狀態
 > > On branch master
 > > Changes to be committed:
-> > (use "git reset HEAD <file>..." to unstage)
+> > (use `it reset HEAD <file>...` to unstage)
 > >
 > > new file:   NYKD-54.avi
 > > **代表系統已經開始追蹤這部影片了**
@@ -116,33 +116,42 @@ tags : Programming
 > 通常會顯示origin，代表clone自哪個資料庫
 
 *`git remote -v`*
-> **顯示已加入協作的資料庫及其URL**
-> 如
-> > origin  https://github.com/a23956491z/receipt.git (fetch)
-> > origin  https://github.com/a23956491z/receipt.git (push)
-> > up_receipt  https://github.com/supermariobros374/receipt.git (fetch)
-> > up_receipt  https://github.com/supermariobros374/receipt.git (push)
->
-> **其實就是顯示主資料庫，和FORK出去的資料庫**
+**顯示已加入協作的資料庫及其URL**
+如
+origin  https://github.com/a23956491z/receipt.git (fetch)
+origin  https://github.com/a23956491z/receipt.git (push)
+up_receipt  https://github.com/supermariobros374/receipt.git (fetch)
+up_receipt  https://github.com/supermariobros374/receipt.git (push)
+
+**其實就是顯示主資料庫，和FORK出去的資料庫**
 
 *`git remote add pb git://github.com/motherbaby/toy.git`*
-> 把該資料庫令為pb并加入資料庫列
+把該資料庫令為pb并加入資料庫列
 
 *`git fetch origin`*
-> origin這個資料庫更新(擷取)到遠端狀態
+rigin這個資料庫更新(擷取)到遠端狀態
 
 *`git push origin master`*
-> 把master這個分支上傳到origin這個資料庫
+把master這個分支上傳到origin這個資料庫
 
 *`git remote show origin`*
-> 顯示origin的詳細資料
+顯示origin的詳細資料
 
 *`git remote rename pb paul`*
-> 把pb重名為paul
+把pb重名為paul
 
 *`git remote rm pb`*
-> 刪除pb這個資料庫
+刪除pb這個資料庫
 
-
+---
+	
 ## 基本分支圖
 我改天再寫
+	
+## 實用指令
+
+持續更新git log
+```bash
+$ watch --color git log --color=always
+```
+
