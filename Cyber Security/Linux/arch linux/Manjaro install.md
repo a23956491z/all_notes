@@ -22,4 +22,10 @@ Pre setting:
 	* Super + M show desktop
 	* Super + L lock
 	* Hold Super and left drag : move window
-	* 
+	* Super + T drop down terminal
+	* Alt + Ctrl + T pop up new terminal
+	* Super + E file manager
+	* Super + B browser
+
+6. Configure Fish & OMF
+	1. Remember also to config root's shell
