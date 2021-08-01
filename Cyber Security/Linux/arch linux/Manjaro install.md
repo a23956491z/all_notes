@@ -32,3 +32,5 @@ Pre setting:
 	1. Remember also to config root's shell
 
 7. Clone repos & obsidian
+	1. install yay
+	2. install obsidian-appimage by yay
