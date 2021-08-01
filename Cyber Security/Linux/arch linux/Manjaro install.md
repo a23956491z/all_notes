@@ -30,3 +30,5 @@ Pre setting:
 
 6. Configure Fish & OMF
 	1. Remember also to config root's shell
+
+7. Clone repos & obsidian
