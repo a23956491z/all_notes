@@ -34,3 +34,5 @@ Pre setting:
 7. Clone repos & obsidian
 	1. install yay
 	2. install obsidian-appimage by yay
+
+8. timeshift backup
