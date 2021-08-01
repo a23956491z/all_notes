@@ -26,6 +26,7 @@ Pre setting:
 	* Alt + Ctrl + T pop up new terminal
 	* Super + E file manager
 	* Super + B browser
+	* Super + PgUp maximize
 
 6. Configure Fish & OMF
 	1. Remember also to config root's shell
