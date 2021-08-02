@@ -35,4 +35,9 @@ Pre setting:
 	1. install yay
 	2. install obsidian-appimage by yay
 
-8. timeshift backup
+8. ROFI
+	1.`rofi -modi window -show window -show-icons`  Super + Tab
+	
+	
+9. timeshift backup
+
