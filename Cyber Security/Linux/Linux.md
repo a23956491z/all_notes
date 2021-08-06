@@ -900,7 +900,35 @@ mount [-t 檔案系統] 裝置檔名  掛載點
 ```bash
 [root@study ~]# blkid /dev/vda4
 /dev/vda4: UUID="e0a6af55-26e7-4cb7-a515-826a8bd29e90" TYPE="xfs"
+
+[root@study ~]# mkdir -p /data/xfs
+[root@study ~]# mount UUID="e0a6af55-26e7-4cb7-a515-826a8bd29e90" /data/xfs
+[root@study ~]# df /data/xfs
+Filesystem     1K-blocks  Used Available Use% Mounted on
+/dev/vda4        1038336 32864   1005472   4% /data/xfs
+# 順利掛載，且容量約為 1G 左右沒問題！
+
 ```
+掛載光碟機也是相同道理
+
+重新掛載目錄:
+```bash
+$ mount  -o remount,rw,auto /
+```
+
+額外掛載:
+```bash
+mount --bind /var /data/var
+```
+
+卸載:
+```bash
+$ umount [-fn] MOUNT_POINT/DEVICE
+```
+參數：
+* -f 強制卸載
+* -l 立刻卸載
+* -n 不更新/etc/mtab
 ## Unzip
 tar.xz
 `tar Jxvf OOO`
