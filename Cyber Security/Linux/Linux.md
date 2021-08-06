@@ -788,6 +788,35 @@ $ find /etc -size +1500k -o size 0
 # 檔案>1500k 或 容量0
 ```
 
+## 磁碟與檔案系統
+
+### df 磁碟使用量
+```bash
+df [-ahikHTm] FILE/DIR
+```
+參數：
+1. -a 所有檔案系統(包含/proc)
+2. -k 以KB
+3. -m 以MB
+4. -h 人類可讀
+5. -H 用M=1000K代替 M=1024K
+6. -T 列出filesystem name
+7. -i 用inode數量顯示
+
+
+### du 評估磁碟使用量
+```bash
+du [-ahskm] FILE/DIR
+
+```
+參數：
+1. -a 所有檔案系統，預設是目前目錄下
+2. -h 人類可讀
+3. -s 列出總量，不列出個別佔用
+4. -S 子目錄的容量不包含
+5. -k KB
+6. -m MB
+
 ## Unzip
 tar.xz
 `tar Jxvf OOO`
