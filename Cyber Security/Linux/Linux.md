@@ -869,7 +869,13 @@ Last sector可以利用 `+1G`的方式來指定容量
 分割完後可以利用`partprobe` 直接更新分割表資訊
 而不需要重開機
 
+### mkfs 磁碟格式化
 
+* `mkfs.ext4 [-b size] [-L label] DEVICE`
+	* -b block 大小, 1K 2K 4K
+	* -L 裝置的標頭名稱
+
+### fsck.ext4 處理EXT4檔案系統
 ## Unzip
 tar.xz
 `tar Jxvf OOO`
