@@ -857,6 +857,19 @@ lsblk [-dfimpt] [device]
 ```bash
 blkid
 ```
+
+### gdisk/fdisk 硬碟分割
+MBR分割表用fdisk
+GPT分割表用gdisk
+
+可以先利用 `parted DEVICE print`來印出分割表資訊
+
+Last sector可以利用 `+1G`的方式來指定容量
+
+分割完後可以利用`partprobe` 直接更新分割表資訊
+而不需要重開機
+
+
 ## Unzip
 tar.xz
 `tar Jxvf OOO`
