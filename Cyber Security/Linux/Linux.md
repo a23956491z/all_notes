@@ -810,13 +810,53 @@ du [-ahskm] FILE/DIR
 
 ```
 參數：
-1. -a 所有檔案系統，預設是目前目錄下
+1. -a 列出所有檔案與目錄，預設是目前目錄下的目錄(不含檔案)
 2. -h 人類可讀
 3. -s 列出總量，不列出個別佔用
 4. -S 子目錄的容量不包含
 5. -k KB
 6. -m MB
 
+```bash
+$ sudo du -smi /* 
+# 檢查根目錄下的所有目錄容量
+```
+
+### ln 連接檔
+* hard link: 實體連接，直接指向inode
+	* 不能跨filesystem
+	* 不能link 目錄
+
+* symbolic link: 符號連接
+
+```bash
+ln [-sf] SOURCE DES
+```
+參數：
+* -s symbolic
+* -f 若DES已經存在，則先移除再建立
+
+### lsblk 磁碟分割狀態
+新增磁碟的動作：
+1. 分割磁碟
+2. 格式化磁碟
+3. 檢驗磁碟
+4. 建立掛載點
+
+```bash
+lsblk [-dfimpt] [device]
+```
+參數：
+* -d 只列出磁碟，不列出分割資料
+* -f 同時列出磁碟的filesystem
+* -i 只用ASCII
+* -m 列出裝置的權限資料
+* -p 列出裝置的完整檔名
+
+### blkid 列出磁碟的UUID
+```bash
+blkid
+```
 ## Unzip
 tar.xz
 `tar Jxvf OOO`
