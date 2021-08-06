@@ -855,7 +855,7 @@ lsblk [-dfimpt] [device]
 
 ### blkid 列出磁碟的UUID
 ```bash
-blkid
+blkid [DEVICE]
 ```
 
 ### gdisk/fdisk 硬碟分割
@@ -876,6 +876,31 @@ Last sector可以利用 `+1G`的方式來指定容量
 	* -L 裝置的標頭名稱
 
 ### fsck.ext4 處理EXT4檔案系統
+```bash
+fsck.ext4 [-pf] [-b superblock] 裝置名稱
+```
+參數：
+* -p 自動按y
+* -f 強制進入細部檢查
+* -D 對目錄做最佳化配置
+* -b SUPERBLOCK 復原毀損的superblock
+
+### dumpe2fs
+
+### mount 掛載
+```bash
+mount -a
+mount [-l] # mount訊息
+mount [-t 檔案系統] LABEL=OOO  掛載點
+mount [-t 檔案系統] UUID=OOO   掛載點
+mount [-t 檔案系統] 裝置檔名  掛載點
+```
+
+掛載普通硬碟
+```bash
+[root@study ~]# blkid /dev/vda4
+/dev/vda4: UUID="e0a6af55-26e7-4cb7-a515-826a8bd29e90" TYPE="xfs"
+```
 ## Unzip
 tar.xz
 `tar Jxvf OOO`
