@@ -35,6 +35,10 @@ config interface 'wan'
 ```
 
 ## Configure WIFI
+MSI laptop example: Intel AC9560
+Intel Wireless 8260
+
+
 ```bash
 $ lspci
 ```
@@ -49,3 +53,15 @@ install firmware & driver on OpenWRT
 $ opkg install ath10k-firware...
 $ opkg install ath10k-ct
 ```
+
+
+## Benchmark
+from inside wireless router to wired:
+ 134.208.3.184 (inside router) -> 134.208.3.186
+ `58.9 Mbits/s`
+
+
+by wireless to wireless inside router LAN:
+from 192.168.0.147 -> 192.168.0.150
+`60.5 Mbits/s`
+
