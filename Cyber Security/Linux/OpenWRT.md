@@ -62,6 +62,8 @@ from inside wireless router to wired:
  134.208.3.184 (inside router) -> 134.208.3.186
  `58.9 Mbits/s`
 
+wired to wired from switch:
+134.208.3.198 -> 134.208.3.186
 
 by wireless to wireless inside router LAN:
 from 192.168.0.147 -> 192.168.0.150
