@@ -1,11 +1,29 @@
+check DHCP devices
 ```bash
 cat /tmp/dhcp.leases
 ```
 
+check internet inferface
+```bash
+ifconfig
+```
+
+## Setting in SWITCH
+802.1Q VLAN
+* VLAN ID : 10, VLAN NAME : WAN
+	* not member : port 3~8
+	* tag (trunk) : port 1, 2
+* VLAN ID : 1, VLAN NAME : LAN
+	* not member : port 1
+	* Untagged : port 2~8
+
+802.1Q PVID setting
+* port 1 : PVID 10
+
 ```bash
 $ vi /etc/config/network
 ```
-
+ 
 ```bash
 config interface 'wan'
 	option ifname 'eth0.10'
