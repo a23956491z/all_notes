@@ -54,6 +54,8 @@ $ opkg install ath10k-firware...
 $ opkg install ath10k-ct
 ```
 
+Enable WPA wifi security:
+* install `hostapd`
 
 ## Benchmark
 from inside wireless router to wired:
