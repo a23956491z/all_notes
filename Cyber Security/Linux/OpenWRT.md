@@ -33,3 +33,19 @@ config interface 'wan'
 	option gateway '134.208.3.254'
 	option dns  '8.8.8.8'
 ```
+
+## Configure WIFI
+```bash
+$ lspci
+```
+
+```bash
+$ opkg update
+$ opkg install pciutils
+```
+
+install firmware & driver on OpenWRT
+```bash
+$ opkg install ath10k-firware...
+$ opkg install ath10k-ct
+```
