@@ -955,6 +955,30 @@ UUID=94ac5f77-cb8a-495e-a65b-2ef7442b837c /boot   xfs     defaults            0 
 /dev/sda1: UUID="e199da15-4032-4d8b-8899-bbb2da46fad9" BLOCK_SIZE="4096" TYPE="ext4" PARTUUID="4b0630b2-01"
 
 ```
+
+欄位：
+1. 裝置檔名 | UUID | LABEL
+	1. 裝置檔名 例如 `/dev/sda2`
+2. 掛載點， 如 `/`
+3. 檔案系統
+4. 檔案系統參數
+	* sync/ async
+	* auto/noauto 自動掛載
+	* rw/ro 
+	* exec/noexec
+	* user/nouser
+	* suid/nosuid
+	* default : rw + suid + dev + exec + nouser + auto + async
+5. 能否使用dump
+6. 是否以 fsck 檢驗磁區
+
+可以使用 `mount -a` 掛載所有 `fstab`內的目錄
+
+單人維護模式中，根目錄是 read only
+可以利用 `mount -n -o remount,rw /` 重新把根目錄掛載成 r/w
+
+### 掛載 映像檔
+
 ## Unzip
 tar.xz
 `tar Jxvf OOO`
