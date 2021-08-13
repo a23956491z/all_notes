@@ -929,6 +929,32 @@ $ umount [-fn] MOUNT_POINT/DEVICE
 * -f 強制卸載
 * -l 立刻卸載
 * -n 不更新/etc/mtab
+
+### 開機自動掛載
+`/etc/fstab` & `/etc/mtab`
+
+* 根目錄要第一個掛載
+* mount point需要是已建立目錄
+
+example
+```bash
+[root@study ~]# cat /etc/fstab
+# Device                              Mount point  filesystem parameters    dump fsck
+/dev/mapper/centos-root                   /       xfs     defaults            0 0
+UUID=94ac5f77-cb8a-495e-a65b-2ef7442b837c /boot   xfs     defaults            0 0
+/dev/mapper/centos-home                   /home   xfs     defaults            0 0
+/dev/mapper/centos-swap                   swap    swap    defaults            0 0
+```
+
+```bash
+╰─λ sudo blkid                                                                                                                     0 (0.003s) < 14:20:45
+[sudo] password for enip: 
+/dev/sdb1: UUID="23c2395f-d1db-4be5-90d3-4c5ee3d3cf34" BLOCK_SIZE="4096" TYPE="ext4" PARTUUID="05084f47-e368-5c4b-a7c3-85c90a686db1"
+/dev/sdc1: UUID="e5c97cfb-a3c5-408e-a833-fb2bd31c9312" BLOCK_SIZE="4096" TYPE="ext4" PARTUUID="bf440adb-6937-c044-a661-975417fa98d6"
+/dev/sda2: UUID="008a7191-c085-4c25-9665-f8dde459f43c" TYPE="swap" PARTUUID="4b0630b2-02"
+/dev/sda1: UUID="e199da15-4032-4d8b-8899-bbb2da46fad9" BLOCK_SIZE="4096" TYPE="ext4" PARTUUID="4b0630b2-01"
+
+```
 ## Unzip
 tar.xz
 `tar Jxvf OOO`
