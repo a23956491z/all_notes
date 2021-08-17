@@ -82,7 +82,7 @@ provide input to container
 
 iterative container(with input and output)
 `docker run -it IMAGE`
-
+e
 Assign name and allocate pseudo-TTY
 `docker run --name python_test -it python:3.8.7`
 ## PORT
