@@ -277,7 +277,7 @@ sudo groupadd docker
 
 ```bash
 $ sudo usermod -aG docker $USER
-```
+```linux tail
 
 ```bash
 $ newgrp docker
