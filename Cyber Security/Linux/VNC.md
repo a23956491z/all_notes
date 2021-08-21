@@ -19,6 +19,8 @@ alwaysshared
 ```
 
 
+`/etc/tigervnc/vncserver.users`
+``
 
 ## Connect with ssh
 ```bash
