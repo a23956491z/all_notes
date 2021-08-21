@@ -18,3 +18,13 @@ localhost
 alwaysshared
 ```
 
+
+
+## Connect with ssh
+```bash
+$ ssh 10.1.10.2 -L 9901:localhost:5901
+```
+
+```bash
+$ vncviewer localhost:9901
+```
