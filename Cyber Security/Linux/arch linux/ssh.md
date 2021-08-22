@@ -3,6 +3,11 @@ Server:
 sudo pacman -S openssh
 sudo sshd -t
 ```
+
+**SSH 的IP ADDR如果設固定IP，可能會無法在開機時啓動**
+> 之前設 134.208.3.198時 會掛掉，設0.0.0.0可能比較好
+
+
 ```
 PermitRootLogin no
 Port 22
