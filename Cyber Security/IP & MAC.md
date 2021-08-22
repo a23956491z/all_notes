@@ -4,6 +4,19 @@ IP address (or **I**nternet **P**rotocol) address
  
  ![](https://i.imgur.com/2wZ06hW.png)
 
+## ARP (Address Resolution Protocol) 
+allowing devices to identify themselves on a network.
+* bind MAC to IP address
+* devices want to communicate with another device -> send broadcast search for specific device
+* devices use ARP to find MAC addr
+
+ARP protocol:
+* ARP request : broadcasted to every device
+* ARP Reply : return to initial device who broadcasted 
+And the initial device now remember this device MAC and store it to cache (ARP entry)
+![](https://i.imgur.com/FWC3AKa.png)
+
+
 ## Links 的種類
 1. 點對點(point-to-point)：Ethernet
 2. 廣博(broadcast)：802.11 LAN
