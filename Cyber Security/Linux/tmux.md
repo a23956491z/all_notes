@@ -62,7 +62,7 @@ press `prefix , I` to fetch plguin
 `prefix , ctrl+s ` save sessions
 `prefix , ctrl+r ` restore sessions
 
-### Assign restored programs
+### Assign restored programs+
 
 MYSETTING:
 ```
