@@ -2,7 +2,7 @@
 ### Session
 session with name
 ```bash
-$ tmux -s SESSION_NAME
+$ tmux new -s SESSION_NAME
 ```
 
 ### Copy & paste
