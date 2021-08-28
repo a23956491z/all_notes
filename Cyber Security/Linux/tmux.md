@@ -61,3 +61,31 @@ press `prefix , I` to fetch plguin
 ### usage
 `prefix , ctrl+s ` save sessions
 `prefix , ctrl+r ` restore sessions
+
+### Assign restored programs
+
+MYSETTING:
+```
+set -g @resurrect-processes 'mosh-client python3'
+```
+
+Example restoring additional programs:
+```
+  set -g @resurrect-processes 'ssh psql mysql sqlite3'
+
+```
+
+Programs with arguments should be double quoted:
+```
+  set -g @resurrect-processes 'some_program "git log"'
+```
+
+Start with tilde to restore a program whose process contains target name:
+```
+  set -g @resurrect-processes 'irb pry "~rails server" "~rails console"'
+```
+
+Use `->` to specify a command to be used when restoring a program (useful if the default restore command fails ):
+```
+  set -g @resurrect-processes 'some_program "grunt->grunt development"'
+```
