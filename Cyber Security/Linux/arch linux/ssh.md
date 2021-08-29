@@ -8,6 +8,7 @@ sudo sshd -t
 > 之前設 134.208.3.198時 會掛掉，設0.0.0.0可能比較好
 
 
+`/etc/ssh/sshd_config`
 ```
 PermitRootLogin no
 Port 22
