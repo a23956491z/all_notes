@@ -9,3 +9,6 @@
 	6. Enter app name("rclone")  select Support email enter Contact email & Save
 	7. "+ CREATE CREDENTIALS" , OAuth client ID, Desktop APP
 	8. Go to OAuth consent screen : **PUBLISH APP**
+
+2. Create Config `rclone config`
+
