@@ -8,7 +8,7 @@ check internet inferface
 ifconfig
 ```
 
-## Setting in SWITCH
+## Setting in SWITCH (VLAN)
 802.1Q VLAN
 * VLAN ID : 10, VLAN NAME : WAN
 	* not member : port 3~8
