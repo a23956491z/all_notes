@@ -12,3 +12,13 @@
 
 2. Create Config `rclone config`
 
+
+## Alias
+`g_transfer`
+```bash
+#!/bin/bash
+TRANSFER_PATH="/home/enip/Downloads/gdrive/transfer"
+
+mkdir -p $TRANSFER_PATH
+rclone copy -P g_ndhu:transfer $TRANSFER_PATH
+```
