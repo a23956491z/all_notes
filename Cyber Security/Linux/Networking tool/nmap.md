@@ -80,4 +80,29 @@ used for  firewall evasion
 some firewall drop incoming TCP packets to blocked ports which have SYN flag set
 
 ## ICMP scan
-ping sweep
+ping sweep `-sn`
+
+```bash
+nmap -sn 192.168.0.1-254
+nmap -sn 192.168.0.*
+nmap -sn 192.168.0.0/24
+```
+
+## NSE scripts
+categories:
+* safe
+* intrusive : may affect the target
+* vuln
+* exploit : exploit a vulerability
+* auth :  bypass authentication 
+* brute : bruteforce credentials  
+* discovery
+
+running with scripts `--script=<script-name>`
+multiple scripts `--script=smb-enum-users,smb-enum-shares`
+
+arguments
+`nmap -p 80 --script http-put --script-args http-put.url='/dav/shell.php',http-put.file='./shell.php'`
+
+script help: `nmap --script-help <script-name>`
+
