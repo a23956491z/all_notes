@@ -106,3 +106,20 @@ arguments
 
 script help: `nmap --script-help <script-name>`
 
+
+find scripts:
+* nmap website
+* `/usr/share/nmap/scripts`
+* `/usr/share/nmap/scripts/script.db`
+
+first way: search in `script.db`
+`grep "ftp" /usr/share/nmap/scripts/script.db`.
+
+second way: find in ls
+`ls -l /usr/share/nmap/scripts/*ftp*`:
+
+## Firewall evasion
+`-Pn` treat host as being alive
+so even if ICMP packets are blocked, still useful
+
+`-f` used to fragment packets, making less likely 
