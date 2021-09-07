@@ -153,6 +153,8 @@ ifconfig
 
 用`ip addr`檢查網路界面和網路位置
 可以看到有五個 eth的網路孔
+可以從這裏看到 eth4是內建的網路卡，其他eth0~eth3是intel的網卡
+因爲他們的MAC地址不同，eth4的MAC 是`bc:5f:f4:...` 其他的都是 `90:e2:ba:...`
 ```bash
 ip addr
 ```
@@ -162,7 +164,52 @@ ip addr
 ```bash
 passwd
 ```
+用 `ping`確認連線狀態
+```bash
+ping 1.1.1.1
+```
+![](https://i.imgur.com/6jAUyw2.png)
 
+結果是沒有網路
+所以需要指定一下 `WAN`跟`LAN`
+用 `vim`編輯 `/etc/config/network`
+
+我們剛剛得知， `eth4`是內建的網路卡，而網路供應商(ISP)出來的網路線，我是選擇插在內建的網卡上，所以`WAN`要分配到 `eth4`上
+![](https://i.imgur.com/IxbbIOl.png)
+
+白色的是網路供應商出來的網路線，黑色的是內網連接其他電腦的線
+而我把 `eth0`~`eth3`都分配到 `LAN`，最後的 config file會長這樣
+```bash
+config interface 'loopback'
+	option device 'lo'
+	option proto 'static'
+	option ipaddr '127.0.0.1'
+	option netmask '255.0.0.0'
+	
+config globals 'globals'
+	option ula_prefix 'fdc4:9196:705b::/48'
+	
+config device
+	option name 'br-lan'
+	option type 'bridge'
+	list ports 'eth0 eth1 eth2 eth3'
+	
+config interface 'lan'
+	option device 'br-lan'
+	option proto 'static'
+	option ipaddr '192.168.3.1'
+	option netmask '255.255.255.0'
+	option ip6assign '60'
+	
+config interface 'wan'
+	option ifname 'eth4'
+	option proto 'static'
+	option ipaddr 'x.x.x.x'
+	option netmask '255.255.255.0'
+	option gateway 'x.x.x.x'
+	option dns  '8.8.8.8'
+	
+```
 check DHCP devices
 ```bash
 cat /tmp/dhcp.leases
