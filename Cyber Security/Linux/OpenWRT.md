@@ -93,6 +93,38 @@ lsblk
 而 `sda` 111.8G的磁碟是我們的SSD
 ![](https://i.imgur.com/ffTDzW2.png)
 
+所以接着用 `dd`把剛剛的映像檔（軔體）裝到硬碟內
+來源是剛剛解壓縮出來的那個檔案
+目的地是我們的SSD `sda` （/dev/sda）
+```bash
+dd if=openwrt-21.02.0-x86-64-generic-ext4-combined.img of=/dev/sda
+```
+
+裝完後 `lsblk`可以看到 一個16MB的開機磁區，和104MB的系統磁區
+
+## 分配額外空間
+接下來我們要使用`fdisk`來分配剩下空間到系統磁區
+fdisk 後面接要更改的磁碟，也就是SSD
+```bash
+fdisk /dev/sda
+```
+
+輸入 `p` 顯示目前的磁碟分割表
+可以看到確實只有兩個磁區，一個16M，一個104M
+然後這裏要把第二個磁區，104M的系統磁區的開始位置記下來，這裏是 *33792*
+![](https://i.imgur.com/BQUsHQn.png)
+
+輸入 `d` 刪除磁區
+再輸入 `2`選擇刪除第二個磁區，也就是104M的系統磁區
+輸入 `p` 顯示磁碟分割表，確認
+![](https://i.imgur.com/NMTsz5T.png)
+
+我們可以看到第二個磁區（/dev/sda2）確實不見了
+輸入 `n` 新增磁區
+輸入 `p` 選擇新增主要磁區
+輸入 `2` 指定新磁區的編號爲2
+這裏的 Fisrt Sector也就是此
+
 
 check DHCP devices
 ```bash
