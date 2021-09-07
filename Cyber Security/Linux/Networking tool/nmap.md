@@ -56,3 +56,20 @@ CONs:
 
 SYN scan is default if you running in SUDO
 otherwise, TCP scan is default.
+
+## UDP scan
+`-sU`
+
+packet is sent to an open UDP port, should be **no response**
+and when it comes with no response, it could be `open|filtered`.
+* port is open
+* or be firewalled
+
+packet is sent to an closed port, target whould respnd with an ICMP packet containing message that the port is unreachable.
+
+and UDP scans tend to be so slow, so usually run with `--top-ports <number>`
+```bash
+nmap -sU --top-ports 20 <target>
+```
+
+## NULL / FIN / Xmas scan
