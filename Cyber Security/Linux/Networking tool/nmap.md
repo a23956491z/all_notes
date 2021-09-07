@@ -52,3 +52,7 @@ PROs:
 
 CONs:
 * need sudo permission
+* sometimes brought down unstable services
+
+SYN scan is default if you running in SUDO
+otherwise, TCP scan is default.
