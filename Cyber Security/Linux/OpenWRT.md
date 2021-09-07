@@ -4,12 +4,27 @@
 
 ![](https://i.imgur.com/ssKUVjg.jpg)
 
-主板：A
+主板：ASRock H87 Pro4
 CPU：Intel core i5-4440
 RAM：ASint DDR3 2GB-1333
-電源：350W
-SSD：crucial M500 2.5 SSD 120GB
+電源：靜音王？ 350W
+SSD：Crucial M500 2.5 SSD 120GB
+機殼：？
 
+機殼&主板：
+
+ASRock的H87 pro這塊板最大的缺點就是，只有一個PCIE x16
+像是ASUS的H87-pro
+
+電源是自帶的一體式電源，所以線材長的有點奇葩。
+而沒看到的SSD裝在理線的那面側板。
+
+
+風扇：
+除了後板自帶的風扇外，也在前板加上吸風的風扇幫助對流，
+而CPU的負載率不高，也不會需要超頻，所以原廠風扇應該就綽綽有餘了。
+
+儲存空間：
 
 
 
