@@ -73,3 +73,11 @@ nmap -sU --top-ports 20 <target>
 ```
 
 ## NULL / FIN / Xmas scan
+more stealthier
+
+used for  firewall evasion
+
+some firewall drop incoming TCP packets to blocked ports which have SYN flag set
+
+## ICMP scan
+ping sweep
