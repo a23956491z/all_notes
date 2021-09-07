@@ -122,4 +122,7 @@ second way: find in ls
 `-Pn` treat host as being alive
 so even if ICMP packets are blocked, still useful
 
-`-f` used to fragment packets, making less likely 
+`-f` used to fragment packets, prevent firewall or IDS to detect
+`--mtu <number>` limit maximum transmission unit size for packets sent (must the multiple of 8)
+`--scan-delay <time>ms`
+`--badsum` generate in invalid checksum, TCP/IP stack would drop this packet, firewalls might respond.
