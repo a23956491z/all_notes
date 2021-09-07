@@ -60,6 +60,16 @@ ASRock的H87 pro這塊板最大的缺點就是，只有一個PCIE x16，而ASUS�
 所以我們需要先 `sudo pacman -Sy wget`來安裝 wget
 pacman 是arch linux自帶的套件管理工具
 
+然後就可以利用 wget來下載 openWRT的系統映像檔
+可以去openWRT 的官方網站找自己需要的軔體來安裝
+我這裏是使用 openWRT 21.02.0版本 x86/64 架構的 generic-ext4-combined檔案
+
+```bash
+wget https://downloads.openwrt.org/releases/21.02.0/targets/x86/64/openwrt-21.02.0-x86-64-generic-ext4-combined.img.gz
+```
+> * **squashfs-combined** 是傳統的openWRT配置，openWRT系統會存在唯讀(read-only)的squashfs檔案系統中，而另外會有230MB左右的可讀寫空間來安裝額外套件，**如果openWRT要run在隨身碟上，用這個比較好**
+> * **ext4-combined**整塊都是可讀寫空間，要重新分配空間比較輕鬆，不過會把整塊硬碟清除。**如果openWRT要run在硬碟上，用這個比較好**
+
 
 
 
