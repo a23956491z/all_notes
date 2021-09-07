@@ -1,3 +1,18 @@
+# Tutorial
+使用設備：x86 PC
+![](https://i.imgur.com/bSLokcQ.jpg)
+
+![](https://i.imgur.com/ssKUVjg.jpg)
+
+主板：A
+CPU：Intel core i5-4440
+RAM：ASint DDR3 2GB-1333
+電源：350W
+SSD：crucial M500 2.5 SSD 120GB
+
+
+
+
 check DHCP devices
 ```bash
 cat /tmp/dhcp.leases
