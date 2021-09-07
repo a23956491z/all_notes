@@ -9,5 +9,8 @@
 ## Enumerating
 
 1. Port scanning
-
+* SMB running on which port?
 2. Enum4Linux
+* workgroup ?
+* name of machine?
+* version of OS
