@@ -189,13 +189,8 @@ config interface 'loopback'
 config globals 'globals'
 	option ula_prefix 'fdc4:9196:705b::/48'
 	
-config device
-	option name 'br-lan'
-	option type 'bridge'
-	list ports 'eth0 eth1 eth2 eth3'
-	
 config interface 'lan'
-	option device 'br-lan'
+	option ifname 'eth0 eth1 eth2 eth3'
 	option proto 'static'
 	option ipaddr '192.168.3.1'
 	option netmask '255.255.255.0'
@@ -210,15 +205,38 @@ config interface 'wan'
 	option dns  '8.8.8.8'
 	
 ```
+
+也可以改成 lan bridge的方式
+```bash
+config device
+	option name 'br-lan'
+	option type 'bridge'
+	list ports 'eth0 eth1 eth2 eth3'
+	
+config interface 'lan'
+	option device 'br-lan'
+	option proto 'static'
+	option ipaddr '192.168.3.1'
+	option netmask '255.255.255.0'
+	option ip6assign '60'
+```
+
+最後`ping`一下，有網路就大功告成了
+```bash
+ping 1.1.1.1
+```
+
+接着只要在其他有連接到openWRT的電腦上
+在瀏覽器輸入 openWRT的 `LAN`地址（上面的範例是 `192.168.3.1`，預設是`192.168.1.1`），就可以看到 openWRT的網頁管理界面了
+
+![](https://i.imgur.com/JoxYxXz.png)
+
+# 其他
 check DHCP devices
 ```bash
 cat /tmp/dhcp.leases
 ```
 
-check internet inferface
-```bash
-ifconfig
-```
 
 ## Setting in SWITCH (VLAN)
 802.1Q VLAN
