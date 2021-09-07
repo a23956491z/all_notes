@@ -123,8 +123,45 @@ fdisk /dev/sda
 輸入 `n` 新增磁區
 輸入 `p` 選擇新增主要磁區
 輸入 `2` 指定新磁區的編號爲2
-這裏的 Fisrt Sector也就是此
+這裏的 Fisrt Sector也就是磁區開始位置，填入剛剛的磁區開始位置，我的例子是 *33792*
+Last Sector可以按空白，直接使用預設的，也就是**分配全部空間**
+輸入 `N` 拒絕刪除原有的ext4磁碟簽章
+![](https://i.imgur.com/00hAoew.png)
 
+輸入 `p` 顯示磁碟分割表，確認，這裏可以看到第二個磁區變成 111.8G了
+輸入 `w` 確認寫入剛剛的更動
+![](https://i.imgur.com/RwLo2VP.png)
+
+到這裏，安裝OpenWRT進硬碟的步驟就全部完成了
+接着就可以關機，拔除隨身碟再開機了
+
+## 設定 openWRT
+開機後可以使用 `df`來檢查可用空間
+```bash
+df -h
+```
+
+![](https://i.imgur.com/c9Q5LfG.jpg)
+
+可以看到 /dev/root的可用空間是 110.3G
+
+`ifconfig` 可以看到我們有兩張網路界面，一張內建的網卡一張外接的
+```bash
+ifconfig
+```
+![](https://i.imgur.com/SjjODsJ.png)
+
+用`ip addr`檢查網路界面和網路位置
+可以看到有五個 eth的網路孔
+```bash
+ip addr
+```
+![](https://i.imgur.com/KRsSA9r.png)
+
+用 `passwd`設定root的密碼
+```bash
+passwd
+```
 
 check DHCP devices
 ```bash
