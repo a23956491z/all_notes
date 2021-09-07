@@ -14,7 +14,12 @@ smbclient:
 
 
 * `get <file>` download file
-* 
+
+
+get the info of file:
+```bash
+$ smbcacls //10.10.199.57/profiles .ssh/id_rsa
+```
 ## Enumerating
 
 1. Port scanning
@@ -24,6 +29,9 @@ smbclient:
 * name of machine?
 * version of OS
 
+
+
+Enum4Linux:
 -U             get userlist  
 -M             get machine list  
 -N             get namelist dump (different from -U and-M)  
