@@ -41,7 +41,27 @@ ASRock的H87 pro這塊板最大的缺點就是，只有一個PCIE x16，而ASUS�
 
 而等級更高的Intel i350 除了價位貴了不少外，其SR-IOV功能也更適合用在虛擬機上，而不是實體路由器，因爲這項技術可以直接讓虛擬機專享網卡中的其中一個port，而不是直接佔掉整個PCIE槽，算是一種相當實用的虛擬化解決方案。
 
-而如果有更大的頻寬需求，HP 331T也算是CP值相當高的，近2.5Gbps方案，
+而如果有更大的頻寬需求，HP 331T也算是CP值相當高的近2.5Gbps方案，而售價也比intel的產品便宜不少。
+
+## 前置作業
+需要一個 隨身碟，大小不限
+並在裏面刷入一個輕量化的liveCD作業系統。可以用 Finnix（僅有400MB），不過我這裏用arch linux做範例。
+制作可開機的隨身碟可以使用 rufus這個程式。
+
+插上隨身碟開機後
+可以利用 `ping 1.1.1.1`來測試網路狀態
+利用 `ip addr`檢查網路卡是否有成功運作
+
+![](https://i.imgur.com/usoOG0V.jpg)
+
+
+## 下載openWRT並安裝
+在下載之前，arch linux沒有內建下載的工具（wget）
+所以我們需要先 `sudo pacman -Sy wget`來安裝 wget
+pacman 是arch linux自帶的套件管理工具
+
+
+
 
 check DHCP devices
 ```bash
