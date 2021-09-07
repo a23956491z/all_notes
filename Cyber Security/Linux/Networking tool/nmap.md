@@ -29,3 +29,26 @@ TCP scan:
 `-sN` TCP full scan
 `-sF` TCP FIN scans
 `-sX` TCP Xmas Scans
+
+## TCP connection scan
+if port is closed, response RST instead of SYN/ACK:
+![](https://i.imgur.com/xzUSnqT.png)
+
+
+firewall reject TCP SYN with RST instead of drop it
+`iptables -I INPUT -p tcp --dport <port> -j REJECT --reject-with tcp-reset`
+
+## SYN scan
+also referred to as "half-open" / "stealth" scans
+
+![](https://i.imgur.com/vGvC9by.png)
+
+send RST after SYN/ACK
+
+PROs:
+* by bass some old Intrusion-detection system
+* not logged by application
+* significantly faster
+
+CONs:
+* need sudo permission
