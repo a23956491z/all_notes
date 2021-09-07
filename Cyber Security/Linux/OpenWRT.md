@@ -228,8 +228,18 @@ ping 1.1.1.1
 
 接着只要在其他有連接到openWRT的電腦上
 在瀏覽器輸入 openWRT的 `LAN`地址（上面的範例是 `192.168.3.1`，預設是`192.168.1.1`），就可以看到 openWRT的網頁管理界面了
-
+密碼是剛剛上面自己用`passwd`設定的
 ![](https://i.imgur.com/JoxYxXz.png)
+
+## 後話
+![](https://i.imgur.com/KB8p2rM.png)
+
+目前這臺路由器直連兩臺Server
+不過這裏的設備當然遠不止4臺啦
+所以之後會再把交換機（Switch）連到路由器上面
+如果不計冗餘設計，隨便連4臺24port的交換機，也能讓路由器處理近百臺設備呢
+而且以這個CPU和RAM，要處理這麼巨量的設備也應該沒問題
+
 
 # 其他
 check DHCP devices
