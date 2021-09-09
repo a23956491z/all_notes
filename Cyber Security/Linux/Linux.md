@@ -979,6 +979,3 @@ UUID=94ac5f77-cb8a-495e-a65b-2ef7442b837c /boot   xfs     defaults            0 
 
 ### 掛載 映像檔
 
-## Unzip
-tar.xz
-`tar Jxvf OOO`
