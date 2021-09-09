@@ -14,3 +14,6 @@ echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>~/.profile
 
 
 `set -U fish_user_paths /home/linuxbrew/.linuxbrew/bin $fish_user_paths`
+
+/etc/apache2/certs/blog.eniplab.com-key.pem
+/etc/apache2/certs/blog.eniplab.com.pem
