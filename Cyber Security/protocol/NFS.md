@@ -17,3 +17,7 @@ sudo mount  -t nfs <IP>:share /tmp/mount -nolock
 * -t nfs : type is NFS
 * IP:share : NFS server's name is share
 * -nolock : not to use NLM locking
+
+
+## escalate privileges
+root_suqash
