@@ -15,3 +15,8 @@ SMTP internal commands
 
 We can use Metasploit's *smtp_enum* module to enumerating
 * it would feed to host a wordlist of usernames
+* auxiliary/scanner/smtp/smtp_enum
+
+Metasploit:
+1. `msfconsole`
+2. `search smtp_version`
