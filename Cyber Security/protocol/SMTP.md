@@ -6,3 +6,12 @@ Ports : 25
 2. Submits : sender, recipeint, body, attachments
 3. SMTP server : Check domain name of recipient & sender is the same?
 4. SMTP server : 
+
+## Enumerating
+
+SMTP internal commands
+* VERY : confirming the name of valid user
+* EXPN : reveal address of user & lists of emails
+
+We can use Metasploit's *smtp_enum* module to enumerating
+* it would feed to host a wordlist of usernames
