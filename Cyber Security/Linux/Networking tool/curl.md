@@ -20,5 +20,21 @@ $ curl http://10.10.28.242:8081
         <li>Set a cookie. /ctf/sendcookie</li>
     </ul>
 </body>
-</html>⏎                  
+</html>⏎
+```
+
+make POST
+```bash
+$ curl http://10.10.28.242:8081/ctf/post --data "flag_please"
+
+```
+
+GET & check cookie
+```bash
+$ curl --cookie-jar - http://10.10.28.242:8081/ctf/getcookie
+```
+
+send cookie
+```bash
+$ curl -v --cookie "flagpls=flagpls" http://10.10.28.242:8081/ctf/sendcookie
 ```
