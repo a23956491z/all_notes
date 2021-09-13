@@ -109,8 +109,24 @@ brew install mkcert
 ```
 
 ## Configuration
+0. clone the repository (need install `git` first)
+use HTTPS:
+```bash
+$ git clone https://github.com/urre/wordpress-nginx-docker-compose.git
+```
 
-1. docker configuration
+use SSH:
+```bash
+$ git clone git@github.com:urre/wordpress-nginx-docker-compose.git
+```
+
+change directory to project
+```bash
+$ cd wordpress-nginx-docker-compose
+```
+
+
+1. Docker configuration
 copy `.env.example` to `.env` 
 ```bash
 $ cp .env.example .env
@@ -127,5 +143,51 @@ DB_ROOT_PASSWORD=OOO
 DB_TABLE_PREFIX=wp_
 ```
 
-2. WordPress 
+2. WordPress configuration
+edit `./src/.env.exmaple`, for example
+```bash
+DB_NAME='enip_blog'
+DB_USER='OOO'
+DB_PASSWORD='OOO'
 
+# Optionally, you can use a data source name (DSN)
+# When using a DSN, you can remove the DB_NAME, DB_USER, DB_PASSWORD, and DB_HOST variables
+# DATABASE_URL='mysql://database_user:database_password@database_host:database_port/database_name'
+
+# Optional variables
+DB_HOST='mysql'
+# DB_PREFIX='wp_'
+
+WP_ENV='staging'
+WP_HOME='https://blog.eniplab.com'
+WP_SITEURL="${WP_HOME}/wp"
+WP_DEBUG_LOG=/path/to/debug.log
+
+# Generate your keys here: https://roots.io/salts.html
+AUTH_KEY='generateme'
+SECURE_AUTH_KEY='generateme'
+LOGGED_IN_KEY='generateme'
+NONCE_KEY='generateme'
+AUTH_SALT='generateme'
+SECURE_AUTH_SALT='generateme'
+LOGGED_IN_SALT='generateme'
+NONCE_SALT='generateme'
+
+```
+
+3. use HTTPS with custom domain
+create SSL certificate:
+```bash
+$ cd cli
+$ ./create-cert.sh
+```
+
+4. Client side : add host record for this domain
+edit `/etc/hosts` and one line for your IP & domain, for example:
+```
+192.168.3.164 blog.eniplab.com
+```
+
+
+
+## 
