@@ -98,7 +98,9 @@ test -r ~/.bash_profile && echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>
 echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>~/.profile
 ```
 
+
 Or Fish for your shell:
+*if you are using homebrew with non bash shell, you might occur some problems.*
 ```bash
 set -U fish_user_paths /home/linuxbrew/.linuxbrew/bin $fish_user_paths
 ```
