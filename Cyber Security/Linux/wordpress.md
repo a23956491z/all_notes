@@ -1,5 +1,5 @@
 ## overview
-using `urre/wordpress-nginx-docker-compose` repository
+using [`urre/wordpress-nginx-docker-compose`](https://github.com/urre/wordpress-nginx-docker-compose) repository
 
 with Bedrock's Wrodpress stack & nginx
 
@@ -84,4 +84,48 @@ $ docker info
 ```bash
 $ sudo apt install libnss3-tools
 ```
+
+2. install `homebrew`
+```bash
+$ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+If you use bash for your shell *(default)*:
+```bash
+test -d ~/.linuxbrew && eval $(~/.linuxbrew/bin/brew shellenv)
+test -d /home/linuxbrew/.linuxbrew && eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+test -r ~/.bash_profile && echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>~/.bash_profile
+echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>~/.profile
+```
+
+Or Fish for your shell:
+```bash
+set -U fish_user_paths /home/linuxbrew/.linuxbrew/bin $fish_user_paths
+```
+
+use homebrew to install `mkcert`
+```bash
+brew install mkcert
+```
+
+## Configuration
+
+1. docker configuration
+copy `.env.example` to `.env` 
+```bash
+$ cp .env.example .env
+```
+
+edit the `.env` file, for example
+```bash
+IP=134.O.O.O
+APP_NAME=enip_blog
+DOMAIN="blog.eniplab.com"
+DB_HOST=mysql
+DB_NAME=enip_blog
+DB_ROOT_PASSWORD=OOO
+DB_TABLE_PREFIX=wp_
+```
+
+2. WordPress 
 
