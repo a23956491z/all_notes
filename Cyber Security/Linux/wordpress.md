@@ -180,6 +180,7 @@ create SSL certificate:
 ```bash
 $ cd cli
 $ ./create-cert.sh
+$ cd .. # back to project folder
 ```
 
 4. Client side : add host record for this domain
@@ -189,5 +190,26 @@ edit `/etc/hosts` and one line for your IP & domain, for example:
 ```
 
 
+## Install & Run
+use docker-compose to create project
+```bash
+$ docker-compose run composer create-project
+```
 
-## 
+create new tmux session for server
+```bash
+$ tmux
+```
+
+run the server
+```bash
+$ docker-compose up
+```
+
+you can open the URL in your browser now.
+for instance : `https://blog.eniplab.com`
+
+or you can directly use IP to connect to web server : `https://192.168.3.164/`
+
+go to `/login` to manage website, example
+`https://blog.eniplab.com/login` or `https://192.168.3.164/login`
