@@ -8,6 +8,10 @@
 
 ## SQL injection
 
+Scenario might be:
+```
+String query = "SELECT * FROM accounts WHERE custID='" + request.getParameter("id") + "'";
+```
 ### TEST injection
 1. Turn on intercept mode in Burp Suite
 2. Login with any infor.
@@ -18,4 +22,10 @@
 explan the payload:
 1. `'` close the brackets in SQL query
 2. `or 1=1` will always return true, which means email is valid and log us into **user id 0**
-3. `--` comm
+3. `--` comment the rest query
+
+### Login to sepecific account
+
+payload : `{"email":"bender@juice-sh.op'--","password":"a"}`
+
+## Brute Force 
