@@ -7,3 +7,15 @@
 
 
 ## SQL injection
+
+### TEST injection
+1. Turn on intercept mode in Burp Suite
+2. Login with any infor.
+3. `Forward` in Burp and we can intercept the POST
+![](https://i.imgur.com/0eMteVm.png)
+4. modify the POST with `{"email":"' or 1=1--","password":"a"}`
+
+explan the payload:
+1. `'` close the brackets in SQL query
+2. `or 1=1` will always return true, which means email is valid and log us into **user id 0**
+3. `--` comm
