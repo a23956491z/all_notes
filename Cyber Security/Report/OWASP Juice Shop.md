@@ -29,3 +29,7 @@ explan the payload:
 payload : `{"email":"bender@juice-sh.op'--","password":"a"}`
 
 ## Brute Force 
+
+1. Use **Intruder**
+2. in **Position** tab click **Clear** button
+3. 
