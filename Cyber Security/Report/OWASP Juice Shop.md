@@ -44,3 +44,9 @@ list position : `/usr/share/seclists/Passwords/Common-Credentials/best1050.txt`
 successful request return **200 ok**
 failed request return **401 Unauthorized**
 
+## Sensitive Data Exposure
+
+### Sensitive link
+in About us page, we found the link of legal.md is `http://10.10.255.254/ftp/legal.md`, which Navigating to that `/ftp/` directory.
+
+And we can directly use `http://10.10.255.254/ftp` to see the files in FTP server.
