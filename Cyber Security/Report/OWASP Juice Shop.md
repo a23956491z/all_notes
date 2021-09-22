@@ -61,3 +61,6 @@ adding this at the end & append the `.md` suffix like:
 `http://10.10.255.254/ftp/package.json.bak%2500.md`
 
 Poison Null byte is a **NULL terminator**
+
+## Broken Access Control
+
