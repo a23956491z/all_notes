@@ -64,3 +64,14 @@ Poison Null byte is a **NULL terminator**
 
 ## Broken Access Control
 
+Privilege Escalation
+* Horizontal : different user same level of permission
+* Vertical : Higher level of permission
+
+In web developer -> debugger
+we can find a javascript file `http://10.10.255.254/main-es2015.js`
+
+Go to this file's source code
+we can search for term`admin` and tring to find `path: administration`
+
+and we found `path:"administration"` this hint towards a page called `/#/administration`
