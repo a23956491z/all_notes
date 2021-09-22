@@ -75,3 +75,22 @@ Go to this file's source code
 we can search for term`admin` and tring to find `path: administration`
 
 and we found `path:"administration"` this hint towards a page called `/#/administration`
+
+### change parameter
+with intercept on , by click the view basket we found the api for basket is : `/rest/basket/NaN`
+
+by change `Nan` to `2` we can see the basket of user 2
+
+## XSS
+
+### DOM XSS
+we can use this payload this in search bar
+```
+<iframe src="javascript:alert(`xss`)"> 
+```
+
+and this type of XSS is also called XFS (Cross-Frame Scripting)
+
+### Persistent XSS
+in admin account
+we can navigate the "Last Login IP" page for this attack
