@@ -52,3 +52,10 @@ in About us page, we found the link of legal.md is `http://10.10.255.254/ftp/leg
 And we can directly use `http://10.10.255.254/ftp` to see the files in FTP server.
 
 ### Download senstive file with **Poison Null Byte**
+
+in `http://10.10.255.254/ftp` we want to download the `package.json.bak` file and we get the *403 Error: Only .md and .pdf files are allowed!*
+
+We can use character bypass called **Poison Null Byte** looks like `%00` & we encode `%00` to URL encoded format which is `%2500`
+
+adding this at the end & append the `.md` suffix like:
+`http://10.10.255.254/ftp/package.json.bak%2500.md`
