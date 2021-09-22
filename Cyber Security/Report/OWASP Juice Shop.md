@@ -101,3 +101,20 @@ and add this Header name:`True-Client-IP` value with the payload:
 ```
 <iframe src="javascript:alert(`xss`)"> 
 ```
+
+and when we back to "Last Login IP" page
+it would show our payload, because this page will catch the header value : `True-Client-IP`
+
+### Reflected XSS
+
+in Order History -> Orders & Payment
+clicking the **Truck** button would lead us to the order detail
+`http://10.10.255.254/#/track-result?id=5267-b33bfac9d9e227c1`
+
+and we can change the parameter id's value to our payload :
+```
+<iframe src="javascript:alert(`xss`)">
+```
+
+## More change 
+in `/#/score-board/`
