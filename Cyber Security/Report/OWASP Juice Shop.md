@@ -94,3 +94,10 @@ and this type of XSS is also called XFS (Cross-Frame Scripting)
 ### Persistent XSS
 in admin account
 we can navigate the "Last Login IP" page for this attack
+![](https://i.imgur.com/MBakVxN.png)
+
+turn on the intercept to catch the **logout request**
+and add this Header name:`True-Client-IP` value with the payload:
+```
+<iframe src="javascript:alert(`xss`)"> 
+```
