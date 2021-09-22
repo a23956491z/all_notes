@@ -50,3 +50,5 @@ failed request return **401 Unauthorized**
 in About us page, we found the link of legal.md is `http://10.10.255.254/ftp/legal.md`, which Navigating to that `/ftp/` directory.
 
 And we can directly use `http://10.10.255.254/ftp` to see the files in FTP server.
+
+### Download senstive file with **Poison Null Byte**
