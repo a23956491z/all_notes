@@ -32,4 +32,15 @@ payload : `{"email":"bender@juice-sh.op'--","password":"a"}`
 
 1. Use **Intruder**
 2. in **Position** tab click **Clear** button
-3. 
+3. add the value field of **password**
+4. email with the admin email  we got `admin@juice-sh.op`
+![](https://i.imgur.com/L27oOTl.png)
+
+we use the payload list `best1050.txt` from Seclists
+install Seclists : `sudo apt-get install seclists`
+
+list position : `/usr/share/seclists/Passwords/Common-Credentials/best1050.txt`
+
+successful request return **200 ok**
+failed request return **401 Unauthorized**
+
