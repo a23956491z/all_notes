@@ -9,6 +9,8 @@ gobuster result with **direcotry-list-medium**:
 * /admin
 * /assets
 
+HINT: the uploaded file are gived a random name in `/`
+
 ## Client-side filter
 
 filter js:
@@ -68,3 +70,6 @@ or upload innocent with MIME from `image/jpg` to `php`? -> also `invalid file tp
 **the server is also using MIME checking**
 
 we can successfully upload some files after change the MIME type to `image/jpeg`
+
+## Admin page
+after we 
