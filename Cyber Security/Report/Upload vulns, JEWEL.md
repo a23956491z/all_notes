@@ -42,3 +42,20 @@ $(document).ready(function(){let errorTimeout;const fadeSpeed=1000;function setR
 const text={success:"File successfully uploaded",failure:"No file selected",invalid:"Invalid file type"};$.ajax("/",{data:JSON.stringify({name:fileBox.name,type:fileBox.type,file:event.target.result}),contentType:"application/json",type:"POST",success:function(data){let colour="";switch(data){case "success":colour="green";break;case "failure":case "invalid":colour="red";break}setResponseMsg(text[data],colour)}})}})});
 
 ```
+
+we can found the client-side filter's error message is :`Invalid file format`
+after we remove the client-side filter, the error message changed to `Invalid file type`
+
+## Server-side
+### Magic number?
+modified the `.jpg` file's magic number to `FF D8 FF DB`
+and uploads works
+
+the server-side filter **is not** using magic number.
+
+### Whitelist or Blacklist
+it says the upload type is wrong
+maybe we can try change the MIME from `.php` file to `image/jpg` -> still get `invalid file type`
+or upload innocent with MIME from `image/jpg` to `php`? -> also `invalid file tpye`
+
+**the server is also using MIME checking**
