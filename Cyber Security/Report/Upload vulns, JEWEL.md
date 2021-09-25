@@ -9,7 +9,13 @@ gobuster result with **direcotry-list-medium**:
 * /admin
 * /assets
 
-HINT: the uploaded file are gived a random name in `/`
+HINT: the uploaded file are gived a random name in `/content` folder like`/content/AIO.jpg` 
+
+our [javascript payload](https://github.com/cyberheartmi9/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md) is 383 bytes 
+and in gobuster result we find a file which is `/content/AIO.jpg` with 383 bytes
+we found the file!
+
+
 
 ## Client-side filter
 
@@ -72,4 +78,8 @@ or upload innocent with MIME from `image/jpg` to `php`? -> also `invalid file tp
 we can successfully upload some files after change the MIME type to `image/jpeg`
 
 ## Admin page
-after we 
+after we upload the file
+the admin page allow us to execute some modules
+
+but we have no files in `/modules` folder
+but we can use parent folder syntax like `../content/AIO.jpg` to activate our payload
