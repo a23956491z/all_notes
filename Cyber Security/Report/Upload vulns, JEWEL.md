@@ -2,6 +2,13 @@ headers:
 * X-Powered-By: Express
 * Server: nginx/1.17.6
 
+## Naming
+gobuster result with **direcotry-list-medium**:
+* /content
+* /modules
+* /admin
+* /assets
+
 ## Client-side filter
 
 filter js:
@@ -48,14 +55,16 @@ after we remove the client-side filter, the error message changed to `Invalid fi
 
 ## Server-side
 ### Magic number?
-modified the `.jpg` file's magic number to `FF D8 FF DB`
+modified the `.jpg` file's magic number to `4D 5A` (`.exe`)
 and uploads works
 
 the server-side filter **is not** using magic number.
 
 ### Whitelist or Blacklist
 it says the upload type is wrong
-maybe we can try change the MIME from `.php` file to `image/jpg` -> still get `invalid file type`
+maybe we can try change the MIME from `.php` file to `image/jpg` -> ~~still get `invalid file type`~~ , we need to use `image/jpeg`!!!!, and it works
 or upload innocent with MIME from `image/jpg` to `php`? -> also `invalid file tpye`
 
 **the server is also using MIME checking**
+
+we can successfully upload some files after change the MIME type to `image/jpeg`
