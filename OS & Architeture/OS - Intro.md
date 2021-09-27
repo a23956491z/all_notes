@@ -90,7 +90,8 @@ Hardware support : **Timer**
 * Software interrupt (**Exception**/**Trap**)
 	* **Software logical error** : e.g. divided by zero
 	* **Process problem** : e.g. infinite loop, process modifying each other
-	* Request for operating system service : not allowed
+	* Request for operating system service : **System call**
+![](https://i.imgur.com/o3uIQMV.png)
 
 ## Dual-mode
 * User mode & Kernel mode
@@ -99,8 +100,37 @@ Hardware support : **Timer**
 ## Virtual Machine Manager (VMM)
 for guest VMs
 
+## Process
+Process is a running program
+* Program is **passive entity**
+* Process is **active entity**
 
+Process termiation:
+* Reclaim resources
 
+Program Counter:
+* Specifying location of next instruction to execute (Sqeuentially)
+* Single-threaded process has one program counter
+* Multi-threaded one program counter *per thread*
+
+Operating system's responsibility
+* Create/Delete user & system processes
+* Suspend/Resume process
+* Synchronize process
+* Commicate process
+* Deadlock handle
+
+## Memory
+* Execute a program : instructions must be in memory
+* data needed by program also need to be in memory
+
+**Memory management** : *what in memory & when*
+* keeping tracking where is being used & by who is using
+* Which process and data need to move in / move out memory
+* Allocating & De-allocating
+
+## Stroage
+* Physical proterty -> logical storage unit : file
 # Kernel Data Structure
 List:
 * Linked List
