@@ -76,4 +76,28 @@ Hardware support : **Timer**
 
 ## Timesharing (multitasking)
 * CPU switch jobs frequently like they are running in the same time
+	* Response time should be < 1s
+	* **Swap** : if process cannot fit in memory
+	* **Virtual memory** : Execute process from Disk + Memory (*Simulate disk to memory*)
+	* **CPU scheduling** : If jobs are going to run in the same time
+
+![](https://i.imgur.com/hW5pizi.png)
+
 # OS operation
+
+# Kernel Data Structure
+List:
+* Linked List
+* Doubly Linked List
+* Circular Linked List
+
+Tree:
+* Binary Search Tree : Search $O(n)$
+* Balanced binary search Tree : Search $O(\lg n)$
+
+Hash map
+* with Hash function
+
+**Bitmap**
+* string of *n* binary digits : *n* status
+
