@@ -141,7 +141,6 @@ Tertiary storage : e.g. optical storage(CD), magnetic tape
 * some are WORM(write-once, read-many-times), RW(read-write)
 
 
-
 **File-System** management:
 * Control who can access what
 * Create/Delete files & directories
@@ -149,7 +148,13 @@ Tertiary storage : e.g. optical storage(CD), magnetic tape
 * ??*Primitives to Manipulate files & directories*??
 
 ## I/O
-Res
+OS Responsibility
+* Memory management of I/O 
+	* Buffering : Store data templorarily while data transferring
+	* Caching : Store data for faster sotrage performance
+	* Spooling : Overlapping output of one job with input by other jobs
+* General device-driver interface
+* Drivers for hardware
 
 
 # Kernel Data Structure
