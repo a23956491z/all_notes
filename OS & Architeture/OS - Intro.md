@@ -179,8 +179,7 @@ Hash map
 	* `<linux/kfifo.h>`
 	* `<linux/rbtree.h>`
 
-[# Homeworks
-![](https://i.imgur.com/NJl9oQ1.png)](<# Homeworks
+# Homeworks
 ![](https://i.imgur.com/NJl9oQ1.png)
 
 ## 1.8
@@ -211,3 +210,4 @@ It's possible:
 > Dual-mode allowed as sharing resources without effect each other.
 >
 > By switch between user mode & monitor mode, user program are not allowed to have privileged instruction>)
+
