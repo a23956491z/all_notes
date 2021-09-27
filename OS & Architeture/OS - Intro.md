@@ -63,7 +63,7 @@ Prevent user program cause **infinite loop**
 
 Hardware support : **Timer**
 * interrupt program after a time period
-* Use Clock Tick
+* Use Clock Tick (physical clock)
 * timer reaches 0, interrupt the program
 
 * **Load-timer** is provileged instruction
