@@ -131,6 +131,22 @@ Operating system's responsibility
 
 ## Stroage
 * Physical proterty -> logical storage unit : file
+
+Disk:
+* Free-space management
+* Sotrage allocation
+* Disk scheduling
+
+Tertiary storage : e.g. optical storage(CD), magnetic tape
+* WORM
+
+**File-System** management:
+* Control who can access what
+* Create/Delete files & directories
+* Mapping files onto another storage
+* ??*Primitives to Manipulate files & directories*??
+
+
 # Kernel Data Structure
 List:
 * Linked List
