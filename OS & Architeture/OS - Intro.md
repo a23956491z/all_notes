@@ -33,6 +33,7 @@ Mode BIT:
 
 * Switch to monitor mode when **interrupt/trap** occurs
 * Monitor mode have **Privileged instructions**, also can request by users(**System calls**)
+	* System call changes mode to kernel, and reset the mode after return 
 
 
 ## I/O Protection
@@ -84,6 +85,21 @@ Hardware support : **Timer**
 ![](https://i.imgur.com/hW5pizi.png)
 
 # OS operation
+## Interrupt driven
+* Hardware interrupt by devices
+* Software interrupt (**Exception**/**Trap**)
+	* **Software logical error** : e.g. divided by zero
+	* **Process problem** : e.g. infinite loop, process modifying each other
+	* Request for operating system service : not allowed
+
+## Dual-mode
+* User mode & Kernel mode
+* **Mode bit** provided by hardware
+
+## Virtual Machine Manager (VMM)
+for guest VMs
+
+
 
 # Kernel Data Structure
 List:
@@ -101,3 +117,11 @@ Hash map
 **Bitmap**
 * string of *n* binary digits : *n* status
 
+## Linux data structure
+* defined in 
+	* `<linux/list.h>`
+	* `<linux/kfifo.h>`
+	* `<linux/rbtree.h>`
+
+# Homeworks
+![](https://i.imgur.com/NJl9oQ1.png)
