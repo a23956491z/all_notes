@@ -1,3 +1,7 @@
+---
+tags : machine-learning
+---
+
 ### Why Preprocessing?
 Data in real situation is chaos
 * **incomplete** or **noisy**: lacking attribute or make up the filling

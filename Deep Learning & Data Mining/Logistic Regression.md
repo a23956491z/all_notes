@@ -1,3 +1,7 @@
+---
+tags : machine-learning
+---
+
 ## Step 1 : function set
 用什麼機率分佈模型都可以(例如高斯分佈)
 

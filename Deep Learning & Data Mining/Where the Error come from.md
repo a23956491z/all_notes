@@ -1,3 +1,7 @@
+---
+tags : machine-learning  Lee-Hong-Yee
+---
+
 Estimator
 
 我們訓練出來的結果就是估計值

@@ -1,3 +1,7 @@
+---
+tags : machine-learning/deep-learning
+---
+
 ## Artificial Intelligence
 The defination of artificial intelligence?
 *the effort to automate intellectual tasks normally performed by humans*

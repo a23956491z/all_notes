@@ -1,3 +1,7 @@
+---
+tags : machine-learning
+---
+
 感知器(perceptron)是神經網路的根基
 
 ## What is perceptron

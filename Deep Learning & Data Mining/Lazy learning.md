@@ -1,3 +1,7 @@
+---
+tags : machine-learning
+---
+
 ## Lazy v.s. Eager leanring
 * **Lazy** learning :
 	* stores simple traning data, wait for sepicific test tuple

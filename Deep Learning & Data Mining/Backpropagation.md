@@ -1,3 +1,7 @@
+---
+tags : machine-learning/deep-learning Lee-Hong-Yee
+---
+
 誤差反向傳播法，可以更有效率地計算權重梯度
 
 ## 引入計算圖

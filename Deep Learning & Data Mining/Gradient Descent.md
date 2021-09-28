@@ -1,3 +1,7 @@
+---
+tags : machine-learning
+---
+
 ## 微分
 ![[Pasted image 20210124152408.png]]
 如果我們用程式執行*數值微分*

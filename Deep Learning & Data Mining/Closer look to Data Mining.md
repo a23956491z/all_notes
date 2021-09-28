@@ -1,3 +1,6 @@
+---
+tags : data-mining
+---
 * Classification :
 	* supervised
 	* dependent variable is **categorical**

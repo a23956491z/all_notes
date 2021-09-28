@@ -1,3 +1,8 @@
+---
+tags : machine-learning Lee-Hong-Yee
+---
+
+
 ### Step 1：Model
 A set of funtions $f_1, f_2...$
 assume we use $y = b + wx_{cp}$
