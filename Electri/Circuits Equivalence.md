@@ -1,5 +1,5 @@
 #circuit_analysis 
-#superposition
+
 
 Example of former equivalence we leart
 ![](https://i.imgur.com/jhHh12e.png)
