@@ -34,5 +34,14 @@
       ],
       "key": "*"
     }
+  ],
+  "templater-obsidian:Templates/meta-data.md": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "T"
+    }
   ]
 }

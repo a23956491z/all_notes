@@ -1,6 +1,9 @@
+---
+tags : web-develop python
+---
+
 ## 安裝環境
 
-要裝[[Python]]
 虛擬環境
 ```bash
 $ pip3 install virtualenvwrapper-win
@@ -8,7 +11,7 @@ $ mkvirtualenv my_django_environment
 ```
 
 虛擬環境常用命令：
-* `deactive` 退出當前Python虛擬環境
+* `deactive` 退出當前[[Python]]虛擬環境
 * `workon` 列出可用環境
 * `wokron environment` 啟動指定Python虛擬環境
 * `rmvirutalenv environment` 刪除指定環境

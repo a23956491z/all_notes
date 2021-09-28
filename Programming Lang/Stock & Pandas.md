@@ -1,4 +1,7 @@
-# [[Python]] Pandas
+---
+tags : python
+---
+
 
 ## fectch
 匯出TEJ檔案

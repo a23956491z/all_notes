@@ -1,3 +1,7 @@
+---
+tags : python
+---
+
 # Python基本語法整理
 > **這是極淺而廣的Python教學筆記**
 

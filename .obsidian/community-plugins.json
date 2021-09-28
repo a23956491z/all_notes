@@ -4,5 +4,7 @@
   "obsidian-imgur-plugin",
   "obsidian-git",
   "url-into-selection",
-  "better-word-count"
+  "better-word-count",
+  "table-editor-obsidian",
+  "templater-obsidian"
 ]
