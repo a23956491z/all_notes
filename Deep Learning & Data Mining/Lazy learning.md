@@ -1,5 +1,5 @@
 ---
-tags : machine-learning
+tags : machine-learning  data-mining
 ---
 
 ## Lazy v.s. Eager leanring

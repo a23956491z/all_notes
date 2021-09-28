@@ -1,11 +1,11 @@
 {
-  "collapse-filter": false,
+  "collapse-filter": true,
   "search": "",
-  "showTags": false,
+  "showTags": true,
   "showAttachments": false,
   "hideUnresolved": false,
   "showOrphans": true,
-  "collapse-color-groups": false,
+  "collapse-color-groups": true,
   "colorGroups": [
     {
       "query": "tag:#machine-learning  OR tag:#data-mining",
@@ -16,15 +16,15 @@
     }
   ],
   "collapse-display": true,
-  "showArrow": true,
+  "showArrow": false,
   "textFadeMultiplier": 0,
   "nodeSizeMultiplier": 0.728205128205128,
   "lineSizeMultiplier": 2.06837606837607,
   "collapse-forces": false,
   "centerStrength": 1,
-  "repelStrength": 14.7008547008547,
-  "linkStrength": 0.726495726495727,
-  "linkDistance": 175,
-  "scale": 0.6872757426070744,
-  "close": true
+  "repelStrength": 15.9550561797753,
+  "linkStrength": 1,
+  "linkDistance": 196,
+  "scale": 0.6872757426070711,
+  "close": false
 }

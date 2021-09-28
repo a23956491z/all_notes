@@ -1,3 +1,7 @@
+---
+tags : data-mining
+---
+
 # Cluster Analysis
 > Cluster : a collection of data objects
 Similarity of another within same cluster
