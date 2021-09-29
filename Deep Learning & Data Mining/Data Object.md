@@ -17,5 +17,5 @@ Attribute types:
 * Ordinal, e.g. *Size={small, medium, large}*
 * Quantity 
 	* Interval , on equal-sized units, e.g. : temperature
-	* Ratio, 
+	* Ratio, nonlinear scale
 	
