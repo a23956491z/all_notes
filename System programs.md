@@ -18,3 +18,10 @@ System programs provide system  service wrapped as progrmas.
 	* using loaders
 * Communications
 	* Creating virtual connection among process/user
+
+#### Background service
+aka services, **daemon**
+
+* Launch at boot
+* *Run in user context instead of kernel*
+* e.g. loggin or disk checking

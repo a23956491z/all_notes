@@ -190,7 +190,6 @@ Hash map
 	* `<linux/kfifo.h>`
 	* `<linux/rbtree.h>`
 
-[[[Homeworks]]](<# Homeworks
 
 ![](https://i.imgur.com/NJl9oQ1.png)
 
