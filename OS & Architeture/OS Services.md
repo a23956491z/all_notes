@@ -6,6 +6,7 @@ tags : operating-system
 
 Services:
 * [[User Interface | UI]]
+* [[Communication model | Communication]]
 * Program Execution
 * I/O operation
 * File-system maniplation
