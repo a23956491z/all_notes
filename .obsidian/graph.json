@@ -1,11 +1,11 @@
 {
-  "collapse-filter": true,
-  "search": "",
-  "showTags": true,
+  "collapse-filter": false,
+  "search": "tag:#operating-system",
+  "showTags": false,
   "showAttachments": false,
   "hideUnresolved": false,
   "showOrphans": true,
-  "collapse-color-groups": true,
+  "collapse-color-groups": false,
   "colorGroups": [
     {
       "query": "tag:#machine-learning  OR tag:#data-mining",
@@ -25,6 +25,6 @@
   "repelStrength": 15.9550561797753,
   "linkStrength": 1,
   "linkDistance": 196,
-  "scale": 0.6872757426070711,
+  "scale": 0.68727574260707,
   "close": false
 }

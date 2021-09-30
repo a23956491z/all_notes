@@ -10,8 +10,7 @@ Request some OS service:
 * Process control
 * File management
 * Device Management
-* Information maintenace
-* Commuinications
+
 
 when system call occurs, **copy contents** of one file to another file
 
@@ -21,7 +20,13 @@ when system call occurs, **copy contents** of one file to another file
 
 ### Parameter passing
 
+![](https://i.imgur.com/yrEFsGW.png)
+
 pass parameters to OS:
 * Simplest : pass parameters in **register**
 * Store in **block** or memory : **address of block** in register
-* Stack : pushed by program, poped by OS
+* Stack : *pushed* by program, *poped* by OS
+
+
+### Exmaple of windows & Unix system call
+![](https://i.imgur.com/FsvwE0A.png)
