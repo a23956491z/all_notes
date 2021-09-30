@@ -18,3 +18,6 @@ Interface vs Library
 Windows : *Win32 API*
 POSIX-based system : *POSIX API*
 JVM : *Java API*
+
+### Example of standard API
+![](https://i.imgur.com/nWfvkkX.png)
