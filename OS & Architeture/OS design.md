@@ -14,5 +14,5 @@ Usually mixing lang:
 * Systems programs in C, C++
 	* Or in scriping lang. : PERL, Python, <span class="unknown">shell script</span>
 
-Emulation : make OS to run on non-native hardware
+Emulation(模擬器) : make OS to run on non-native hardware
 
