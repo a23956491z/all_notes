@@ -40,11 +40,38 @@ $X_{tri(14)} = (X_{tri(20)}-X_{tri(10)})*\cfrac{14-10}{20-10}$
 
 ## Data Dispersion
 ### Variance 
+![](https://i.imgur.com/3bMrFIC.png)
+
+
+### Standard deviation
+sqrt of variance
+
+
+### Quartile
+* $Q_1$ ($25^{th}$ percentile)
+* $Q_3$ ($75^{th}$ percentile)
+
+### Inter-quartile range
+$IQR=Q_3 - Q_1$
+
+### Five number summary
+* min
+* $Q_1$
+* median
+* $Q_3$
+* max
+
+
+### Outlier
+values higer/lower than $IQR*1.5$
+
 
 ## Graphic Display
 
 ### Boxplot
-![](https://i.imgur.com/O28AdRw.png)
+based on **five number summary**
+![](https://i.imgur.com/OOKBgww.png)
+
 
 ### Histogram
 * x-axis : values
@@ -63,3 +90,12 @@ e.g. this 2 distrubtuion have same boxplot
 
 ### Scatter plot
 ![](https://i.imgur.com/bGMqzbi.png)
+
+Positively correlated:
+![](https://i.imgur.com/rUsGuSb.png)
+
+Negatively correlated:
+![](https://i.imgur.com/KnAY7yr.png)
+
+both:
+
