@@ -2,6 +2,7 @@
 tags : data-mining
 ---
 
+# Data Similarity
 Similarity
 * how alike are 2 data objects
 * usually in $[0,1]$
@@ -47,4 +48,22 @@ Jaccard coefficient : **similarity** for asymmetric binary variable
 for more variables
 e.g. *red, yellow, blue...*
 
-### Method 1 : Simpl
+### Method 1 : Simple matching
+* $m$ : how many matches
+* $p$ : how many variables
+![](https://i.imgur.com/1fz7Ljx.png)
+
+Example:
+![](https://i.imgur.com/B6JMiI4.png)
+![](https://i.imgur.com/zklid4P.png)
+
+### Method 2 : Large number of binary attr
+Create a **new binary attribute** for *each M nomial states*
+* asymmetric
+
+Example:
+![](https://i.imgur.com/9MpJe87.png)
+![](https://i.imgur.com/K5BnYxH.png)
+
+## Distance on Numberic Data
+[[Minkowski Distance]]
