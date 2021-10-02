@@ -1,3 +1,8 @@
+---
+tags : data-mining
+---
+
+# Statistical Descriptions of Data
 * Motivation : to stand for data
 	* central tendency
 	* variation & spread
@@ -27,3 +32,12 @@ $X_{tri(10)}$ which means trimming 10% smallest & largest data and
 
 if we have remaining: **interpolation**
 $X_{tri(14)} = (X_{tri(20)}-X_{tri(10)})*\cfrac{14-10}{20-10}$
+
+### Symmetric vs Skewed Data
+![](https://i.imgur.com/4g9lN2y.png)
+
+![](https://i.imgur.com/294QVUG.png)
+
+## Data Dispersion
+### Variance 
+
