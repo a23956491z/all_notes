@@ -6,12 +6,13 @@ Similarity
 * how alike are 2 data objects
 * usually in $[0,1]$
 
+**Proximity** measure : Similarity or Dissimilarity measure
 
 Dissimilarity matrix : only contains distances
 ![](https://i.imgur.com/6yb1gD5.png)
 
-## binary variable
-if we have a 2 data object like this (binary attribute):
+## Binary Variable
+if we have a 2 data object like this which are binary variable(binary attribute):
 ![](https://i.imgur.com/BJzWPvo.png)
 
 we can get a table like this:
@@ -21,12 +22,29 @@ we can get a table like this:
 ![](https://i.imgur.com/qsKwKYD.png)
 
 
-### Dis
-* Distance for **symmetric** binary variable:
+### Dissimilarity (Distance)
+* Distance with **symmetric** :
 ![](https://i.imgur.com/GYF9NeR.png)
-* Distance for **asymmetric** binary variable:
+* Distance with **asymmetric**:
 ![](https://i.imgur.com/xwTIxWs.png)
 
+Example: sickness & medical tests
+* Gender is a **symmetric** attribute
+* fever, cough, tests are asymmetric
+![](https://i.imgur.com/UWfgSMk.png)
 
+in calculation
+* ignore the symmetric attr. here
+* Y or P is 1
+* N is 0
+![](https://i.imgur.com/Xs4v6WJ.png)
+
+### Similarity
 Jaccard coefficient : **similarity** for asymmetric binary variable
 ![](https://i.imgur.com/jLWLeaO.png)
+
+## Proximity of Nominal Attributes 
+for more variables
+e.g. *red, yellow, blue...*
+
+### Method 1 : Simpl
