@@ -41,3 +41,25 @@ $X_{tri(14)} = (X_{tri(20)}-X_{tri(10)})*\cfrac{14-10}{20-10}$
 ## Data Dispersion
 ### Variance 
 
+## Graphic Display
+
+### Boxplot
+![](https://i.imgur.com/O28AdRw.png)
+
+### Histogram
+* x-axis : values
+* y-axis : frequency
+
+![](https://i.imgur.com/4NhJdmo.png)
+
+sometimes Historgrams can show more information than boxplot
+e.g. this 2 distrubtuion have same boxplot
+![](https://i.imgur.com/8paRLwP.png)
+
+
+### Quantile plot
+
+### Quantile-quantile(q-q) plot
+
+### Scatter plot
+![](https://i.imgur.com/bGMqzbi.png)
