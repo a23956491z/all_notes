@@ -85,10 +85,15 @@ e.g. this 2 distrubtuion have same boxplot
 
 
 ### Quantile plot
+how many fraction of data under certain value
+
+![](https://i.imgur.com/CZpYhcd.png)
 
 ### Quantile-quantile(q-q) plot
 Comparing **2 dataset**
 
+advantage:
+* sample size doesn't need to be equal
 
 We can see only have 9 unit on both axis
 * 3rd unit is $Q_1$
