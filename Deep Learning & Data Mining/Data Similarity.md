@@ -66,4 +66,10 @@ Example:
 ![](https://i.imgur.com/K5BnYxH.png)
 
 ## Distance on Numberic Data
-[[Minkowski Distance]]
+### Metric
+Must statify following properties
+* Symmetry : $d(i,j)=d(j,i)$
+* Triangle Inequality : $d(i,j)>0$ if $i \neq j$ and $d(i,i)=0$
+* Positive definiteness : $d(i,j) \leq d(i,k) + d(k,j)$
+
+### [[Minkowski Distance]]

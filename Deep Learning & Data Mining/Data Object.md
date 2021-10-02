@@ -19,3 +19,6 @@ Attribute types:
 	* Interval , on equal-sized units, e.g. : temperature
 	* Ratio, nonlinear scale
 	
+	### Ratio-Scaled Variable
+	
+	### Ordinal variable
