@@ -87,6 +87,16 @@ e.g. this 2 distrubtuion have same boxplot
 ### Quantile plot
 
 ### Quantile-quantile(q-q) plot
+Comparing **2 dataset**
+
+
+We can see only have 9 unit on both axis
+* 3rd unit is $Q_1$
+* 7rd unit is $Q_3$
+
+![](https://i.imgur.com/N6QIRGk.png)
+* $Q_1$ of first dataset is 60
+* $Q_1$ of second dataset is about 65
 
 ### Scatter plot
 ![](https://i.imgur.com/bGMqzbi.png)
@@ -98,4 +108,7 @@ Negatively correlated:
 ![](https://i.imgur.com/KnAY7yr.png)
 
 both:
+![](https://i.imgur.com/vt6nuPs.png)
 
+unrelated
+![](https://i.imgur.com/8COwlNK.png)
