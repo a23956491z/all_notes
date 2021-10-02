@@ -3,6 +3,8 @@ tags : machine-learning Lee-Hong-Yee
 ---
 
 #data-science
+
+# 簡介
 ## 機器學習的種類
 是否需要人類監督：
 * 監督式學習
@@ -34,14 +36,18 @@ tags : machine-learning Lee-Hong-Yee
 
 ### 增強式學習
 
+# 常見演算法
+## 決策樹 & 隨機森林
+
+## 線性回歸 & 羅吉斯回歸
+
+## 支援向量機
 
 
 ## KNN(K臨近演算法)
-常見的機器學習分類預測做法：
-1. Logistic回歸
-2. 決策樹
-3. K臨近演算法
-[[Lazy learning#k-Nearest Neighbor alg]]
+[[Lazy learning#KNN K-Nearest Neighbor alg]]
+
+## 貝氏分類器
 
 # 機器學習(李宏毅)
 Framework
