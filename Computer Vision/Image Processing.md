@@ -23,6 +23,23 @@ image processing:
 ### Image Acquisition
 using CCD(Charge Coupled Device) camera
 
+### Images vs Digital Images
+* digital image : a array of sampled point from real image
+	* these point are **pixels**
+	* neighborhood : some pixels around the pixel
+	* ![](https://i.imgur.com/Ct3cyJx.png)
+
+each pixel have a color value from 0 ~ 255
+* for example, gray scale: 
+![](https://i.imgur.com/GuyjHrK.png)
+
+applications:
+* Medicine
+* Ariculture
+* Indusrty
+* Law enforcement
+
+
 ---
 Computer Vision vs Image Processing vs Image Analysis
 ![](https://i.imgur.com/bctvmyu.png)
@@ -33,5 +50,14 @@ Image Analysis
 * Pattern Classification
 
 * Image Resotration
+	* Remove motion blue 
+	* Remove *distortions*
+	* Remove *periodic interference*
 * Image Enhancement
+	* Sharpen or deblur
+	* Highlight edges
+	* Improve image constrast
+	* Remove noise
+* Image Segmentation
+	* finding the shape of objects in an image
 * Image Compression
