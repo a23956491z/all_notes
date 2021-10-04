@@ -18,6 +18,16 @@ purpose of image processing:
 ![](https://i.imgur.com/eOGGyBj.png)
 
 ## Image Sampling & Acquisition
+### Sample
+**Nyquist criterion**
+* require sampleing frequency be at least **twice the  highest frequency** in signal
+* so we can construct a near continuous function
+
+correct sampleing vs undersampled:
+* we get a **aliasing** in undersampled picture
+	* e.g.  [moiré pattern](https://en.wikipedia.org/wiki/Moir%C3%A9_pattern)
+	* aliasing is an effect that causes different signals to become indistinguishable when sampled.
+![](https://i.imgur.com/Ls6ZrtB.png)
 
 
 ### Image Acquisition
