@@ -1,3 +1,8 @@
+---
+tags : image-processing
+---
+
+
 purpose of image processing:
 * improve pictorial information for human
 * redner it for autonomous machine
