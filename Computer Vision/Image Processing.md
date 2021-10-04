@@ -49,6 +49,7 @@ Image Analysis
 * Feature Extraction
 * Pattern Classification
 
+### Applications
 * Image Resotration
 	* Remove motion blue 
 	* Remove *distortions*
@@ -61,3 +62,24 @@ Image Analysis
 * Image Segmentation
 	* finding the shape of objects in an image
 * Image Compression
+
+face detection:
+![](https://i.imgur.com/eyUueud.png)
+
+### Image type
+![](https://i.imgur.com/GMKNqa8.png)
+
+binary image:
+![](https://i.imgur.com/FjyYySH.png)
+
+
+Grayscale:
+![](https://i.imgur.com/8W0963v.png)
+
+True color/red-green-blue:
+* we have 3 channels here
+![](https://i.imgur.com/CFd22ja.png)
+
+Indexed
+* images's **indeices** correspoding to elements in **color map**
+![](https://i.imgur.com/jCynIpg.png)
