@@ -76,18 +76,6 @@ tags : machine-learning Lee-Hong-Yee
 
 # 常見演算法
 ## 決策樹 & 隨機森林
-### 決策樹
-* 用於分類、回歸的監督式學習
-* 從特徵推斷出**多個二分規則**
-	* 中間節點(non-leaf node)：測試條件
-	* 分支(branch)：條件測試的結果
-	* 葉節點(leaf nodes)：最終的分類結果
-![](https://i.imgur.com/coSBmAi.png)
-
-產生決策樹：
-1. 建立樹狀結構
-2. 修剪樹狀結構
-
 
 ## 線性回歸 & 羅吉斯回歸
 
