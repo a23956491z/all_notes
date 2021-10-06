@@ -76,6 +76,7 @@ tags : machine-learning Lee-Hong-Yee
 
 # 常見演算法
 ## 決策樹 & 隨機森林
+![[Decision Tree]]
 
 ## 線性回歸 & 羅吉斯回歸
 
@@ -83,7 +84,7 @@ tags : machine-learning Lee-Hong-Yee
 
 
 ## KNN(K臨近演算法)
-[[Lazy learning#KNN K-Nearest Neighbor alg]]
+![[Lazy learning#KNN K-Nearest Neighbor alg]]
 
 ## 貝氏分類器
 

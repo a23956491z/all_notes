@@ -2,6 +2,10 @@
 tags : machine-learning Lee-Hong-Yee
 ---
 
+## 回歸分析
+
+---
+李宏毅
 
 ### Step 1：Model
 A set of funtions $f_1, f_2...$

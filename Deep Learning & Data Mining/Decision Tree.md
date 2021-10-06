@@ -30,6 +30,12 @@ tags : machine-learning
 	* 資訊獲利比最大化
 	* 基尼指數最小化
 
+優點：
+* 決策規則直觀，訓練快
+
+缺點：
+* 難以發覺屬性間的互相關聯
+* 容易overfitting
 
 ### 資訊獲利
 特定條件下，減少多少資訊不確定性
@@ -53,7 +59,7 @@ tags : machine-learning
 ![](https://i.imgur.com/Hb8ZeSa.png)
 
 資訊獲利：
-
+是否漂亮這個特徵，對於選擇買、不買的不確定度減少了`0.0056`
 ![](https://i.imgur.com/2jLbUd4.png)
 
 
@@ -67,3 +73,23 @@ tags : machine-learning
 
 例如：買、不買兩個類別
 ![](https://i.imgur.com/FLubxVk.png)
+
+### 隨機森林
+* 包含多個Decision Tree的分類器，輸出的類別以所有Decision Tree的投票結果爲準。
+* 是一種集成學習（Ensemble Learning）
+
+
+演算：
+1. 隨機採樣出 n 個（可放回）
+2. 隨機選擇 k 個特徵，以這些特徵建立Decision Tree
+3. 重復 m 次，生成 m 棵Decision Tree
+4. 新的資料，經過所有Decision Tree投票，最高票就是輸出類別
+
+優點：
+* 能處理高維度（多特徵）資料，且不需要選擇特徵
+* 可判斷特徵的重要程度及其互相影響程度
+* 可平行運算，因爲不同樹之間互相獨立
+* 採樣的隨機性降低overfitting
+
+缺點：
+* 噪音較大的問題上容易overfitting
