@@ -1,6 +1,30 @@
 ---
 tags : machine-learning
 ---
+### 邏吉斯回歸
+類似於線性回歸，不過自變數與應變數間的相關性以**指數**的方式變動
+* 邏輯斯回歸常用於應變數是離散資料的問題，如分類問題
+![](https://i.imgur.com/2NUEYuz.png)
+
+線性分析希望資料盡可能貼近紅線：
+![](https://i.imgur.com/aDnH74b.png)
+
+邏輯斯回歸希望資料盡可能被分成兩類：
+![](https://i.imgur.com/p3Lu6EH.png)
+
+與Perceptron的差異：
+* 激活函數：Sigmoid Function
+* 損失函數：Cross entropy Error Function
+* 具有正規化項(Regularization Term)，或懲罰項，避免overfitting
+
+### Cross entropy
+* $N$ ：資料數
+* $y_i$：預測值
+* $t_i$：正確值（標籤）
+![](https://i.imgur.com/5mycRvf.png)
+
+
+---
 
 ## Step 1 : function set
 用什麼機率分佈模型都可以(例如高斯分佈)
