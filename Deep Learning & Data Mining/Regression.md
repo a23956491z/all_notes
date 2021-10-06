@@ -10,6 +10,8 @@ tags : machine-learning Lee-Hong-Yee
 * 給定一些點，找出一條直線方程式，使所有點到該線的距離平方和最小
 ![](https://i.imgur.com/kNALXUB.png)
 
+### 邏輯斯回歸
+![[Logistic Regression]]
 
 ---
 李宏毅

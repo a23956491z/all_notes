@@ -79,6 +79,9 @@ tags : machine-learning Lee-Hong-Yee
 ![[Decision Tree]]
 
 ## 線性回歸 & 羅吉斯回歸
+![[Regression]]
+
+![[Logistic Regression]]
 
 ## 支援向量機
 

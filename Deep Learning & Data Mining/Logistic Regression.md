@@ -17,11 +17,27 @@ tags : machine-learning
 * 損失函數：Cross entropy Error Function
 * 具有正規化項(Regularization Term)，或懲罰項，避免overfitting
 
-### Cross entropy
+優點：
+* 實現簡單
+* 計算量小、運算快、儲存資源低
+缺點：
+* 特徵空間大時，性能不好
+* 容易underfitting
+* 通常只能處理二分類問題
+* 非線性特徵需要進行轉換
+
+### 交叉熵誤差函數
+Cross entropy error function
 * $N$ ：資料數
 * $y_i$：預測值
 * $t_i$：正確值（標籤）
 ![](https://i.imgur.com/5mycRvf.png)
+
+### 正規化
+Regulation，在學習時給予懲罰，讓決策分界線更平滑
+* Loss function = 原Loss function + 正規化項
+* L2 正規化：**權重的平方**作爲懲罰項
+* L1 正規化：**權重的絕對值**作爲懲罰項
 
 
 ---
