@@ -32,11 +32,38 @@ tags : machine-learning
 
 
 ### 資訊獲利
+特定條件下，減少多少資訊不確定性
+* 資訊獲利 = 資訊熵 - 條件熵
+* 資訊熵：樣本的類別復雜度
+![](https://i.imgur.com/KhkIMy8.png)
+* 條件熵：特定特徵下，樣本的類別復雜度
+![](https://i.imgur.com/3x37DHH.png)
+
 
 資訊獲利比 = 資訊獲利 / 資訊熵
 
+例如：水果資料集
+![](https://i.imgur.com/0EoKGci.png)
+
+買、不買的資訊熵
+![](https://i.imgur.com/5TXnN7Q.png)
+
+以漂亮、不漂亮做爲**特徵**：
+* 漂亮的有3個，其中2個買，1個不買
+![](https://i.imgur.com/Hb8ZeSa.png)
+
+資訊獲利：
+
+![](https://i.imgur.com/2jLbUd4.png)
+
+
 ### 基尼指數
-表示資料的不平均程度
+表示資料的**不平均程度**
 所有樣本類別相同，基尼指數爲0
 
+* $D$：資料集
+* $p(x_i)$：每個類別出現的幾率
+![](https://i.imgur.com/Dkvmw4D.png)
 
+例如：買、不買兩個類別
+![](https://i.imgur.com/FLubxVk.png)
