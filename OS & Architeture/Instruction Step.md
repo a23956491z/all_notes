@@ -43,11 +43,50 @@ we don't know don't know exactly instruction rn
 
 
 ## Step 3
+only R-type doesn't complete its instruction
 
-### Memory refer
+### Memory reference
+RTL:
+![](https://i.imgur.com/A6rO7VH.png)
+
+Datapath:
+![](https://i.imgur.com/gaOvn7q.png)
 
 ### R-type
+RTL:
+![](https://i.imgur.com/F3Qrjiy.png)
+
+Datapath:
+![](https://i.imgur.com/9ANNrbI.png)
 
 ### Branch
+RTL:
+![](https://i.imgur.com/98R1mcJ.png)
+
+Datapath:
+![](https://i.imgur.com/aJkjRF1.png)
+
 
 ### Jump
+RTL:
+![](https://i.imgur.com/aZMiHXx.png)
+
+Datapath
+![](https://i.imgur.com/OTSCyrq.png)
+
+## Step 4
+
+### Memory reference
+RTL:
+![](https://i.imgur.com/hafC9Ru.png)
+
+datapath of `lr`
+![](https://i.imgur.com/AEgcnCd.png)
+
+datapath of `sw`
+![](https://i.imgur.com/ZaROUGw.png)
+
+### R-type
+RTL:
+![](https://i.imgur.com/hhy3l9V.png)
+
