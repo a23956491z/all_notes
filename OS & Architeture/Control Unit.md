@@ -37,3 +37,15 @@ System clock works on these units
 ![](https://i.imgur.com/PsvPOi7.png)
 
 
+## Multicycle control
+not simply determined by instrcution bit
+
+we use **finite state machine**
+* more precisely, **Moore machine**: control signals based only on current state
+
+
+### Finite state machine implement
+![](https://i.imgur.com/er11elb.png)
+
+### Truth table
+![](https://i.imgur.com/6oedTAS.png)
