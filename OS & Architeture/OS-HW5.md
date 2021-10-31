@@ -11,13 +11,13 @@ $P_1$ takes 8 units
 $P_2$ takes (8-0.4)+4 = 11.6 units
 $P_3$ takes (8+4-1)+1 = 12 units
 
-average turnaround time = (8+11.6+12)/3= **10.53 units**
+average turnaround time = (8+11.6+12)/3= *10.53 units*
 ### b. SJF
 $P_1$ takes 8 units
 $P_3$ takes (8-1)+1 = 8 units
 $P_2$ takes (8+1-0.4)+4 = 12.6 units
 
-average turnaround time = (8+8+12.6)/3= **9.53 units**
+average turnaround time = (8+8+12.6)/3= *9.53 units*
 ### c. SJF & idle for first unit
 $P_3$ takes 1 units
 $P_2$ takes (1+1-0.4)+4 = 5.6 units
@@ -25,7 +25,7 @@ $P_1$ takes (1+1+4)+8 = 14 units
 
 ---
 
-average turnaround time = (1+5.6+14)/3= **6.86 units**
+average turnaround time = (1+5.6+14)/3= *6.86 units*
 ## Problem 5.4
 ![](https://i.imgur.com/juLx2LS.png)
 
@@ -36,83 +36,15 @@ Following algorithm:
 * non-preemptive priority
 * RR
 
-<style>
-.mermaid {
-  max-width: 20%;
-  overflow: scroll;
-}
-
-.mermaid svg {
-  min-height:200px;
-  width: 20%;
-}
-
-svg[id^="m"][width][height][viewBox] {
-    width: 400px;
-    height: auto;
-}
-</style>
-
 [![](https://mermaid.ink/img/eyJjb2RlIjoiZ2FudHRcbiAgICB0aXRsZSBGQ0ZTXG4gICAgZGF0ZUZvcm1hdCAgc1xuICAgIGF4aXNGb3JtYXQgICVTXG4gICAgc2VjdGlvbiBQMVxuICAgIFAxIDogMCwgMnNcbiAgICBzZWN0aW9uIFAyXG4gICAgUDIgOiAyLCAxc1xuICAgIHNlY3Rpb24gUDNcbiAgICBQMyA6IDMsIDhzXG4gICAgc2VjdGlvbiBQNFxuICAgIFA0IDogMTEsIDRzXG4gICAgc2VjdGlvbiBQNVxuICAgIFA1IDogMTUsIDVzIiwibWVybWFpZCI6eyJ0aGVtZSI6ImRlZmF1bHQifSwidXBkYXRlRWRpdG9yIjpmYWxzZSwiYXV0b1N5bmMiOnRydWUsInVwZGF0ZURpYWdyYW0iOmZhbHNlfQ)](https://mermaid.live/edit#eyJjb2RlIjoiZ2FudHRcbiAgICB0aXRsZSBGQ0ZTXG4gICAgZGF0ZUZvcm1hdCAgc1xuICAgIGF4aXNGb3JtYXQgICVTXG4gICAgc2VjdGlvbiBQMVxuICAgIFAxIDogMCwgMnNcbiAgICBzZWN0aW9uIFAyXG4gICAgUDIgOiAyLCAxc1xuICAgIHNlY3Rpb24gUDNcbiAgICBQMyA6IDMsIDhzXG4gICAgc2VjdGlvbiBQNFxuICAgIFA0IDogMTEsIDRzXG4gICAgc2VjdGlvbiBQNVxuICAgIFA1IDogMTUsIDVzIiwibWVybWFpZCI6IntcbiAgXCJ0aGVtZVwiOiBcImRlZmF1bHRcIlxufSIsInVwZGF0ZUVkaXRvciI6ZmFsc2UsImF1dG9TeW5jIjp0cnVlLCJ1cGRhdGVEaWFncmFtIjpmYWxzZX0)
 
 
+[![](https://mermaid.ink/img/eyJjb2RlIjoiZ2FudHRcbiAgICB0aXRsZSBTSkZcbiAgICBkYXRlRm9ybWF0ICBzXG4gICAgYXhpc0Zvcm1hdCAgJVNcbiAgICBzZWN0aW9uIFAyXG4gICAgUDIgOiAwLCAxc1xuICAgIHNlY3Rpb24gUDFcbiAgICBQMSA6IDEsIDJzXG4gICAgc2VjdGlvbiBQNFxuICAgIFA0IDogMywgNHNcbiAgICBzZWN0aW9uIFA1XG4gICAgUDUgOiA3LCA1c1xuICAgIHNlY3Rpb24gUDNcbiAgICBQMyA6IDEyLCA4c1xuIiwibWVybWFpZCI6eyJ0aGVtZSI6ImRlZmF1bHQifSwidXBkYXRlRWRpdG9yIjpmYWxzZSwiYXV0b1N5bmMiOnRydWUsInVwZGF0ZURpYWdyYW0iOmZhbHNlfQ)](https://mermaid.live/edit#eyJjb2RlIjoiZ2FudHRcbiAgICB0aXRsZSBTSkZcbiAgICBkYXRlRm9ybWF0ICBzXG4gICAgYXhpc0Zvcm1hdCAgJVNcbiAgICBzZWN0aW9uIFAyXG4gICAgUDIgOiAwLCAxc1xuICAgIHNlY3Rpb24gUDFcbiAgICBQMSA6IDEsIDJzXG4gICAgc2VjdGlvbiBQNFxuICAgIFA0IDogMywgNHNcbiAgICBzZWN0aW9uIFA1XG4gICAgUDUgOiA3LCA1c1xuICAgIHNlY3Rpb24gUDNcbiAgICBQMyA6IDEyLCA4c1xuIiwibWVybWFpZCI6IntcbiAgXCJ0aGVtZVwiOiBcImRlZmF1bHRcIlxufSIsInVwZGF0ZUVkaXRvciI6ZmFsc2UsImF1dG9TeW5jIjp0cnVlLCJ1cGRhdGVEaWFncmFtIjpmYWxzZX0)
 
-```mermaid
-gantt
-    title SJF
-    dateFormat  s
-    axisFormat  %S
-    section P2
-    P2 : 0, 1s
-    section P1
-    P1 : 1, 2s
-    section P4
-    P4 : 3, 4s
-    section P5
-    P5 : 7, 5s
-    section P3
-    P3 : 12, 8s
-```
+[![](https://mermaid.ink/img/eyJjb2RlIjoiZ2FudHRcbiAgICB0aXRsZSBub24tcHJlZW1wdGl2ZSBwcmlvcml0eVxuICAgIGRhdGVGb3JtYXQgIHNcbiAgICBheGlzRm9ybWF0ICAlU1xuICAgIHNlY3Rpb24gUDNcbiAgICBQMyA6IDAsIDhzXG4gICAgc2VjdGlvbiBQNVxuICAgIFA1IDogOCwgNXNcbiAgICBzZWN0aW9uIFAxXG4gICAgUDEgOiAxMywgMnNcbiAgICBzZWN0aW9uIFA0XG4gICAgUDQgOiAxNSwgNHNcbiAgICBzZWN0aW9uIFAyXG4gICAgUDIgOiAxOSwgMXMiLCJtZXJtYWlkIjp7InRoZW1lIjoiZGVmYXVsdCJ9LCJ1cGRhdGVFZGl0b3IiOmZhbHNlLCJhdXRvU3luYyI6dHJ1ZSwidXBkYXRlRGlhZ3JhbSI6ZmFsc2V9)](https://mermaid.live/edit#eyJjb2RlIjoiZ2FudHRcbiAgICB0aXRsZSBub24tcHJlZW1wdGl2ZSBwcmlvcml0eVxuICAgIGRhdGVGb3JtYXQgIHNcbiAgICBheGlzRm9ybWF0ICAlU1xuICAgIHNlY3Rpb24gUDNcbiAgICBQMyA6IDAsIDhzXG4gICAgc2VjdGlvbiBQNVxuICAgIFA1IDogOCwgNXNcbiAgICBzZWN0aW9uIFAxXG4gICAgUDEgOiAxMywgMnNcbiAgICBzZWN0aW9uIFA0XG4gICAgUDQgOiAxNSwgNHNcbiAgICBzZWN0aW9uIFAyXG4gICAgUDIgOiAxOSwgMXMiLCJtZXJtYWlkIjoie1xuICBcInRoZW1lXCI6IFwiZGVmYXVsdFwiXG59IiwidXBkYXRlRWRpdG9yIjpmYWxzZSwiYXV0b1N5bmMiOnRydWUsInVwZGF0ZURpYWdyYW0iOmZhbHNlfQ)
 
-```mermaid
-gantt
-    title non-preemptive priority
-    dateFormat  s
-    axisFormat  %S
-    section P3
-    P3 : 0, 8s
-    section P5
-    P5 : 8, 5s
-    section P1
-    P1 : 13, 2s
-    section P4
-    P4 : 15, 4s
-    section P2
-    P2 : 19, 1s
-```
+[![](https://mermaid.ink/img/eyJjb2RlIjoiZ2FudHRcbiAgICB0aXRsZSBSUihxdWFudHVtPTIpXG4gICAgZGF0ZUZvcm1hdCAgc1xuICAgIGF4aXNGb3JtYXQgICVTXG4gICAgc2VjdGlvbiBQMVxuICAgIFAxIDogMCwgMnNcbiAgICBzZWN0aW9uIFAyXG4gICAgUDIgOiAyLCAxc1xuICAgIHNlY3Rpb24gUDNcbiAgICBQMyA6IDMsIDJzXG4gICAgUDMgOiA5LCAyc1xuICAgIFAzIDogMTUsMnNcbiAgICBQMyA6IDE4LDJzXG4gICAgc2VjdGlvbiBQNFxuICAgIFA0IDogNSwgMnNcbiAgICBQNCA6IDExLDJzXG4gICAgc2VjdGlvbiBQNVxuICAgIFA1IDogNywgMnNcbiAgICBQNSA6IDEzLDJzXG4gICAgUDUgOiAxNywxcyIsIm1lcm1haWQiOnsidGhlbWUiOiJkZWZhdWx0In0sInVwZGF0ZUVkaXRvciI6ZmFsc2UsImF1dG9TeW5jIjp0cnVlLCJ1cGRhdGVEaWFncmFtIjpmYWxzZX0)](https://mermaid.live/edit#eyJjb2RlIjoiZ2FudHRcbiAgICB0aXRsZSBSUihxdWFudHVtPTIpXG4gICAgZGF0ZUZvcm1hdCAgc1xuICAgIGF4aXNGb3JtYXQgICVTXG4gICAgc2VjdGlvbiBQMVxuICAgIFAxIDogMCwgMnNcbiAgICBzZWN0aW9uIFAyXG4gICAgUDIgOiAyLCAxc1xuICAgIHNlY3Rpb24gUDNcbiAgICBQMyA6IDMsIDJzXG4gICAgUDMgOiA5LCAyc1xuICAgIFAzIDogMTUsMnNcbiAgICBQMyA6IDE4LDJzXG4gICAgc2VjdGlvbiBQNFxuICAgIFA0IDogNSwgMnNcbiAgICBQNCA6IDExLDJzXG4gICAgc2VjdGlvbiBQNVxuICAgIFA1IDogNywgMnNcbiAgICBQNSA6IDEzLDJzXG4gICAgUDUgOiAxNywxcyIsIm1lcm1haWQiOiJ7XG4gIFwidGhlbWVcIjogXCJkZWZhdWx0XCJcbn0iLCJ1cGRhdGVFZGl0b3IiOmZhbHNlLCJhdXRvU3luYyI6dHJ1ZSwidXBkYXRlRGlhZ3JhbSI6ZmFsc2V9)
 
-```mermaid
-gantt
-    title RR(quantum=2)
-    dateFormat  s
-    axisFormat  %S
-    section P1
-    P1 : 0, 2s
-    section P2
-    P2 : 2, 1s
-    section P3
-    P3 : 3, 2s
-    P3 : 9, 2s
-    P3 : 15,2s
-    P3 : 18,2s
-    section P4
-    P4 : 5, 2s
-    P4 : 11,2s
-    section P5
-    P5 : 7, 2s
-    P5 : 13,2s
-    P5 : 17,1s
-```
 
 
 ### b. turnaround time
@@ -134,7 +66,7 @@ gantt
 |    $P_5$     |  15  |  7  |            8            | 12  |
 |   Average    | 6.2  | 4.6 |           11            |  7  |
 ### d. minimum average waiting time
-in part c. we can see the **minimum average waiting time is 4.6** which is **SJF algorithm** in this case.
+in part c. we can see the *minimum average waiting time is 4.6* which is *SJF algorithm* in this case.
 
 ---
 
@@ -182,7 +114,7 @@ In CPU-bound programs, the one never get schedule in would be execute first. So 
 | $P_3$ |    10     |    65    |
 
 CPU-bound process use more CPU resources.
-But if it use more CPU resources it would get lower priority(higher priorty number), resulting to **lower the relative priority** of a CPU-bound process.
+But if it use more CPU resources it would get lower priority(higher priorty number), resulting to *lower the relative priority of a CPU-bound process*.
 
 ## Problem 5.22
 ![](https://i.imgur.com/6d7545h.png)
@@ -198,7 +130,7 @@ tasks:
 
 $\cfrac{10}{1.1}=90.9\%$
 
-CPU utilization is **90.9%**
+CPU utilization is *90.9%*
 
 ### b. time quantum is 10 ms
 
@@ -209,4 +141,4 @@ CPU utilization is **90.9%**
 
 $\cfrac{20}{(1.1*10+10.1)}=94.78\%$
 
-CPU utilization is **94.78%**
+CPU utilization is *94.78%*
