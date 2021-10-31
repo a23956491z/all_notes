@@ -36,38 +36,25 @@ Following algorithm:
 * non-preemptive priority
 * RR
 
+<style>
+.mermaid {
+  max-width: 20%;
+  overflow: scroll;
+}
 
-    <script>
-        var config = {
-            mermaid:{
-                startOnLoad:true,
-                htmlLabels:true,
-                callback:function(id){
-                    console.log(id,' rendered');
-                },
-                flowChart:{width:'500'}
-            }
-        };
-        mermaid.initialize(config);
-    </script>
+.mermaid svg {
+  min-height:200px;
+  width: 20%;
+}
 
+svg[id^="m"][width][height][viewBox] {
+    width: 400px;
+    height: auto;
+}
+</style>
 
-```mermaid
-gantt
-    title FCFS
-    dateFormat  s
-    axisFormat  %S
-    section P1
-    P1 : 0, 2s
-    section P2
-    P2 : 2, 1s
-    section P3
-    P3 : 3, 8s
-    section P4
-    P4 : 11, 4s
-    section P5
-    P5 : 15, 5s
-```
+[![](https://mermaid.ink/img/eyJjb2RlIjoiZ2FudHRcbiAgICB0aXRsZSBGQ0ZTXG4gICAgZGF0ZUZvcm1hdCAgc1xuICAgIGF4aXNGb3JtYXQgICVTXG4gICAgc2VjdGlvbiBQMVxuICAgIFAxIDogMCwgMnNcbiAgICBzZWN0aW9uIFAyXG4gICAgUDIgOiAyLCAxc1xuICAgIHNlY3Rpb24gUDNcbiAgICBQMyA6IDMsIDhzXG4gICAgc2VjdGlvbiBQNFxuICAgIFA0IDogMTEsIDRzXG4gICAgc2VjdGlvbiBQNVxuICAgIFA1IDogMTUsIDVzIiwibWVybWFpZCI6eyJ0aGVtZSI6ImRlZmF1bHQifSwidXBkYXRlRWRpdG9yIjpmYWxzZSwiYXV0b1N5bmMiOnRydWUsInVwZGF0ZURpYWdyYW0iOmZhbHNlfQ)](https://mermaid.live/edit#eyJjb2RlIjoiZ2FudHRcbiAgICB0aXRsZSBGQ0ZTXG4gICAgZGF0ZUZvcm1hdCAgc1xuICAgIGF4aXNGb3JtYXQgICVTXG4gICAgc2VjdGlvbiBQMVxuICAgIFAxIDogMCwgMnNcbiAgICBzZWN0aW9uIFAyXG4gICAgUDIgOiAyLCAxc1xuICAgIHNlY3Rpb24gUDNcbiAgICBQMyA6IDMsIDhzXG4gICAgc2VjdGlvbiBQNFxuICAgIFA0IDogMTEsIDRzXG4gICAgc2VjdGlvbiBQNVxuICAgIFA1IDogMTUsIDVzIiwibWVybWFpZCI6IntcbiAgXCJ0aGVtZVwiOiBcImRlZmF1bHRcIlxufSIsInVwZGF0ZUVkaXRvciI6ZmFsc2UsImF1dG9TeW5jIjp0cnVlLCJ1cGRhdGVEaWFncmFtIjpmYWxzZX0)
+
 
 
 ```mermaid
