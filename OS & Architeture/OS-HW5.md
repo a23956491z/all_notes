@@ -37,6 +37,21 @@ Following algorithm:
 * RR
 
 
+    <script>
+        var config = {
+            mermaid:{
+                startOnLoad:true,
+                htmlLabels:true,
+                callback:function(id){
+                    console.log(id,' rendered');
+                },
+                flowChart:{width:'500'}
+            }
+        };
+        mermaid.initialize(config);
+    </script>
+
+
 ```mermaid
 gantt
     title FCFS
@@ -111,6 +126,8 @@ gantt
     P5 : 13,2s
     P5 : 17,1s
 ```
+
+
 ### b. turnaround time
 | unit(second) | FCFS | SJF | Non-Preemptive Priority |  RR  |
 |:------------:|:----:|:---:|:-----------------------:|:----:|
