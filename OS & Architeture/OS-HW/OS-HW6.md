@@ -14,7 +14,9 @@ title: Operating System HW5
 ## Problem 6.4
 ![](https://i.imgur.com/XzDYL80.png)
 
-if we directly disable the interrupt in single-processor system
+if we directly disable the interrupt in single-processor system, it might results **infinite loop** when waiting another job.
+So the **interrupt** is necessary to jump to other process when another process get in the critical section.
+
 ## Problem 6.5
 ![](https://i.imgur.com/yp9RSCx.png)
 
@@ -24,8 +26,9 @@ if we use interrupt it might unintentionally change the registers we are using b
 ## Problem 6.8
 ![](https://i.imgur.com/tITafU5.png)
 
-atomic `compare_and_swap()`
-multual exclusion : bounded-waiting
+ `compare_and_swap()`
+because it is atomic
+so when we execute this function, it would be finished immediately.
 ## Problem 6.9
 ![](https://i.imgur.com/LJAitG4.png)
 
