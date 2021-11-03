@@ -8,6 +8,13 @@ title: Operating System HW5
 ## Problem 6.2
 ![](https://i.imgur.com/ZWwze8T.png)
 
+requirements:
+* Mutual exclusion
+	* when 
+* progress
+* bounded-wait
+
+
 ## Problem 6.3
 ![](https://i.imgur.com/MApH1fM.png)
 
