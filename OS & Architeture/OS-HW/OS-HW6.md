@@ -10,7 +10,7 @@ title: Operating System HW5
 
 requirements:
 * Mutual exclusion
-	* when 
+	* when the flag is on & the it turn to the process, others can not enter the 
 * progress
 * bounded-wait
 
