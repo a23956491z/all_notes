@@ -13,8 +13,8 @@ title: Operating System HW5
 
 ## Problem 6.4
 ![](https://i.imgur.com/XzDYL80.png)
-![](https://i.imgur.com/5VZfq4R.png)
 
+if we directly disable the interrupt in single-processor system
 ## Problem 6.5
 ![](https://i.imgur.com/yp9RSCx.png)
 
@@ -24,7 +24,8 @@ if we use interrupt it might unintentionally change the registers we are using b
 ## Problem 6.8
 ![](https://i.imgur.com/tITafU5.png)
 
-`compare_and_swp`
+atomic `compare_and_swap()`
+multual exclusion : bounded-waiting
 ## Problem 6.9
 ![](https://i.imgur.com/LJAitG4.png)
 
