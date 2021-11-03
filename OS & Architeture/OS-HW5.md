@@ -128,7 +128,7 @@ tasks:
     * for both I/O-bound job or CPU-bound job, takes 1 ms to do work (use CPU)
     * 0.1ms to do context-switch
 
-$\cfrac{10}{1.1}=90.9\%$
+$\cfrac{1}{1.1}=90.9\%$
 
 CPU utilization is *90.9%*
 
