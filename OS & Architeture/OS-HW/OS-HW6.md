@@ -12,7 +12,7 @@ requirements:
 * Mutual exclusion
 	* when the flag is on & the it turn to the process, others can not enter the cirtical section
 	* `flag[i]==1` and another flag would be `flag[j]==0`
-* progress                                                 
+* progress                                                                                                                                                                                     
 * 
 * bounded-wait
 
