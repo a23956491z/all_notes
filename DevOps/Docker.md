@@ -304,3 +304,16 @@ distribution=$(. /etc/os-release;echo $ID$VERSION_ID) \
 sudo apt-get update
 
 sudo apt-get install -y nvidia-docker2
+
+## Archlinux
+
+奇怪的問題：
+`/etc/nvidia-container-runtime/config.toml`
+```
+no-cgroups = false
+```
+
+`/etc/default/grub`
+```
+GRUB_CMDLINE_LINUX_DEFAULT="`systemd.unified_cgroup_hierarchy=false`"
+```
