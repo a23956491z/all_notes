@@ -1,6 +1,13 @@
 ## Problem 7.7
 ![](https://i.imgur.com/7x3Z9FG.png)
 
+requirements of deadlock
+* mutual exclusion
+* hold & wait
+* no preemption
+* circular wait
+
+
 ## Problem 7.8
 ![](https://i.imgur.com/QXRMywd.png)
 
