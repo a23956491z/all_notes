@@ -7,6 +7,8 @@ requirements of deadlock
 * no preemption
 * circular wait
 
+Because every type of resources are the same.
+So it won't wait for the particular resource, resulting would not cause circular wait.
 
 ## Problem 7.8
 ![](https://i.imgur.com/QXRMywd.png)
