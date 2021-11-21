@@ -9,17 +9,23 @@ title: Operating System HW5
 * `deposit(amount)`
 * `withdraw(amount)`
 
-if they deplsit & withdraw at the same time
-* *
+if they deplsit & withdraw at nearly the same time
+* both function load the same balance to register
+* but store `balance + deposit` or `balance - withdraw` to database depending on which one is first request instead of  `balance + deposit - withdraw`
+
+we can put the load balance & change balance to critical secion using Peterson algorithm to deal with this problem.
 ## Problem 6.2
 ![](https://i.imgur.com/ZWwze8T.png)
 
 requirements:
 * Mutual exclusion
-	* when the flag is on & the it turn to the process, others can not enter the cirtical section
-	* `flag[i]==1` and another flag would be `flag[j]==0`
+	* when the `turn` variable is not equal to the process id, it won't enter the critical section
+	* only one process's id would equal to the `turn` variable
 * progress
+	* we put down our flag if other process have entering the critical section and after they finished we put the flag back.
+	* 
 * bounded-wait
+	* after the end of critical section, we would change the turn and pass the access to other process.
 
 
 ## Problem 6.3
