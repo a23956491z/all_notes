@@ -30,24 +30,38 @@ requirements:
 
 ## Problem 6.3
 ![](https://i.imgur.com/MApH1fM.png)
+requirements:
+* Mutual exclusion
+	* when the `turn` variable is not equal to the process id, it won't enter the critical section
+	* only one process's id would equal to the `turn` variable
+* progress
+	* it would check every process is in critical section or not, if there is a process in crtical section -> keep set `j = turn` & waiting
+	* because we keep spinning in while loop, if any process return the access we can enter the critical section right away.
+* bounded-wait
+	* after the end of critical section, we would change the turn and pass the access to other process.
+
 
 ## Problem 6.4
 ![](https://i.imgur.com/XzDYL80.png)
 
 if we disabling interrupt
-* programs cannot use **system call** any more, so they can't using some priviliged function or using the 
+* programs(user-level) cannot use **system call** any more, so they can't using some priviliged function or using the I/O resources.
+* kernel-level programs doesn't have these kind of problem, they dont need to use interrupt to switch mode however user-level programs need to switch the mode from user to kernel by interrupt
+
 ## Problem 6.5
 ![](https://i.imgur.com/yp9RSCx.png)
 
-when we in critaical section,
-if we use interrupt it might unintentionally change the registers we are using by another processes.
+if we interrupt all processes in the other processors to enter the critical section , which is directly waste the resource of other processors.  
 
 ## Problem 6.8
 ![](https://i.imgur.com/tITafU5.png)
 
  `compare_and_swap()`
 because it is atomic
-so when we execute this function, it would be finished immediately.
+When we execute this function, it would be finished immediately.
+
+There is no race condition in this function because 
+
 ## Problem 6.9
 ![](https://i.imgur.com/LJAitG4.png)
 
