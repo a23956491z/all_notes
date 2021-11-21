@@ -34,9 +34,8 @@ requirements:
 ## Problem 6.4
 ![](https://i.imgur.com/XzDYL80.png)
 
-if we directly disable the interrupt in single-processor system, it might results **infinite loop** when waiting another job.
-So the **interrupt** is necessary to jump to other process when another process get in the critical section.
-
+if we disabling interrupt
+* programs cannot use **system call** any more, so they can't using some priviliged function or using the 
 ## Problem 6.5
 ![](https://i.imgur.com/yp9RSCx.png)
 
