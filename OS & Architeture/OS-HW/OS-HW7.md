@@ -87,10 +87,55 @@ state : safe
 
 1. $Available>Need_{P_0}$
 	* 執行$P_0$並釋放資源
-	* Available = (3,3,2,1) + (2,2,1,1) = (5,5,3,2)
+	* Available = (3,3,2,1) + (4,2,1,2) = (7,5,3,3)
+2. 目前的 Available已大於所有Process的需求，剩下的Process依序執行下去
+
+順序 $P_0 \rightarrow P_1 \rightarrow P_2 \rightarrow P_3 \rightarrow P_4$
+
+### b. $P_1$ allocation = (1,1,0,0)
+
+|       | Available  | (3,3,2,1) |           |
+| ----- | ---------- | --------- | --------- |
+|       | Allocation | Max       | Need      |
+| $P_0$ | (2,0,0,1)  | (4,2,1,2) | (2,2,1,1) |
+| $P_1$ | (1,1,0,0)  | (5,2,5,2) | (4,1,5,2) |
+| $P_2$ | (2,1,0,3)  | (2,3,1,6) | (0,2,1,3) |
+| $P_3$ | (1,3,1,2)  | (1,4,2,4) | (0,1,1,2) |
+| $P_4$ | (1,4,3,2)  | (3,6,6,5) | (2,2,3,3) |
+
+1. $Available>Need_{P_0}$
+	* 執行$P_0$並釋放資源
+	* Available = (3,3,2,1) + (4,2,1,2) = (7,5,3,3)
+2. $Available>Need_{P_2}$
+	* 執行$P_2$並釋放資源
+	* Available = (7,5,3,3) + (2,3,1,6) = (9,8,4,9)
+3. $Available>Need_{P_3}$
+	* 執行$P_2$並釋放資源
+	* Available = (9,8,4,9) + (1,4,2,4) = (10,12,6,13)
+4. 目前的 Available已大於所有Process的需求，剩下的Process依序執行下去
+
+順序 $P_0 \rightarrow P_2 \rightarrow P_3 \rightarrow P_1 \rightarrow P_4$
+safe state，可以直接執行，不過要先執行$P_0$，無法第一個執行$P_1$
+
+### c. $P_4$ allocation = (0,0,2,0)
+
+|       | Available  | (3,3,2,1) |           |
+| ----- | ---------- | --------- | --------- |
+|       | Allocation | Max       | Need      |
+| $P_0$ | (2,0,0,1)  | (4,2,1,2) | (2,2,1,1) |
+| $P_1$ | (3,1,2,1)  | (5,2,5,2) | (2,1,3,1) |
+| $P_2$ | (2,1,0,3)  | (2,3,1,6) | (0,2,1,3) |
+| $P_3$ | (1,3,1,2)  | (1,4,2,4) | (0,1,1,2) |
+| $P_4$ | (0,0,2,0)  | (3,6,6,5) | (3,3,4,5) |
+
+1. $Available>Need_{P_0}$
+	* 執行$P_0$並釋放資源
+	* Available = (3,3,2,1) + (4,2,1,2) = (7,5,3,3)
 2. $Available>Need_{P_1}$
-	* 執行$P_1$並釋放資源
-	* Available = (5,5,3,2) + (2,1,3,1) = (7,6,6,3)
+	* 執行$P_2$並釋放資源
+	* Available = (7,5,3,3) + (5,2,5,2) = (12,7,8,5)
 3. 目前的 Available已大於所有Process的需求，剩下的Process依序執行下去
 
-順序 $P_0 \rightarrow P_2 \rightarrow P_0 \rightarrow P_3 \rightarrow P_4$
+順序 $P_0 \rightarrow P_1 \rightarrow P_2 \rightarrow P_3 \rightarrow P_4$
+safe state，可以直接執行，不過要先執行$P_0$，無法第一個執行$P_4$
+
