@@ -35,8 +35,11 @@ disadvantages:
 ## 5.6
 ![](https://i.imgur.com/dyKRNzf.png)
 
-CPU-bounded programs are better for regressive round-robin
-* I/O 
+CPU-bound programs are better for regressive round-robin
+* I/O-bound jobs would get interrupt by I/O request resulting get lower priority
+* CPU-bound jobs can keep using CPU and continuously increase the time quantum & priority.
+
+
 ## 5.7
 ![](https://i.imgur.com/V3S7E11.png)
 ![](https://i.imgur.com/LiUThfI.png)
@@ -82,6 +85,7 @@ Following algorithm:
 in part c. we can see the *minimum average waiting time is 4.6* which is *SJF algorithm* in this case.
 
 ## 5.8
+![](https://i.imgur.com/vS433Yw.png)
 
 ---
 
