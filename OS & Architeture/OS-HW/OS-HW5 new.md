@@ -87,8 +87,21 @@ in part c. we can see the *minimum average waiting time is 4.6* which is *SJF al
 ## 5.8
 ![](https://i.imgur.com/vS433Yw.png)
 
+### a. gantt
 [![](https://mermaid.ink/img/eyJjb2RlIjoiZ2FudHRcbiAgICB0aXRsZSByb3VuZC1yb2JpblxuICAgIGRhdGVGb3JtYXQgIERERFxuICAgIGF4aXNGb3JtYXQgICVqXG4gICAgc2VjdGlvbiBQMVxuICAgIFAxIDogMSwgMTlkXG4gICAgc2VjdGlvbiBQMlxuICAgIFAyIDogMjUsIDEwZFxuICAgIFAyIDogNDUsIDEwZFxuICAgIFAyIDogNzAsIDVkXG4gICAgc2VjdGlvbiBQM1xuICAgIFAzIDogMzUsIDEwZFxuICAgIFAzIDogNTUsIDVkXG4gICAgUDMgOiA3NSwgMTBkXG4gICAgc2VjdGlvbiBQNFxuICAgIFA0IDogNjAsIDEwZFxuICAgIFA0IDogODUsIDVkXG4gICAgc2VjdGlvbiBQNVxuICAgIFA1IDogMTAwLCA1ZFxuICAgIFA1IDogMTE1LCA1ZFxuICAgIHNlY3Rpb24gUDZcbiAgICBQNiA6IDEwNSwgMTBkXG4gICAgc2VjdGlvbiBpZGxlXG4gICAgaWRsZSA6IDIwLCA1ZFxuICAgIGlkbGUgOiA5MCwgMTBkIiwibWVybWFpZCI6eyJ0aGVtZSI6ImRlZmF1bHQifSwidXBkYXRlRWRpdG9yIjpmYWxzZSwiYXV0b1N5bmMiOnRydWUsInVwZGF0ZURpYWdyYW0iOmZhbHNlfQ)](https://mermaid.live/edit/#eyJjb2RlIjoiZ2FudHRcbiAgICB0aXRsZSByb3VuZC1yb2JpblxuICAgIGRhdGVGb3JtYXQgIERERFxuICAgIGF4aXNGb3JtYXQgICVqXG4gICAgc2VjdGlvbiBQMVxuICAgIFAxIDogMSwgMTlkXG4gICAgc2VjdGlvbiBQMlxuICAgIFAyIDogMjUsIDEwZFxuICAgIFAyIDogNDUsIDEwZFxuICAgIFAyIDogNzAsIDVkXG4gICAgc2VjdGlvbiBQM1xuICAgIFAzIDogMzUsIDEwZFxuICAgIFAzIDogNTUsIDVkXG4gICAgUDMgOiA3NSwgMTBkXG4gICAgc2VjdGlvbiBQNFxuICAgIFA0IDogNjAsIDEwZFxuICAgIFA0IDogODUsIDVkXG4gICAgc2VjdGlvbiBQNVxuICAgIFA1IDogMTAwLCA1ZFxuICAgIFA1IDogMTE1LCA1ZFxuICAgIHNlY3Rpb24gUDZcbiAgICBQNiA6IDEwNSwgMTBkXG4gICAgc2VjdGlvbiBpZGxlXG4gICAgaWRsZSA6IDIwLCA1ZFxuICAgIGlkbGUgOiA5MCwgMTBkIiwibWVybWFpZCI6IntcbiAgXCJ0aGVtZVwiOiBcImRlZmF1bHRcIlxufSIsInVwZGF0ZUVkaXRvciI6ZmFsc2UsImF1dG9TeW5jIjp0cnVlLCJ1cGRhdGVEaWFncmFtIjpmYWxzZX0)
 
+### b&c turnaround time & waiting time
+|       | turnaround time | waiting time |
+|:-----:|:---------------:|:------------:|
+| $P_1$ |       20        |      0       |
+| $P_2$ |       50        |      25      |
+| $P_3$ |       50        |      25      |
+| $P_4$ |       30        |      15      |
+| $P_5$ |       20        |      10      |
+| $P_6$ |       10        |      0       |
+
+### d. CPU util rate
+$\cfrac{120-15}{120}*100\%=87.5\%$
 
 ---
 
@@ -107,3 +120,5 @@ ANS:
 
 ## 5.22
 ![](https://i.imgur.com/AOjMXxC.png)
+
+### a. rate-monoton
