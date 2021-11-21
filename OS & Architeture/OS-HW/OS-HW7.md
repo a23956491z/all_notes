@@ -28,9 +28,30 @@ So it won't wait for the particular resource, resulting would not cause circular
 		* 只有 $P_2$ 符合條件
 	* 確認resource B,C,D
 		* $P_2$ 都符合條件，執行並歸還資源
-		* 
+		*  Available = (0,3,0,1) + (3,1,2,1)
+2. Available = (3,6,2,1)
+	* $P_1$符合條件，執行並歸還資源
+	* Available = (3,6,2,1) + (2,2,1,0)
+3. Available = (6,8,3,2)
+	*  $P_3$符合條件，執行並歸還資源
+	*  Available = (6,8,3,2) + (0,5,1,0)
+4. Available = (10,14,4,4)
+	* $P_0$符合條件，執行並歸還資源
+	*  Available = (10,14,4,4) + (3,0,1,4)
+* Available = (13,14,5,8)
+	*  $P_4$符合條件，執行並歸還資源
+	*  Available = (13,14,5,8) + (4,2,1,2)
 
+總共資源：(17,16,6,10)
+順序 $P_2 \rightarrow P_1 \rightarrow P_3 \rightarrow P_0 \rightarrow P_4$
 
-
+### b. Avaliable = (1,0,0,2)
+1. Avaliable = (1,0,0,2)
+	* 先確認resource A
+		* 需要滿足條件：$Available_A + Allocation_A >= Max_A$
+		* 只有$P_1$符合條件
+	* 確認resource B,C,D
+		* $P_1$符合條件，執行並歸還資源
+		* Available =  (1,0,0,2) + (2,2,1,0)
 ## Problem 7.13
 ![](https://i.imgur.com/EeUlJUA.png)
