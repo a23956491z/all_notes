@@ -64,7 +64,19 @@ There is no race condition in this function because we load value & change value
 after we finished critical seciton, we just need to change the value back to provide bounded-waiting.
 ## Problem 6.9
 ![](https://i.imgur.com/LJAitG4.png)
+```c++
 
+void acquire(lock *mutex){
+	lock = !mutex->available;
+	
+	while(!test_and_set());
+	
+}
+
+void release(lock *mutex){
+	mutex->availble = 1;
+}
+```
 ## Problem 6.14
 ![](https://i.imgur.com/ipcgl2p.png)
 
@@ -81,4 +93,9 @@ after we finished critical seciton, we just need to change the value back to pro
 
 ### c. atomic is work or not
 even if we can change the pid in atomic
-* it only solve the same pid compete 
+* it only solve the same pid competition
+
+but we still have problem on the `if` condition
+* because the  `if-else` clause is not atomic, so if they allocate at the same time. They would both pass the `if` condition & both increase the `number_of_processes` & the faster one would get pid under `MAX_PROCESSES`  limitation.
+
+this replacement is not enough to prevent the race condition.
