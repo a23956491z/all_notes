@@ -38,12 +38,13 @@ So it won't wait for the particular resource, resulting would not cause circular
 4. `Available = (10,14,4,5)`
 	* $P_0$符合條件，執行並歸還資源
 	*  Available = (10,14,4,5) + (5,1,1,7)
-* `Available = (15,15,5,11)`
+* `Available = (15,15,5,12)`
 	*  $P_4$符合條件，執行並歸還資源
-	* Available = (15,15,5,11) + (6,3,2,5)
+	* Available = (15,15,5,12) + (6,3,2,5)
 
-總共資源：(21,18,7,16)
+總共資源：(21,18,7,17)
 順序 $P_2 \rightarrow P_1 \rightarrow P_3 \rightarrow P_0 \rightarrow P_4$
+state : safe
 
 ### b. Avaliable = (1,0,0,2)
 1. `Avaliable = (1,0,0,2)`
@@ -61,14 +62,35 @@ So it won't wait for the particular resource, resulting would not cause circular
 	*  Available =  (7,5,3,4) + (5,1,1,7)
 4. `Avaliable = (12,6,4,11)`
 	* $P_3$符合條件，執行並歸還資源
-	*  Available = (12,6,4,11) + (0,5,1,0)
-5. `Avaliable = (12,11,5,11)`
+	*  Available = (12,6,4,11) + (4,6,1,2)
+5. `Avaliable = (16,12,5,13)`
 	* $P_4$符合條件，執行並歸還資源
-	*  Available = (12,11,5,11) + (6,3,2,5)
+	*  Available = (16,12,5,13) + (6,3,2,5)
 
-總共資源：(18,14,7,16)
-順序 $P_2 \rightarrow P_1 \rightarrow P_3 \rightarrow P_0 \rightarrow P_4$
-
+總共資源：(22,15,7,18)
+順序 $P_1 \rightarrow P_2 \rightarrow P_0 \rightarrow P_3 \rightarrow P_4$
+state : safe
 
 ## Problem 7.13
 ![](https://i.imgur.com/EeUlJUA.png)
+
+|       | Available  | (3,3,2,1) |           |
+| ----- | ---------- | --------- | --------- |
+|       | Allocation | Max       | Need      |
+| $P_0$ | (2,0,0,1)  | (4,2,1,2) | (2,2,1,1) |
+| $P_1$ | (3,1,2,1)  | (5,2,5,2) | (2,1,3,1) |
+| $P_2$ | (2,1,0,3)  | (2,3,1,6) | (0,2,1,3) |
+| $P_3$ | (1,3,1,2)  | (1,4,2,4) | (0,1,1,2) |
+| $P_4$ | (1,4,3,2)  | (3,6,6,5) | (2,2,3,3) |
+
+### a. process completion order
+
+1. $Available>Need_{P_0}$
+	* 執行$P_0$並釋放資源
+	* Available = (3,3,2,1) + (2,2,1,1) = (5,5,3,2)
+2. $Available>Need_{P_1}$
+	* 執行$P_1$並釋放資源
+	* Available = (5,5,3,2) + (2,1,3,1) = (7,6,6,3)
+3. 目前的 Available已大於所有Process的需求，剩下的Process依序執行下去
+
+順序 $P_0 \rightarrow P_2 \rightarrow P_0 \rightarrow P_3 \rightarrow P_4$
