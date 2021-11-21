@@ -22,7 +22,11 @@ if a process need more than m resource, it could result infinite wait and would 
 So the the maximum need of one process are m resources to keep deadlock free.
 
 ### b. all maximum need less than m+n
-
+ if the maximum need of a system is $m+n$
+ * assume $n-1$ processes each need 1 resrouce, 1 process need $m+1$  resources
+ * there exitst a need of process greater than the resources we have
+ * the maximum need of a system have to less than $m+n$\
+ 
 
 ## Problem 7.9
 ![](https://i.imgur.com/qO8JL4i.png)

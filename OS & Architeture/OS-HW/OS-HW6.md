@@ -5,6 +5,12 @@ title: Operating System HW5
 ## Problem 6.1
 ![](https://i.imgur.com/IJRosRQ.png)
 
+2 functions:
+* `deposit(amount)`
+* `withdraw(amount)`
+
+if they deplsit & withdraw at the same time
+* *
 ## Problem 6.2
 ![](https://i.imgur.com/ZWwze8T.png)
 
