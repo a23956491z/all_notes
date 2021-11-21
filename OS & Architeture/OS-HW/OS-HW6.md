@@ -1,6 +1,12 @@
 ---
-title: Operating System HW5
+title: Operating System HW6
 ---
+
+# Operating System Week6 HW
+* 410821238
+* 資工三
+* 余慶龍
+
 
 ## Problem 6.1
 ![](https://i.imgur.com/IJRosRQ.png)
@@ -30,27 +36,71 @@ requirements:
 
 ## Problem 6.3
 ![](https://i.imgur.com/MApH1fM.png)
+requirements:
+* Mutual exclusion
+	* when the `turn` variable is not equal to the process id, it won't enter the critical section
+	* only one process's id would equal to the `turn` variable
+* progress
+	* it would check every process is in critical section or not, if there is a process in crtical section -%3E keep set `j = turn` & waiting
+	* because we keep spinning in while loop, if any process return the access we can enter the critical section right away.
+* bounded-wait
+	* after the end of critical section, we would change the turn and pass the access to other process.
+
 
 ## Problem 6.4
 ![](https://i.imgur.com/XzDYL80.png)
 
-if we directly disable the interrupt in single-processor system, it might results **infinite loop** when waiting another job.
-So the **interrupt** is necessary to jump to other process when another process get in the critical section.
+if we disabling interrupt
+* programs(user-level) cannot use **system call** any more, so they can't using some priviliged function or using the I/O resources.
+* kernel-level programs doesn't have these kind of problem, they dont need to use interrupt to switch mode however user-level programs need to switch the mode from user to kernel by interrupt
 
 ## Problem 6.5
 ![](https://i.imgur.com/yp9RSCx.png)
 
-when we in critaical section,
-if we use interrupt it might unintentionally change the registers we are using by another processes.
+if we interrupt all processes in the other processors to enter the critical section , which is directly waste the resource of other processors.  
 
 ## Problem 6.8
 ![](https://i.imgur.com/tITafU5.png)
 
  `compare_and_swap()`
-because it is atomic
-so when we execute this function, it would be finished immediately.
+because it is atomic, when we execute this function, it would be finished immediately.
+
+There is no race condition in this function because we load value & change value immediately would not happen the situation that 2 process use this function at the same time & causing race condition.
+
+after we finished critical seciton, we just need to change the value back to provide bounded-waiting.
 ## Problem 6.9
 ![](https://i.imgur.com/LJAitG4.png)
+```c++
+
+void acquire(lock *mutex){
+
+	while(!compare_and_swap(lock->available, 1, 0));
+}
+
+void release(lock *mutex){
+	test_and_set(mutex->available)
+}
+```
 
 ## Problem 6.14
 ![](https://i.imgur.com/ipcgl2p.png)
+
+### a. race condition
+* if they compare the value & both get into the `else` section & the `number_of_processes` is 254 currently.
+	* it would cause `number_of_processes` greater than `MAX_PROCESSES` because they both pass the if condition & both make `number_of_processes` plus one.
+* if they execute the `allocate_process` at the same time
+	* they may compete to allocate the same pid.
+
+### b. where to put acquire() & release()
+
+* put `acquire`() before `if-else` clause
+* put  `release()` before return
+
+### c. atomic is work or not
+even if we can change the pid in atomic
+* it only solve the same pid competition
+
+but we still have problem on the `if` condition
+* because the  `if-else` clause is not atomic, so if they allocate at the same time. They would both pass the `if` condition & both increase the `number_of_processes` & the faster one would get pid under `MAX_PROCESSES`  limitation.
+
+this replacement is not enough to prevent the race condition.>)

@@ -1,3 +1,8 @@
+# Operating System Week7 HW
+* 410821238
+* 資工三
+* 余慶龍
+
 ## Problem 7.7
 ![](https://i.imgur.com/7x3Z9FG.png)
 
