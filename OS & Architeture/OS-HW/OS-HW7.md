@@ -8,10 +8,21 @@ requirements of deadlock
 * circular wait
 
 Because every type of resources are the same.
-So it won't wait for the particular resource, resulting would not cause circular wait.
+* at least one process can get enough resources and return it.
+* it won't wait for the particular resource, resulting would not cause circular wait.
+
+
 
 ## Problem 7.8
 ![](https://i.imgur.com/QXRMywd.png)
+
+### a. max need of one process in 1~m resource
+if a process need more than m resource, it could result infinite wait and would not return the resource which causing deadlock
+
+So the the maximum need of one process are m resources to keep deadlock free.
+
+### b. all maximum need less than m+n
+
 
 ## Problem 7.9
 ![](https://i.imgur.com/qO8JL4i.png)
@@ -58,15 +69,15 @@ state : safe
 	*  Available =  (3,2,1,2) + (3,1,2,1)
 3. `Avaliable = (6,3,3,3)`
 	* $P_0$符合條件，執行並歸還資源
-	*  Available =  (6,3,3,3) + ()
-4. `Avaliable = (12,6,4,11)`
+	*  Available =  (6,3,3,3) + (3,0,1,4)
+4. `Avaliable = (9,3,4,7)`
 	* $P_3$符合條件，執行並歸還資源
-	*  Available = (12,6,4,11) + (4,6,1,2)
-5. `Avaliable = (16,12,5,13)`
+	*  Available = (9,3,4,7) + (0,5,1,0)
+5. `Avaliable = (9,8,5,7)`
 	* $P_4$符合條件，執行並歸還資源
-	*  Available = (16,12,5,13) + (6,3,2,5)
+	*  Available = (9,8,5,7) + (4,2,1,2)
 
-總共資源：(22,15,7,18)
+總共資源：(13,10,6,9)
 順序 $P_1 \rightarrow P_2 \rightarrow P_0 \rightarrow P_3 \rightarrow P_4$
 state : safe
 
