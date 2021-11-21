@@ -57,13 +57,28 @@ if we interrupt all processes in the other processors to enter the critical sect
 ![](https://i.imgur.com/tITafU5.png)
 
  `compare_and_swap()`
-because it is atomic
-When we execute this function, it would be finished immediately.
+because it is atomic, when we execute this function, it would be finished immediately.
 
-There is no race condition in this function because 
+There is no race condition in this function because we load value & change value immediately would not happen the situation that 2 process use this function at the same time & causing race condition.
 
+after we finished critical seciton, we just need to change the value back to provide bounded-waiting.
 ## Problem 6.9
 ![](https://i.imgur.com/LJAitG4.png)
 
 ## Problem 6.14
 ![](https://i.imgur.com/ipcgl2p.png)
+
+### a. race condition
+* if they compare the value & both get into the `else` section & the `number_of_processes` is 254 currently.
+	* it would cause `number_of_processes` greater than `MAX_PROCESSES` because they both pass the if condition & both make `number_of_processes` plus one.
+* if they execute the `allocate_process` at the same time
+	* they may compete to allocate the same pid.
+
+### b. where to put acquire() & release()
+
+* put `acquire`() before `if-else` clause
+* put  `release()` before return
+
+### c. atomic is work or not
+even if we can change the pid in atomic
+* it only solve the same pid compete 
