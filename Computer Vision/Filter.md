@@ -10,6 +10,15 @@ correlation
 covolution
 * filter rotate 180 degree
 
+All refer to spatial filter not true comvolution
+* convolution filter
+* convlution mask
+* convolution kernel
+
+
+colvolving mask with an image -> slding, sum-of-products process -> more like correlation
+
+
 ![](https://i.imgur.com/P26mfXc.png)
 
 ![](https://i.imgur.com/NxmBzdi.png)
