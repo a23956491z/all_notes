@@ -15,3 +15,19 @@ a function, expressed in either a Fourier series or transform, can be reconstruc
 
 ### Impulse & sifting property
 ![](https://i.imgur.com/1b7CJOT.png)
+
+$f(t)$ is continous at $t=0$
+![](https://i.imgur.com/wEPqHT9.png)
+
+
+![](https://i.imgur.com/aKbWNBN.png)
+
+discrete impulse
+![](https://i.imgur.com/oPEHgi2.png)
+
+### Fourier Transfomer of functions of one continuous variable
+
+![](https://i.imgur.com/B2jIXtV.png)
+![](https://i.imgur.com/qxBzwYl.png)
+
+![](https://i.imgur.com/XlJ32Me.png)
