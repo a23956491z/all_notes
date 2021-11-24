@@ -61,3 +61,18 @@ put into Fourier
 ![](https://i.imgur.com/QBqZK3W.png)
 
 ![](https://i.imgur.com/XHqI4hN.png)
+
+convolution theorem
+![](https://i.imgur.com/jr9oXe7.png)
+
+## Fourier transform of sampled function
+sample
+![](https://i.imgur.com/6ngy3VJ.png)
+
+
+## Discrete Fourier Transform of one variable
+![](https://i.imgur.com/4fwjOmt.png)
+
+![](https://i.imgur.com/LG6dshM.png)
+inverse:
+![](https://i.imgur.com/o0bV4ow.png)
