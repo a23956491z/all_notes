@@ -77,6 +77,11 @@ sample
 inverse:
 ![](https://i.imgur.com/o0bV4ow.png)
 
+### Properties
+* Linearity
+![](https://i.imgur.com/a8m0WTw.png)
+
+
 ### convolution
 ![](https://i.imgur.com/1ZVoqJD.png)
 
