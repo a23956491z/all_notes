@@ -1,0 +1,1 @@
+Any periodic function can be expressed as the su m of sines and/or cosines of differen
