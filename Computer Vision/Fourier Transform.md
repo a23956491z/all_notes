@@ -76,3 +76,10 @@ sample
 ![](https://i.imgur.com/LG6dshM.png)
 inverse:
 ![](https://i.imgur.com/o0bV4ow.png)
+
+### convolution
+![](https://i.imgur.com/1ZVoqJD.png)
+
+## Frequency Domain Filtering
+Inverse Discrete Fourier Transform
+![](https://i.imgur.com/ThqG9VF.png)
