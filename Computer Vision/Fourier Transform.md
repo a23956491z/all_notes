@@ -47,3 +47,17 @@ Example:
 ![](https://i.imgur.com/6W4S7HQ.png)
 
 ![](https://i.imgur.com/XHQ3jhO.png)
+
+### Convolution
+
+convoluton of 2 continuous functions with one continuous variable
+![](https://i.imgur.com/jsapBmA.png)
+
+* minus sign accounts for the flipping
+* $t$ is the displacement to sliding
+* $\tau$ is dummy variable that is  intergrated out
+
+put into Fourier
+![](https://i.imgur.com/QBqZK3W.png)
+
+![](https://i.imgur.com/XHqI4hN.png)
