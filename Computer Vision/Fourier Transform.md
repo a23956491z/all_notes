@@ -88,3 +88,9 @@ inverse:
 ## Frequency Domain Filtering
 Inverse Discrete Fourier Transform
 ![](https://i.imgur.com/ThqG9VF.png)
+
+DFT
+
+Inverse Discrete Fourier Transform
+
+IDFT( DFT(img) * DFT(filter) )
