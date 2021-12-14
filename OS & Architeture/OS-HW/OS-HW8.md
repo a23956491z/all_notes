@@ -107,6 +107,22 @@ if we sort it first:
 ## 8.12
 ![](https://i.imgur.com/QohmAjW.png)
 
+$1KB = 1024 byte= 2^{10} bits$
+一個offset由 10 個 bits 組成
+* 除以 page size 的商即是 page number
+* 除以 page size 的餘即是 page offset
+
+### a. 3085
+$3085 \div 4096 = 0 \ldots 3085$
+
+* page number = **0**
+* page offset = **3085**
+
+### b. 42095
+$42095 \div 4096 = 10 \ldots 1135$
+
+* page number = **10**
+* page offset = **1135**
 
 ## 8.15
 ![](https://i.imgur.com/7fr4ZtP.png)
