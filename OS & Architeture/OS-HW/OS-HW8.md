@@ -133,9 +133,9 @@ code seg. follow by data seg.
 ### a. contiguous
 contiguous memory allocation中，如果需要分配更多記憶體，則需要重新分配整個process，
 ### b. pure seg.
-因爲segmentation同時兼具連續和區塊性，可以看作更有彈性的contiguous memory allocation，而需要時只需要多
+因爲segmentation同時兼具連續和區塊性，可以看作更有彈性的contiguous memory allocation，而需要記憶體時，只需要要求一塊新的segmentation而不用重新分配整個記憶體。
 ### c. pure paging
-paging得益於量大而尺寸迷你的分頁，使得本身就具有極良好的動態記憶體分配能力。
+paging得益於量大而尺寸迷你的分頁，使得本身就具有極良好的動態記憶體分配能力，同時也可以用更小的尺度來分配記憶體，但是每一個process都需要分配page table消耗部分記憶體空間。
 
 ## 8.12
 ![](https://i.imgur.com/QohmAjW.png)
