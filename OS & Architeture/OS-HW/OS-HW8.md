@@ -91,7 +91,9 @@ if we sort it first:
 * 排序後效率接近最好，空間利用率最小
 * 沒排序的效率則最差
 
-空間利用率： $best-fit >$
+空間利用率： $\textrm{best-fit} = \textrm{first-fit} > \textrm{worst-fit}$
+未排序效率： $\textrm{first-fit} > \textrm{best-fit} > \textrm{worst-fit}$
+已排序效率： $\textrm{first-fit} > \textrm{worst-fit} > \textrm{best-fit}$
 
 ## 8.4
 ![](https://i.imgur.com/Tfd4Rof.png)
