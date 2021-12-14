@@ -131,11 +131,11 @@ code starts with fixed virtual addr
 code seg. follow by data seg.
 
 ### a. contiguous
-
+contiguous memory allocation中，如果需要分配更多記憶體，則需要重新分配整個process，
 ### b. pure seg.
-
+因爲segmentation同時兼具連續和區塊性，可以看作更有彈性的contiguous memory allocation，而需要時只需要多
 ### c. pure paging
-paging得益於量大而尺寸迷你的分頁，使得本身就具有極良好的動態記憶體分配能力，自然不需要code segment緊接data segment的設計，而且也因爲paging本身是不連續，所以這個設計對paging而言是無效的。
+paging得益於量大而尺寸迷你的分頁，使得本身就具有極良好的動態記憶體分配能力。
 
 ## 8.12
 ![](https://i.imgur.com/QohmAjW.png)
