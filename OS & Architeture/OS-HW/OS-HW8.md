@@ -9,7 +9,7 @@ todo tick:
 - [ ] 8.11
 - [x] 8.12
 - [x] 8.15
-- [ ] 8.16
+- [x] 8.16
 - [x] 8.20
 - [ ] 8.23
 
@@ -182,6 +182,17 @@ total bits for physical address : 6+12 = **18 bits**
 ## 8.16
 ![](https://i.imgur.com/SHOQI5y.png)
 
+### a. page table
+page size : 4 KB = 12 bytes -> offset is 12 bit
+page number is 32-12 = 20 bit
+
+A page table is 1MB which has $2^{20}$ entries.
+### b. inverted page table
+based on physical memory
+
+$512 MB \div 4KB = 128*1024 = 2^{17}$
+
+A inverted page table is 128KB which has $2^{17}$ entries.
 ## 8.20
 ![](https://i.imgur.com/PXfKMZA.png)
 
