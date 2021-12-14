@@ -5,12 +5,12 @@ todo tick:
 - [x] 8.1
 - [x] 8.3
 - [x] 8.4
-- [ ] 8.5
+- [x] 8.5
 - [ ] 8.11
 - [x] 8.12
 - [x] 8.15
 - [ ] 8.16
-- [ ] 8.20
+- [x] 8.20
 - [ ] 8.23
 
 ## 8.1
@@ -118,12 +118,11 @@ if we sort it first:
 ## 8.5
 ![](https://i.imgur.com/dNcYKm0.png)
 
-| Memory allocation |            External fragmentation            | Internal fragmentation              | Share Code                          |
-|:-----------------:|:--------------------------------------------:| ----------------------------------- | ----------------------------------- |
-|    Contiguous     | 會發生，因爲到後面連續的大塊記憶體會越來越少 | 會發生，有些process有資源過剩的情況 | 無法，每個process會有一份code的副本 |
-| Pure Segmentation |                                              |                                     | 可以，藉由共用單一segmentation      |
-|    Pure Paging    |                                              |                                     | 可以，藉由共用單一frame             |
-
+| Memory allocation |              External fragmentation             | Internal fragmentation                    | Share Code                          |
+|:-----------------:|:-----------------------------------------------:|-------------------------------------------|-------------------------------------|
+|    Contiguous     |  會發生，因爲到後面連續的大塊記憶體會越來越少   | 會發生，有些process有資源過剩的情況       | 無法，每個process會有一份code的副本 |
+| Pure Segmentation |       會，Segmentation也是一塊塊連續記憶體      | 會，limit邊界無法自由調整，分配完就固定了 | 可以，藉由共用單一segmentation      |
+|    Pure Paging    | 不會發生，Page size夠小，可以完整利用整個記憶體 | 幾乎不會產生，因爲每個page的大小都很小    | 可以，藉由共用單一frame             |
 
 ## 8.11
 ![](https://i.imgur.com/0gXdj71.png)
@@ -186,10 +185,36 @@ total bits for physical address : 6+12 = **18 bits**
 ## 8.20
 ![](https://i.imgur.com/PXfKMZA.png)
 
+### a. 0,430
+
+
+
+219 + 430 = 649
+ans: 649
+
+### b. 1,10
+
+2300 + 10=2310
+ans: 2310
+
+### c. 2,500
+
+500 > limit
+ans: illegal address，trap
+
+### d. 3,400
+
+1327+400 = 1727
+ans: 1727
+### e. 4,112
+
+112 > 96
+ans: illegal address, trap
+
 ## 8.23
 ![](https://i.imgur.com/oPQ86Dy.png)
 
-
+segmented paging vshashed page table
 
 
 
