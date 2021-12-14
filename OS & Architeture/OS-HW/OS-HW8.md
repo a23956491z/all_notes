@@ -235,7 +235,4 @@ ans: illegal address, trap
 
 segmented paging vs hashed page table
 
-when handling a large address spaces, the size of page table is getting very big, which is fatal in memory sensitive situation by page table devouring the memory space. For low-latency circumstances, iterating through the hierarchical page tables is also harmful to access time.
-
-segmented paging is more efficient.
-hashed page tables has higer space utilizaiton.
+當地址空間很大時，page table也會變得很大，此時對於空間需求大的場景非常不利， 因爲會有一部分的memory被page table吃掉，而階層式的hashed page table則可以解決這個問題，尤其是實際使用的地址很少時，hashed page table新建的sub page table也會很少，這種情況就可以節省大量的空間，宏觀上類似一種動態大小的page table，但是相對的也增加了存取延遲，對於需要極低延遲的應用場景不利，但是在page table使用量不高和空間需求大的場景非常有利。
