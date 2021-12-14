@@ -13,7 +13,35 @@ process內的破碎即內部破碎
 ## 8.3
 ![](https://i.imgur.com/eIGzXIj.png)
 
+### Fisrt-fit
+with avaliable list:
 
+| Space(KB) | allocated(KB) | iteration |
+|:---------:|:-------------:|-----------|
+|    300    |      115      | 1         |
+|    600    |      500      | 1         |
+|    350    |      200      | 1         |
+|    200    |               |           |
+|    700    |      358      | 1         |
+|    125    |               |           |
+| no space  |      375      | 2         |
+| total     |      1173     | 6         |
+
+### best-fit:
+with avaliable list:
+
+| Space(KB) | allocated(KB) | iteration |
+|:---------:|:-------------:| --------- |
+|    300    |               |           |
+|    600    |      500      | 5         |
+|    350    |               |           |
+|    200    |      200      | 3         |
+|    700    |      358      | 4         |
+|    125    |      115      | 6         |
+| no space  |      375      | 2         |
+|   total   |     1173      | 20        |
+
+if we sort it first
 ## 8.4
 ![](https://i.imgur.com/Tfd4Rof.png)
 
