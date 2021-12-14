@@ -127,6 +127,14 @@ if we sort it first:
 ## 8.11
 ![](https://i.imgur.com/0gXdj71.png)
 
+code starts with fixed virtual addr
+code seg. follow by data seg.
+
+### a. contiguous
+
+### b. pure seg.
+
+### c. pure paging
 ## 8.12
 ![](https://i.imgur.com/QohmAjW.png)
 
@@ -227,4 +235,4 @@ ans: illegal address, trap
 
 segmented paging vs hashed page table
 
-
+when handling a large address spaces, the size of page table is getting very big,
