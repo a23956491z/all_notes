@@ -214,10 +214,6 @@ ans: illegal address, trap
 ## 8.23
 ![](https://i.imgur.com/oPQ86Dy.png)
 
-segmented paging vshashed page table
-
-
-
-
+segmented paging vs hashed page table
 
 
