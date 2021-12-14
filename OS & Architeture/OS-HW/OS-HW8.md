@@ -1,6 +1,11 @@
 
 # Homework
 
+todo tick:
+- [ ] 8.1
+- [ ] 8.3
+- [ ] 
+
 ## 8.1
 ![](https://i.imgur.com/7R81JRg.png)
 
@@ -107,25 +112,54 @@ if we sort it first:
 ## 8.12
 ![](https://i.imgur.com/QohmAjW.png)
 
-$1KB = 1024 byte= 2^{10} bits$
+$1KB = 1024 byte= 2^{10} byte$
 一個offset由 10 個 bits 組成
 * 除以 page size 的商即是 page number
 * 除以 page size 的餘即是 page offset
 
 ### a. 3085
-$3085 \div 4096 = 0 \ldots 3085$
+$3085 \div 1024 = 3 \ldots 13$
 
 * page number = **0**
 * page offset = **3085**
 
 ### b. 42095
-$42095 \div 4096 = 10 \ldots 1135$
+$42095 \div 1024 = 41 \ldots 111$
 
 * page number = **10**
-* page offset = **1135**
+* page offset = **111**
+
+### c.215201
+$215201 \div 1024 = 210 \ldots 161$
+
+* page number = **210**
+* page offset = **161**
+
+### d.650000
+$650000 \div 1024 = 634 \ldots 784$
+
+* page number = **634**
+* page offset = **784**
+
+### e.2000001
+$650000 \div 1024 = 1953 \ldots 129$
+
+* page number = **1953**
+* page offset = **129**
+
 
 ## 8.15
 ![](https://i.imgur.com/7fr4ZtP.png)
+
+64 frames = $2^6$ frames
+256 pages = $2^8$ pages
+4 KB page size = $2^{12}$ byte 
+
+### a. bits for logical addr
+total bits for logical address : 8+12 =  **20 bits**
+
+### b. bits for physical addr
+total bits for physical address : 6+12 = **18 bits**
 
 ## 8.16
 ![](https://i.imgur.com/SHOQI5y.png)
