@@ -118,6 +118,13 @@ if we sort it first:
 ## 8.5
 ![](https://i.imgur.com/dNcYKm0.png)
 
+| Memory allocation |            External fragmentation            | Internal fragmentation              | Share Code                          |
+|:-----------------:|:--------------------------------------------:| ----------------------------------- | ----------------------------------- |
+|    Contiguous     | 會發生，因爲到後面連續的大塊記憶體會越來越少 | 會發生，有些process有資源過剩的情況 | 無法，每個process會有一份code的副本 |
+| Pure Segmentation |                                              |                                     | 可以，藉由共用單一segmentation      |
+|    Pure Paging    |                                              |                                     | 可以，藉由共用單一frame             |
+
+
 ## 8.11
 ![](https://i.imgur.com/0gXdj71.png)
 
