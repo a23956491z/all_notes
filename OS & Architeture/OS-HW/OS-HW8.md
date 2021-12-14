@@ -4,7 +4,7 @@
 todo tick:
 - [x] 8.1
 - [x] 8.3
-- [ ] 8.4
+- [x] 8.4
 - [ ] 8.5
 - [ ] 8.11
 - [x] 8.12
@@ -110,7 +110,11 @@ if we sort it first:
 ## 8.4
 ![](https://i.imgur.com/Tfd4Rof.png)
 
-* BUDI
+* 連續記憶體分配：需要，否則需要更多空間時，要重新分配整個程式的記憶體空間
+* 純segmentation：需要，單一sementation內的記憶體用完就沒了，也要分配一個更大的segmentation替代
+* 純paging：**不需要額外的dynamic memory allocation**，page本身的機制就支援分配新的page，而不需要重新分配舊的空間
+
+
 ## 8.5
 ![](https://i.imgur.com/dNcYKm0.png)
 
