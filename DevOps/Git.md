@@ -155,3 +155,10 @@ rigin這個資料庫更新(擷取)到遠端狀態
 $ watch --color git log --color=always
 ```
 
+
+## SSH
+```shell
+ssh-keygen -t ed25519 -C "a23956491z@yahoo.com.tw"
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+```
