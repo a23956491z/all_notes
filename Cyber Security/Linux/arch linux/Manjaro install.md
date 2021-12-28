@@ -41,3 +41,8 @@ Pre setting:
 	
 9. timeshift backup
 
+
+10. Get fatest mirror
+```
+sudo pacman-mirrors --fasttrack && sudo pacman -Syyu
+```
