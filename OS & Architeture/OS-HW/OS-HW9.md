@@ -209,6 +209,8 @@ iv. 選擇counter最低的，換掉使用次數少的
 | 4  |    |    |    |    |
 | 2  |    |    |    | 2  |
  
+ 11次 page fault
+ 
 ## 9.19
 ![](https://i.imgur.com/UoEWExD.png)
 
