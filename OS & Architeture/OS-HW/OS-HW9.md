@@ -54,6 +54,7 @@ page fault的機率要低於0.006%
 ## 9.8
 ![](https://i.imgur.com/9ty23IN.png)
 
+
 ## 9.9
 ![](https://i.imgur.com/u1pWc0o.png)
 ![](https://i.imgur.com/XJUyPVE.png)
@@ -63,7 +64,9 @@ page fault的機率要低於0.006%
 ## 9.12
 ![](https://i.imgur.com/sVNPzUo.png)
 
-最常使用的page不代表使用時間最長，例如OS的每日定期更新，在更新期間，會非常頻繁地訪問特定pages，但是更新完後就不再訪問，這種情況就屬於 頻繁使用，但是使用時間不常，而LRU則是利用page的未使用時間來判斷，這種情況下用 MFU 的page fault率就更低。
+最常使用的page不代表使用時間最長，例如OS的每日定期更新，在更新期間，會非常頻繁地訪問特定pages，但是更新完後就不再訪問，這種情況就屬於 頻繁使用，但是使用時間不長，而LRU則是利用page的未使用時間來判斷，這種情況下用 MFU 的page fault率就更低。
+
+相反地，如果使用的不頻繁，但是定期會使用一次，或是每次使用時間超長，例如linux的Daemon會一直在背景執行，造訪次數不一定多，但是可能會定期監控某些狀態，這種情況下，用最後參考時間來做替換的LRU就不會把這些背景process替換掉。
 
 ## 9.14
 ![](https://i.imgur.com/9O1p8Bv.png)
