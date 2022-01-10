@@ -16,6 +16,11 @@ todo tick:
 ## 9.2
 ![](https://i.imgur.com/DM5RnZ2.png)
 
+a. a page fault means process need to load the page from disk to memory requiring I/O, changing state  to **blocked** when incurs a page fault
+
+b. TLB is in CPU so the process would keep running 
+
+c. resolving address reference means the process didn't load the refered page into memory, it would change state to **blocked** to loading the reference.
 ## 9.4
 ![](https://i.imgur.com/PNQPs0Q.png)
 
