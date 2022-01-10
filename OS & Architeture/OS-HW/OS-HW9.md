@@ -18,11 +18,17 @@ todo tick:
 
 a. a page fault means process need to load the page from disk to memory requiring I/O, changing state  to **blocked** when incurs a page fault
 
-b. TLB is in CPU so the process would keep running 
+b. due to TLB is in CPU, resolving address in TLB  would keep process **running**. 
 
-c. resolving address reference means the process didn't load the refered page into memory, it would change state to **blocked** to loading the reference.
+c. resolving address reference would also keep process **running**. it doesnt need I/O at all.
+
+
 ## 9.4
 ![](https://i.imgur.com/PNQPs0Q.png)
+
+爲了共享虛擬記憶體，copy-on-write可以在process寫入時才復制，取代每個process復制一份，當我們大量讀取、而不寫入時，就可以減少很多的副本來節省空間。  
+
+硬體上，TLB內需要標記那些目前是read only，並且持續計算有多少process需要使用，當有process需要寫入時，再復制一份出來並改成取消read only的標記。
 
 ## 9.6
 ![](https://i.imgur.com/IAS3YJB.png)
