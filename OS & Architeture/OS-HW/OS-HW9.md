@@ -1,6 +1,7 @@
 # Operating System Homework chap.9
 ## 410821238 資工三 余慶龍
 
+<!--
 todo tick:
 - [x] 9.2
 - [x] 9.4
@@ -12,7 +13,7 @@ todo tick:
 - [ ] 9.17
 - [x] 9.19
 - [x] 9.21
-
+-->
 
 ## 9.2
 ![](https://i.imgur.com/DM5RnZ2.png)
