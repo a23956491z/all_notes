@@ -60,11 +60,11 @@ page fault的機率要低於0.006%
 <span style="color:tomato;">3，1，2：5</span>
 <span style="color:tomato;">1，2，5：3</span>
 <span style="color:tomato;">2，5，3：4</span>
-<span style="color:tomato;">5，3，4：6</span>
-<span style="color:tomato;">3，4，6：7</span>
-<span style="color:green;">4，6，7：7</span>
-<span style="color:tomato;">4，6，7：1</span>
-<span style="color:tomato;">6，7，1：0</span>
+<span style="color:tomato;">2，4，3：6</span>
+<span style="color:tomato;">2，6，3：7</span>
+<span style="color:green;">2，7，3：7</span>
+<span style="color:tomato;">2，3，7：1</span>
+<span style="color:tomato;">3，7，1：0</span>
 <span style="color:tomato;">7，1，0：5</span>
 <span style="color:tomato;">1，0，5：4</span>
 <span style="color:tomato;">0，5，4：6</span>
@@ -96,6 +96,25 @@ page fault的機率要低於0.006%
 
 18次page fault
 
+### Optimal
+<span style="color:tomato;">7，2，3：1</span>
+<span style="color:tomato;">2，3，1：2</span>
+
+<span style="color:tomato;">3，1，5：5</span>
+<span style="color:green;">3，1，5：3</span>
+<span style="color:tomato;">4，1，5：4</span>
+<span style="color:tomato;">6，1，5：6</span>
+<span style="color:tomato;">7，1，5：7</span>
+<span style="color:green;">7，1，5：7</span>
+<span style="color:green;">7，1，5：1</span>
+<span style="color:tomato;">7，1，5：0</span>
+<span style="color:tomato;">7，1，0：5</span>
+<span style="color:tomato;">1，0，5：4</span>
+<span style="color:tomato;">0，5，4：6</span>
+<span style="color:tomato;">5，4，6：2</span>
+<span style="color:tomato;">4，6，2：3</span>
+<span style="color:tomato;">6，2，3：0</span>
+<span style="color:tomato;">2，3，0：1</span>
 
 ## 9.9
 ![](https://i.imgur.com/u1pWc0o.png)
