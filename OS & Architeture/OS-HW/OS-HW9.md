@@ -18,11 +18,10 @@ todo tick:
 
 a. page fault 代表需要I/O操作來將page從硬碟讀取到記憶體，所以需要進入**block**狀態。
 
-b. 因爲TLB就在CPU內，尋找TLB內的
+b. TLB missing時，到page table尋找address不需要太多時間，不需要切換狀態，可以繼續執行 (running)
 
-b. due to TLB is in CPU, resolving address in TLB  would keep process **running**. 
+c. 在TLB內尋找address需要的時間更少，也不需要切換狀態，繼續執行(running)
 
-c. resolving address reference would also keep process **running**. it doesnt need I/O at all.
 
 
 ## 9.4
@@ -35,6 +34,7 @@ c. resolving address reference would also keep process **running**. it doesnt ne
 ## 9.6
 ![](https://i.imgur.com/IAS3YJB.png)
 
+有empty frame或候選page 8ms 
 
 ## 9.8
 ![](https://i.imgur.com/9ty23IN.png)
