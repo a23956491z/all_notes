@@ -16,7 +16,8 @@ todo tick:
 ## 9.2
 ![](https://i.imgur.com/DM5RnZ2.png)
 
-a. a page fault means process need to load the page from disk to memory requiring I/O, changing state  to **blocked** when incurs a page fault
+a. page fault 代表需要I/O操作來將page從 硬碟讀取到記憶體，
+means process need to load the page from disk to memory requiring I/O, changing state  to **blocked** when incurs a page fault
 
 b. due to TLB is in CPU, resolving address in TLB  would keep process **running**. 
 
@@ -32,6 +33,7 @@ c. resolving address reference would also keep process **running**. it doesnt ne
 
 ## 9.6
 ![](https://i.imgur.com/IAS3YJB.png)
+
 
 ## 9.8
 ![](https://i.imgur.com/9ty23IN.png)
