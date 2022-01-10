@@ -1,5 +1,5 @@
 # Operating System Homework chap.9
-## 410821238 資工三 青龍
+## 410821238 資工三 余慶龍
 
 todo tick:
 - [x] 9.2
@@ -148,6 +148,15 @@ h. 降低CPU使用率，增加page size會增大內外部碎片化的機率，�
 ## 9.17
 ![](https://i.imgur.com/f10VpQG.png)
 
+### a.
+i. counter初始值是0
+ii. 每次被使用就會增加counter
+iii. 每次被踢出page table時會重置counter
+iv. 選擇counter最低的，換掉使用次數少的
+
+### b.
+1(1) 2(1) 3 4 : 5
+1 2 3 4 : 5
 ## 9.19
 ![](https://i.imgur.com/UoEWExD.png)
 
