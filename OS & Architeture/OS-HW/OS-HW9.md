@@ -1,4 +1,5 @@
-# Homework
+# Operating System Homework chap.9
+## 410821238 資工三 青龍
 
 todo tick:
 - [x] 9.2
@@ -6,8 +7,8 @@ todo tick:
 - [x] 9.6
 - [x] 9.8
 - [ ] 9.9
-- [ ] 9.12
-- [ ] 9.14
+- [x] 9.12
+- [x] 9.14
 - [ ] 9.17
 - [x] 9.19
 - [x] 9.21
@@ -132,6 +133,17 @@ page fault的機率要低於0.006%
 
 ## 9.14
 ![](https://i.imgur.com/9O1p8Bv.png)
+
+a. CPU利用率不會更高，可能更低，因爲原本需要CPU的資源可以更快速地執行完
+b. 使用更大的 paging disk沒辦法提升CPU利用率，也不會改變 pageing disk的使用率
+c. 增加multiprogramming degree會降低CPU使用率，因爲 paging的時間本來就多，代表每個process的frames可能不夠，更多的process再進來，只會使資源更加匱乏
+d. 會增加CPU使用率，因爲每個process能用的Frame變多了，就可以減少swapping的次數
+e. 增加CPU使用率，更大的記憶體就可以分配給process更多的Frame，同樣可以減少swapping的次數
+f. 增加CPU使用率，更快的Disk可以讓swapping速度加快，降低 I/O 所造成的pending狀態
+g. 略微增加CPU使用率，因爲disk的使用率本來就很高，Disk空閒下來讓CPU fetch的時間也會變得很少，不過仍然會增加CPU的使用率
+h. 降低CPU使用率，增加page size會增大內外部碎片化的機率，使得本來就不夠用的memory/frames更加不夠用，進而需要增加swapping的次數
+
+會提升CPU使用率： **d e f g**
 
 ## 9.17
 ![](https://i.imgur.com/f10VpQG.png)
