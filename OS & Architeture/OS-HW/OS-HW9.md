@@ -125,8 +125,22 @@ page fault的機率要低於0.006%
 ![](https://i.imgur.com/rFjN8mR.png)
 
 ### a.
-* 0xE12C
-* 0x3A9D
+0xA = 10
+0xE = 14
+
+* 0xE12C : 0x312C
+* 0x3A9D : 0xAA9D
+* 0xA9D9 :0x59D9
+* 0x7001 : 0xF001
+* 0xACA1 : 0x5CA1
+
+### b.
+例如：0x4000，會找不到對應的page，產生page fault
+
+### C.
+Least recenlty used
+只挑有儲存過的做替換
+{0, 1, 2, 3, 5, 6, 7, 9, 10, 11, 14, 15}
 
 
 ## 9.12
