@@ -124,6 +124,10 @@ page fault的機率要低於0.006%
 ![](https://i.imgur.com/XJUyPVE.png)
 ![](https://i.imgur.com/rFjN8mR.png)
 
+### a.
+* 0xE12C
+* 0x3A9D
+
 
 ## 9.12
 ![](https://i.imgur.com/sVNPzUo.png)
