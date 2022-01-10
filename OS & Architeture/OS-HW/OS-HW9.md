@@ -1,16 +1,16 @@
 # Homework
 
 todo tick:
-- [ ] 9.2
-- [ ] 9.4
-- [ ] 9.6
-- [ ] 9.8
+- [x] 9.2
+- [x] 9.4
+- [x] 9.6
+- [x] 9.8
 - [ ] 9.9
 - [ ] 9.12
 - [ ] 9.14
 - [ ] 9.17
-- [ ] 9.19
-- [ ] 9.21
+- [x] 9.19
+- [x] 9.21
 
 
 ## 9.2
@@ -99,7 +99,6 @@ page fault的機率要低於0.006%
 ### Optimal
 <span style="color:tomato;">7，2，3：1</span>
 <span style="color:tomato;">2，3，1：2</span>
-
 <span style="color:tomato;">3，1，5：5</span>
 <span style="color:green;">3，1，5：3</span>
 <span style="color:tomato;">4，1，5：4</span>
@@ -108,13 +107,15 @@ page fault的機率要低於0.006%
 <span style="color:green;">7，1，5：7</span>
 <span style="color:green;">7，1，5：1</span>
 <span style="color:tomato;">7，1，5：0</span>
-<span style="color:tomato;">7，1，0：5</span>
-<span style="color:tomato;">1，0，5：4</span>
-<span style="color:tomato;">0，5，4：6</span>
-<span style="color:tomato;">5，4，6：2</span>
-<span style="color:tomato;">4，6，2：3</span>
-<span style="color:tomato;">6，2，3：0</span>
-<span style="color:tomato;">2，3，0：1</span>
+<span style="color:green;">0，1，5：5</span>
+<span style="color:tomato;">0，1，5：4</span>
+<span style="color:tomato;">0，1，4：6</span>
+<span style="color:tomato;">0，1，6：2</span>
+<span style="color:tomato;">0，1，2：3</span>
+<span style="color:green;">0，1，3：0</span>
+<span style="color:green;">2，3，0：1</span>
+
+14次 page fault
 
 ## 9.9
 ![](https://i.imgur.com/u1pWc0o.png)
