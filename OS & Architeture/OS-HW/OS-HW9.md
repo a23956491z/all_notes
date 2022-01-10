@@ -63,6 +63,8 @@ page fault的機率要低於0.006%
 ## 9.12
 ![](https://i.imgur.com/sVNPzUo.png)
 
+最常使用的page不代表使用時間最長，例如OS的每日定期更新，在更新期間，會非常頻繁地訪問特定pages，但是更新完後就不再訪問，這種情況就屬於 頻繁使用，但是使用時間不常，而LRU則是利用page的未使用時間來判斷，這種情況下用 MFU 的page fault率就更低。
+
 ## 9.14
 ![](https://i.imgur.com/9O1p8Bv.png)
 
@@ -73,7 +75,11 @@ page fault的機率要低於0.006%
 ![](https://i.imgur.com/UoEWExD.png)
 
 Thrashing源自process一直花時間進行paging
-而
+而需要一直paging代表 page fault rate很高
+* 如果同時執行太多process，也就是multiprogramming degree很高的話，會使每個process能分到的frame變少，就需要一直頻繁訪問虛擬記憶體
+* 在使用 Global replacement policy 來決定 swapping區塊時，有可能會導致process搶走其他process的Frame，造成其他process產生page fault
+* 當 page fault rate上升，CPU 利用率會下降，在multiprogramming的環境下，OS會在載入更多process造成 page fault rate更高惡性循環。
+
 ## 9.21
 ![](https://i.imgur.com/HQ7UWZX.png)
 
