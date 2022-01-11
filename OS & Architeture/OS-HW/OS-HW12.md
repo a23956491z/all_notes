@@ -20,8 +20,17 @@ Memory-mapped不需要和Port-mapped一樣使用額外的指令來存取I/O設�
 ## 13.5
 - Q: What are the various kinds of performance overhead associated with **servicing an interrupt**?
 
-Cost of saving & restoring process state
-Cost of Flushing instruction pipeline & restore
+利用Interrupt來跟I/O設備傳輸資料時，需要中斷CPU內的程序，流程如下：
+1. 儲存原本執行中的Process狀態
+2. 因爲Process被中斷：清空Pipeline上的指令
+3. ..傳輸傳輸傳輸..
+4. 恢復之前的Process狀態
+5. 把之前的指令放回Pipeline
+
+所以overhead會取決於：
+* 儲存和回復Process的速度
+* 清空和回復Pipeline的速度
+
 ## 13.6
 - Q: Describe three circumstance under which blocking I/O should be used.
 
