@@ -45,3 +45,9 @@ blocking vs non-blocking：
 
 ## 13.8
 - Q: Some **DMA controllers** support **direct virtual memory access**, where the targets of I/O operations are specified as virtual addresses and **a translation from virtual to physical address** is performed **during the DMA**. ==How does this designed complicate the design of the DMA controller?== What are the **advantages** of providing such functionality?
+
+讓DMA controller支援虛擬記憶體的直接訪問，意味着需要把第二記憶體（如硬碟）的部分資料復制到記憶體中。而虛擬記憶體的實現是利用查page表，來對應虛擬記憶體位置與實際的位置，DMA controller就會需要**同時處理實體位置和虛擬位置**，而這個特性就會讓虛擬記憶體的轉換（查表）變得更復雜。
+
+優點是使其餘硬體也能和CPU一起享有虛擬記憶體的好處，例如：
+* 連續的記憶體區塊
+* 額外的記憶體空間
