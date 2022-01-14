@@ -52,7 +52,7 @@ attach cotainer in background:
 
 execute command in container
 `docker exec ID/NAME COMMAND` 
-## PS
+## PS sudo apt-get install docker-ce docker-ce-cli containerd.io
 check running container:
 `docker ps`
 check exists container:
