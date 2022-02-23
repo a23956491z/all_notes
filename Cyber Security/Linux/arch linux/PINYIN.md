@@ -13,3 +13,4 @@ export XMODIFIERS=@im=fcitx
 ...
 exec YOUR_WM
 ```
+
