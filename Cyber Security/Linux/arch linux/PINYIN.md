@@ -14,3 +14,6 @@ export XMODIFIERS=@im=fcitx
 exec YOUR_WM
 ```
 
+
+fcitx-diagnose
+檢查 fcitx的功能
