@@ -54,3 +54,7 @@ basic operation of regex
 * Catenation
 * Kleene closure
 * Without Addition
+
+storage binding:
+* static variable
+* stack-dynamic, explicit heap-dynamic
