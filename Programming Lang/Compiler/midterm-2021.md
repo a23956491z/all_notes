@@ -5,7 +5,7 @@ Language evaluation
 * Writablility: Expressivity
 
 Langs
-* COBOL is not functional language
+* COBOL(common bussiness oriented) is not functional,is impoerative
 * **Lisp**(First) is functional programming lang and considered for AI
 * **IBM 704、Fortan** was first with both foresight & resources undertake developments in design of computers & programming lang.
 * COBOL
