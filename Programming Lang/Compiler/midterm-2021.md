@@ -17,6 +17,14 @@ Lang categories:
 * Logic
 * object oriented
 
+influence(s) of design of pro. lang.
+* Computer arch
+* programming deisng methodology
+* without Software dev tool &  Power comsumption
+
+implementation methods
+* compile, interpretation, hybrid(java), preprocessor
+
 variable atrributes:
 * Name
 * Type
