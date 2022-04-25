@@ -22,3 +22,18 @@ Bindings:
 * Binding take place is called binding time.
 * Binding is dynamic if occurs before run time, remains unchanged thoughout program execution
 * Dynamic 
+
+Compiler written in Java, compile python to assembly
+* Python is source language
+* Java is implementation
+* C is intermediate 
+* Assenbly is target
+
+Analysis taks performed by compiler:
+* Lexical 
+* Semantic analysis
+* Synatax analysis
+* Without Regression analysis 
+
+basic operation of regex
+* 
