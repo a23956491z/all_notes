@@ -1,8 +1,8 @@
 Language evaluation
 * Cost
-* Readability
-* Reliability
-* Writablility
+* Readability: Simplicity、Orthogonality、Data Types、Syntax Design
+* Reliability: Type Checking、Exception Handling、Aliasing
+* Writablility: Expressivity
 
 Langs
 * COBOL is not functional language
@@ -10,6 +10,12 @@ Langs
 * **IBM 704、Fortan** was first with both foresight & resources undertake developments in design of computers & programming lang.
 * COBOL
 * ALGOL 60
+
+Lang categories:
+* Imperative
+* Fcuntional 
+* Logic
+* object oriented
 
 variable atrributes:
 * Name
@@ -36,4 +42,7 @@ Analysis taks performed by compiler:
 * Without Regression analysis 
 
 basic operation of regex
-* 
+* Alternation
+* Catenation
+* Kleene closure
+* Without Addition
