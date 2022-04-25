@@ -27,7 +27,7 @@ implementation methods
 
 variable atrributes:
 * Name
-* Type
+* 
 * Address
 * Valuer
 
