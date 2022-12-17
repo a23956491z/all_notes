@@ -3,5 +3,6 @@
   "translucency": false,
   "baseFontSize": 18,
   "cssTheme": "Atom",
-  "enabledCssSnippets": []
+  "enabledCssSnippets": [],
+  "accentColor": ""
 }
