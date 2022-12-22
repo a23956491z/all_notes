@@ -53,4 +53,42 @@ folder meaning:
 * `settings.gradle` settings to define build name and subprojects
 * `build.gradle` configure dependency of the build logic
 * `buildSrc/src/main/groovy` source folder for convention plugins written in Groovy
-* ``
+
+
+## Settings.gradle
+
+```groovy
+rootProject.name = 'demo'
+include('app', 'list', 'utilities')
+```
+
+* `rootProject.name`
+* `include` : including subproject
+
+## Convention plugins
+
+this plugins is for sharing same build logic and configuration file between multiple sub project.
+
+we can change the 
+`buildSrc/src/main/groovy/demo.java-common-conventions.gradle`
+```groovy
+plugins {
+    id 'java' 
+}
+
+repositories {
+    mavenCentral() 
+}
+
+dependencies {
+    constraints {
+        implementation 'org.apache.commons:commons-text:1.9' 
+    }
+
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.9.1' 
+}
+
+tasks.named('test') {
+    useJUnitPlatform() 
+}
+```
