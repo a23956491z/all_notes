@@ -69,7 +69,7 @@ include('app', 'list', 'utilities')
 
 this plugins is for sharing same build logic and configuration file between multiple sub project.
 
-we can change the 
+we define our shared configuration in
 `buildSrc/src/main/groovy/demo.java-common-conventions.gradle`
 ```groovy
 plugins {
@@ -92,3 +92,6 @@ tasks.named('test') {
     useJUnitPlatform() 
 }
 ```
+
+* `repositories` for source for external dependencies
+* 
