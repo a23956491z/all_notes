@@ -94,4 +94,24 @@ tasks.named('test') {
 ```
 
 * `repositories` for source for external dependencies
-* 
+
+
+`buildSrc/src/main/groovy/demo.java-library-conventions.gradle`
+```groovy
+plugins {
+    id 'demo.java-common-conventions' 
+
+    id 'java-library' 
+}
+```
+
+`buildSrc/src/main/groovy/demo.java-application-conventions.gradle`
+```groovy
+plugins {
+    id 'demo.java-common-conventions' 
+
+    id 'application' 
+}
+```
+
+these 2 comventions apply the basic `demo.java-common-conventions`
